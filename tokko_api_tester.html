@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokko Broker API Testing Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0e17;
+            --bg-secondary: #141b2d;
+            --bg-tertiary: #1e2842;
+            --accent-blue: #00d4ff;
+            --accent-purple: #b794f6;
+            --accent-green: #00ff88;
+            --text-primary: #e8eaed;
+            --text-secondary: #9ba3b4;
+            --border-color: #2a3650;
+            --success: #00ff88;
+            --error: #ff4757;
+            --warning: #ffa502;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Archivo', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            position: relative;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, var(--accent-blue) 0%, transparent 70%);
+            opacity: 0.1;
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: translateX(-50%) scale(1); opacity: 0.1; }
+            50% { transform: translateX(-50%) scale(1.2); opacity: 0.15; }
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+
+        .api-key-section {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .api-key-section label {
+            color: var(--accent-blue);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .api-key-section input {
+            flex: 1;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .api-key-section input:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1);
+        }
+
+        .tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .tab {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 0.9rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tab::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .tab:hover::before {
+            left: 100%;
+        }
+
+        .tab:hover {
+            border-color: var(--accent-blue);
+            color: var(--accent-blue);
+        }
+
+        .tab.active {
+            background: var(--accent-blue);
+            color: var(--bg-primary);
+            border-color: var(--accent-blue);
+        }
+
+        .section {
+            display: none;
+            animation: fadeIn 0.4s ease;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .endpoint-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .endpoint-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--accent-blue), var(--accent-purple));
+            border-radius: 12px 0 0 12px;
+        }
+
+        .endpoint-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .endpoint-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--accent-blue);
+        }
+
+        .method-badge {
+            background: var(--accent-green);
+            color: var(--bg-primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .method-badge.post {
+            background: var(--warning);
+        }
+
+        .endpoint-description {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .filters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .filter-group label {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .filter-group input,
+        .filter-group select {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 0.5rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .filter-group input:focus,
+        .filter-group select:focus {
+            outline: none;
+            border-color: var(--accent-purple);
+            box-shadow: 0 0 0 3px rgba(183, 148, 246, 0.1);
+        }
+
+        .btn {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            color: white;
+            border: none;
+            padding: 0.75rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 212, 255, 0.3);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .response-container {
+            margin-top: 1.5rem;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1rem;
+            max-height: 500px;
+            overflow-y: auto;
+        }
+
+        .response-container::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .response-container::-webkit-scrollbar-track {
+            background: var(--bg-secondary);
+            border-radius: 4px;
+        }
+
+        .response-container::-webkit-scrollbar-thumb {
+            background: var(--accent-blue);
+            border-radius: 4px;
+        }
+
+        .response-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .response-status {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+        }
+
+        .status-indicator {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--success);
+            animation: blink 2s ease-in-out infinite;
+        }
+
+        .status-indicator.error {
+            background: var(--error);
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        .copy-btn {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .copy-btn:hover {
+            color: var(--accent-blue);
+            border-color: var(--accent-blue);
+        }
+
+        pre {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: var(--text-primary);
+        }
+
+        .loading {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--accent-blue);
+        }
+
+        .spinner {
+            width: 16px;
+            height: 16px;
+            border: 2px solid var(--border-color);
+            border-top-color: var(--accent-blue);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            border-color: var(--accent-purple);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(183, 148, 246, 0.2);
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        .property-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .property-card {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .property-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-blue);
+            box-shadow: 0 12px 24px rgba(0, 212, 255, 0.2);
+        }
+
+        .property-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+        }
+
+        .property-content {
+            padding: 1rem;
+        }
+
+        .property-type {
+            display: inline-block;
+            background: var(--accent-purple);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .property-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .property-price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--accent-green);
+            margin-bottom: 0.5rem;
+        }
+
+        .property-location {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-top: 4rem;
+            border-top: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏢 Tokko Broker API</h1>
+            <p class="subtitle">Panel de Testing Completo para Integración con tu CRM</p>
+        </header>
+
+        <div class="api-key-section">
+            <label>API KEY:</label>
+            <input type="text" id="apiKey" value="7dcae850ffa5d3c45a748c97976c16ae9269b10d" placeholder="Ingresa tu API Key">
+        </div>
+
+        <div class="tabs">
+            <div class="tab active" onclick="switchTab('propiedades')">📋 Propiedades</div>
+            <div class="tab" onclick="switchTab('busqueda')">🔍 Búsqueda Avanzada</div>
+            <div class="tab" onclick="switchTab('emprendimientos')">🏗️ Emprendimientos</div>
+            <div class="tab" onclick="switchTab('contactos')">📧 Contactos/Leads</div>
+            <div class="tab" onclick="switchTab('ubicaciones')">📍 Ubicaciones</div>
+            <div class="tab" onclick="switchTab('estadisticas')">📊 Estadísticas</div>
+        </div>
+
+        <!-- SECCIÓN: PROPIEDADES -->
+        <div id="propiedades" class="section active">
+            <div class="endpoint-card">
+                <div class="endpoint-header">
+                    <h3 class="endpoint-title">Listar Todas las Propiedades</h3>
+                    <span class="method-badge">GET</span>
+                </div>
+                <p class="endpoint-description">Obtiene todas las propiedades disponibles en Tokko Broker. Ideal para sincronización inicial.</p>
+                
+                <div class="filters-grid">
+                    <div class="filter-group">
+                        <label>Límite de resultados</label>
+                        <input type="number" id="limit" value="20" min="1" max="100">
+                    </div>
+                    <div class="filter-group">
+                        <label>Offset</label>
+                        <input type="number" id="offset" value="0" min="0">
+                    </div>
+                </div>
+
+                <button class="btn" onclick="fetchProperties()">🚀 Obtener Propiedades</button>
+
+                <div id="propertiesResponse" class="response-container" style="display:none;">
+                    <div class="response-header">
+                        <div class="response-status">
+                            <span class="status-indicator" id="propertiesStatus"></span>
+                            <span id="propertiesStatusText">Respuesta</span>
+                        </div>
+                        <button class="copy-btn" onclick="copyToClipboard('propertiesData')">📋 Copiar</button>
+                    </div>
+                    <pre id="propertiesData"></pre>
+                </div>
+
+                <div id="propertiesGrid" class="property-grid"></div>
+            </div>
+
+            <div class="endpoint-card">
+                <div class="endpoint-header">
+                    <h3 class="endpoint-title">Obtener Propiedad por ID</h3>
+                    <span class="method-badge">GET</span>
+                </div>
+                <p class="endpoint-description">Consulta los detalles completos de una propiedad específica.</p>
+                
+                <div class="filters-grid">
+                    <div class="filter-group">
+                        <label>ID de Propiedad</label>
+                        <input type="text" id="propertyId" placeholder="Ej: 12345">
+                    </div>
+                </div>
+
+                <button class="btn" onclick="fetchPropertyById()">🔎 Buscar Propiedad</button>
+
+                <div id="propertyByIdResponse" class="response-container" style="display:none;">
+                    <div class="response-header">
+                        <div class="response-status">
+                            <span class="status-indicator" id="propertyByIdStatus"></span>
+                            <span id="propertyByIdStatusText">Respuesta</span>
+                        </div>
+                        <button class="copy-btn" onclick="copyToClipboard('propertyByIdData')">📋 Copiar</button>
+                    </div>
+                    <pre id="propertyByIdData"></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN: BÚSQUEDA AVANZADA -->
+        <div id="busqueda" class="section">
+            <div class="endpoint-card">
+                <div class="endpoint-header">
+                    <h3 class="endpoint-title">Búsqueda Avanzada de Propiedades</h3>
+                    <span class="method-badge">GET</span>
+                </div>
+                <p class="endpoint-description">Filtra propiedades por múltiples criterios: tipo, operación, precio, ubicación, etc.</p>
+                
+                <div class="filters-grid">
+                    <div class="filter-group">
+                        <label>Tipo de Operación</label>
+                        <select id="operationType">
+                            <option value="">Todos</option>
+                            <option value="1">Venta</option>
+                            <option value="2">Alquiler</option>
+                            <option value="3">Alquiler Temporal</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Tipo de Propiedad</label>
+                        <select id="propertyType">
+                            <option value="">Todos</option>
+                            <option value="1">Casa</option>
+                            <option value="2">Departamento</option>
+                            <option value="3">PH</option>
+                            <option value="4">Terreno</option>
+                            <option value="5">Local</option>
+                            <option value="6">Oficina</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Precio Desde</label>
+                        <input type="number" id="priceFrom" placeholder="0">
+                    </div>
+                    <div class="filter-group">
+                        <label>Precio Hasta</label>
+                        <input type="number" id="priceTo" placeholder="999999999">
+                    </div>
+                    <div class="filter-group">
+                        <label>Moneda</label>
+                        <select id="currency">
+                            <option value="ANY">Cualquiera</option>
+                            <option value="USD">USD</option>
+                            <option value="ARS">ARS</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button class="btn" onclick="searchProperties()">🔍 Buscar Propiedades</button>
+
+                <div id="searchResponse" class="response-container" style="display:none;">
+                    <div class="response-header">
+                        <div class="response-status">
+                            <span class="status-indicator" id="searchStatus"></span>
+                            <span id="searchStatusText">Respuesta</span>
+                        </div>
+                        <button class="copy-btn" onclick="copyToClipboard('searchData')">📋 Copiar</button>
+                    </div>
+                    <pre id="searchData"></pre>
+                </div>
+
+                <div id="searchGrid" class="property-grid"></div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN: EMPRENDIMIENTOS -->
+        <div id="emprendimientos" class="section">
+            <div class="endpoint-card">
+                <div class="endpoint-header">
+                    <h3 class="endpoint-title">Listar Emprendimientos</h3>
+                    <span class="method-badge">GET</span>
+                </div>
+                <p class="endpoint-description">Obtiene todos los emprendimientos/desarrollos inmobiliarios.</p>
+                
+                <button class="btn" onclick="fetchDevelopments()">🏗️ Obtener Emprendimientos</button>
+
+                <div id="developmentsResponse" class="response-container" style="display:none;">
+                    <div class="response-header">
+                        <div class="response-status">
+                            <span class="status-indicator" id="developmentsStatus"></span>
+                            <span id="developmentsStatusText">Respuesta</span>
+                        </div>
+                        <button class="copy-btn" onclick="copyToClipboard('developmentsData')">📋 Copiar</button>
+                    </div>
+                    <pre id="developmentsData"></pre>
+                </div>
+            </div>
+
+            <div class="endpoint-card">
+                <div class="endpoint-header">
+                    <h3 class="endpoint-title">Obtener Emprendimiento por ID</h3>
+                    <span class="method-badge">GET</span>
+                </div>
+                <p class="endpoint-description">Consulta los detalles completos de un emprendimiento específico.</p>
+                
+                <div class="filters-grid">
+                    <div class="filter-group">
+                        <label>ID de Emprendimiento</label>
+                        <input type="text" id="developmentId" placeholder="Ej: 456">
+                    </div>
+                </div>
+
+                <button class="btn" onclick="fetchDevelopmentById()">🔎 Buscar Emprendimiento</button>
+
+                <div id="developmentByIdResponse" class="response-container" style="display:none;">
+                    <div class="response-header">
+                        <div class="response-status">
+                            <span class="status-indicator" id="developmentByIdStatus"></span>
+                            <span id="developmentByIdStatusText">Respuesta</span>
+                        </div>
+                        <button class="copy-btn" onclick="copyToClipboard('developmentByIdData')">📋 Copiar</button>
+                    </div>
+                    <pre id="developmentByIdData"></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN: CONTACTOS/LEADS -->
+        <div id="contactos" class="section">
+            <div class="endpoint-card">
+                <div class="endpoint-header">
+                    <h3 class="endpoint-title">Crear Contacto/Lead</h3>
+                    <span class="method-badge post">POST</span>
+                </div>
+                <p class="endpoint-description">Simula el envío de una consulta/lead desde un portal. Esto es lo que recibirás en tu CRM.</p>
+                
+                <div class="filters-grid">
+                    <div class="filter-group">
+                        <label>Nombre</label>
+                        <input type="text" id="contactName" placeholder="Juan Pérez">
+                    </div>
+                    <div class="filter-group">
+                        <label>Email</label>
+                        <input type="email" id="contactEmail" placeholder="juan@email.com">
+                    </div>
+                    <div class="filter-group">
+                        <label>Teléfono</label>
+                        <input type="text" id="contactPhone" placeholder="+54 11 1234-5678">
+                    </div>
+                    <div class="filter-group">
+                        <label>ID Propiedad</label>
+                        <input type="text" id="contactPropertyId" placeholder="Ej: 12345">
+                    </div>
+                </div>
+
+                <div class="filter-group" style="margin-bottom: 1rem;">
+                    <label>Mensaje/Comentario</label>
+                    <input type="text" id="contactComment" placeholder="Me interesa esta propiedad...">
+                </div>
+
+                <button class="btn" onclick="createContact()">📧 Enviar Contacto</button>
+
+                <div id="contactResponse" class="response-container" style="display:none;">
+                    <div class="response-header">
+                        <div class="response-status">
+                            <span class="status-indicator" id="contactStatus"></span>
+                            <span id="contactStatusText">Respuesta</span>
+                        </div>
+                        <button class="copy-btn" onclick="copyToClipboard('contactData')">📋 Copiar</button>
+                    </div>
+                    <pre id="contactData"></pre>
+                </div>
+            </div>
+
+            <div class="endpoint-card">
+                <div class="endpoint-header">
+                    <h3 class="endpoint-title">Listar Contactos Recibidos</h3>
+                    <span class="method-badge">GET</span>
+                </div>
+                <p class="endpoint-description">Obtiene todos los contactos/leads que han llegado. Esto es lo que sincronizarás a tu CRM.</p>
+                
+                <button class="btn" onclick="fetchContacts()">📥 Obtener Contactos</button>
+
+                <div id="contactsListResponse" class="response-container" style="display:none;">
+                    <div class="response-header">
+                        <div class="response-status">
+                            <span class="status-indicator" id="contactsListStatus"></span>
+                            <span id="contactsListStatusText">Respuesta</span>
+                        </div>
+                        <button class="copy-btn" onclick="copyToClipboard('contactsListData')">📋 Copiar</button>
+                    </div>
+                    <pre id="contactsListData"></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN: UBICACIONES -->
+        <div id="ubicaciones" class="section">
+            <div class="endpoint-card">
+                <div class="endpoint-header">
+                    <h3 class="endpoint-title">Listar Ubicaciones (Países)</h3>
+                    <span class="method-badge">GET</span>
+                </div>
+                <p class="endpoint-description">Obtiene la lista de países disponibles.</p>
+                
+                <button class="btn" onclick="fetchCountries()">🌎 Obtener Países</button>
+
+                <div id="countriesResponse" class="response-container" style="display:none;">
+                    <div class="response-header">
+                        <div class="response-status">
+                            <span class="status-indicator" id="countriesStatus"></span>
+                            <span id="countriesStatusText">Respuesta</span>
+                        </div>
+                        <button class="copy-btn" onclick="copyToClipboard('countriesData')">📋 Copiar</button>
+                    </div>
+                    <pre id="countriesData"></pre>
+                </div>
+            </div>
+
+            <div class="endpoint-card">
+                <div class="endpoint-header">
+                    <h3 class="endpoint-title">Obtener Ubicación por ID</h3>
+                    <span class="method-badge">GET</span>
+                </div>
+                <p class="endpoint-description">Consulta los detalles de una ubicación específica (provincia, ciudad, barrio).</p>
+                
+                <div class="filters-grid">
+                    <div class="filter-group">
+                        <label>ID de Ubicación</label>
+                        <input type="text" id="locationId" placeholder="Ej: 43660">
+                    </div>
+                </div>
+
+                <button class="btn" onclick="fetchLocationById()">📍 Buscar Ubicación</button>
+
+                <div id="locationResponse" class="response-container" style="display:none;">
+                    <div class="response-header">
+                        <div class="response-status">
+                            <span class="status-indicator" id="locationStatus"></span>
+                            <span id="locationStatusText">Respuesta</span>
+                        </div>
+                        <button class="copy-btn" onclick="copyToClipboard('locationData')">📋 Copiar</button>
+                    </div>
+                    <pre id="locationData"></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN: ESTADÍSTICAS -->
+        <div id="estadisticas" class="section">
+            <h2 style="margin-bottom: 2rem; color: var(--accent-purple);">📊 Resumen de Datos</h2>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value" id="totalProperties">-</div>
+                    <div class="stat-label">Total Propiedades</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="totalDevelopments">-</div>
+                    <div class="stat-label">Total Emprendimientos</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="totalContacts">-</div>
+                    <div class="stat-label">Total Contactos</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="apiCalls">0</div>
+                    <div class="stat-label">Llamadas API Realizadas</div>
+                </div>
+            </div>
+
+            <div class="endpoint-card">
+                <div class="endpoint-header">
+                    <h3 class="endpoint-title">Resumen de Búsqueda</h3>
+                    <span class="method-badge">GET</span>
+                </div>
+                <p class="endpoint-description">Obtiene estadísticas agregadas de propiedades (útil para filtros y contadores).</p>
+                
+                <button class="btn" onclick="fetchSearchSummary()">📊 Obtener Resumen</button>
+
+                <div id="summaryResponse" class="response-container" style="display:none;">
+                    <div class="response-header">
+                        <div class="response-status">
+                            <span class="status-indicator" id="summaryStatus"></span>
+                            <span id="summaryStatusText">Respuesta</span>
+                        </div>
+                        <button class="copy-btn" onclick="copyToClipboard('summaryData')">📋 Copiar</button>
+                    </div>
+                    <pre id="summaryData"></pre>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>🚀 Tokko Broker API Testing Dashboard | Desarrollado para integración con CRM</p>
+            <p style="margin-top: 0.5rem; font-size: 0.85rem;">Todas las llamadas se realizan directamente a la API oficial de Tokko Broker</p>
+        </footer>
+    </div>
+
+    <script>
+        const BASE_URL = 'https://www.tokkobroker.com/api/v1';
+        let apiCallCount = 0;
+
+        function getApiKey() {
+            return document.getElementById('apiKey').value;
+        }
+
+        function incrementApiCalls() {
+            apiCallCount++;
+            document.getElementById('apiCalls').textContent = apiCallCount;
+        }
+
+        function switchTab(tabName) {
+            // Ocultar todas las secciones
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Remover clase active de todos los tabs
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Activar la sección seleccionada
+            document.getElementById(tabName).classList.add('active');
+            
+            // Activar el tab seleccionado
+            event.target.classList.add('active');
+        }
+
+        function showLoading(containerId, statusId, statusTextId) {
+            const container = document.getElementById(containerId);
+            const status = document.getElementById(statusId);
+            const statusText = document.getElementById(statusTextId);
+            
+            container.style.display = 'block';
+            container.innerHTML = `
+                <div class="response-header">
+                    <div class="loading">
+                        <div class="spinner"></div>
+                        <span>Cargando...</span>
+                    </div>
+                </div>
+            `;
+        }
+
+        function displayResponse(containerId, statusId, statusTextId, dataId, data, isSuccess = true) {
+            const container = document.getElementById(containerId);
+            const status = document.getElementById(statusId);
+            const statusText = document.getElementById(statusTextId);
+            const dataElement = document.getElementById(dataId);
+            
+            container.style.display = 'block';
+            
+            if (isSuccess) {
+                status.classList.remove('error');
+                statusText.textContent = 'Éxito - 200 OK';
+            } else {
+                status.classList.add('error');
+                statusText.textContent = 'Error';
+            }
+            
+            dataElement.textContent = JSON.stringify(data, null, 2);
+        }
+
+        function displayProperties(properties, gridId) {
+            const grid = document.getElementById(gridId);
+            grid.innerHTML = '';
+            
+            if (!properties || properties.length === 0) {
+                grid.innerHTML = '<p style="color: var(--text-secondary); text-align: center;">No se encontraron propiedades.</p>';
+                return;
+            }
+
+            properties.forEach(property => {
+                const card = document.createElement('div');
+                card.className = 'property-card';
+                
+                const imageUrl = property.photos && property.photos.length > 0 
+                    ? property.photos[0].image 
+                    : '';
+                
+                const price = property.operations && property.operations.length > 0
+                    ? `${property.operations[0].formatted_amount}`
+                    : 'Consultar';
+                
+                const type = property.type ? property.type.name : 'Propiedad';
+                
+                const location = property.location 
+                    ? `${property.location.name}, ${property.location.state ? property.location.state.name : ''}`
+                    : 'Sin ubicación';
+
+                card.innerHTML = `
+                    ${imageUrl ? `<img src="${imageUrl}" class="property-image" alt="${type}">` : '<div class="property-image"></div>'}
+                    <div class="property-content">
+                        <span class="property-type">${type}</span>
+                        <div class="property-title">${property.address || 'Sin dirección'}</div>
+                        <div class="property-price">${price}</div>
+                        <div class="property-location">📍 ${location}</div>
+                    </div>
+                `;
+                
+                grid.appendChild(card);
+            });
+        }
+
+        async function fetchProperties() {
+            const apiKey = getApiKey();
+            const limit = document.getElementById('limit').value;
+            const offset = document.getElementById('offset').value;
+            
+            showLoading('propertiesResponse', 'propertiesStatus', 'propertiesStatusText');
+            incrementApiCalls();
+
+            try {
+                const response = await fetch(`${BASE_URL}/property/?format=json&key=${apiKey}&lang=es_ar&limit=${limit}&offset=${offset}`);
+                const data = await response.json();
+                
+                displayResponse('propertiesResponse', 'propertiesStatus', 'propertiesStatusText', 'propertiesData', data);
+                
+                if (data.objects) {
+                    displayProperties(data.objects, 'propertiesGrid');
+                    document.getElementById('totalProperties').textContent = data.meta?.total_count || data.objects.length;
+                }
+            } catch (error) {
+                displayResponse('propertiesResponse', 'propertiesStatus', 'propertiesStatusText', 'propertiesData', 
+                    { error: error.message }, false);
+            }
+        }
+
+        async function fetchPropertyById() {
+            const apiKey = getApiKey();
+            const propertyId = document.getElementById('propertyId').value;
+            
+            if (!propertyId) {
+                alert('Por favor ingresa un ID de propiedad');
+                return;
+            }
+
+            showLoading('propertyByIdResponse', 'propertyByIdStatus', 'propertyByIdStatusText');
+            incrementApiCalls();
+
+            try {
+                const response = await fetch(`${BASE_URL}/property/${propertyId}/?format=json&key=${apiKey}&lang=es_ar`);
+                const data = await response.json();
+                
+                displayResponse('propertyByIdResponse', 'propertyByIdStatus', 'propertyByIdStatusText', 'propertyByIdData', data);
+            } catch (error) {
+                displayResponse('propertyByIdResponse', 'propertyByIdStatus', 'propertyByIdStatusText', 'propertyByIdData', 
+                    { error: error.message }, false);
+            }
+        }
+
+        async function searchProperties() {
+            const apiKey = getApiKey();
+            const operationType = document.getElementById('operationType').value;
+            const propertyType = document.getElementById('propertyType').value;
+            const priceFrom = document.getElementById('priceFrom').value || '0';
+            const priceTo = document.getElementById('priceTo').value || '999999999';
+            const currency = document.getElementById('currency').value;
+
+            const searchData = {
+                current_localization_id: 1,
+                current_localization_type: "country",
+                price_from: parseInt(priceFrom),
+                price_to: parseInt(priceTo),
+                operation_types: operationType ? [operationType] : [],
+                property_types: propertyType ? [propertyType] : [],
+                currency: currency,
+                filters: []
+            };
+
+            showLoading('searchResponse', 'searchStatus', 'searchStatusText');
+            incrementApiCalls();
+
+            try {
+                const url = `${BASE_URL}/property/search/?lang=es_ar&key=${apiKey}&data=${encodeURIComponent(JSON.stringify(searchData))}&format=json`;
+                const response = await fetch(url);
+                const data = await response.json();
+                
+                displayResponse('searchResponse', 'searchStatus', 'searchStatusText', 'searchData', data);
+                
+                if (data.objects) {
+                    displayProperties(data.objects, 'searchGrid');
+                }
+            } catch (error) {
+                displayResponse('searchResponse', 'searchStatus', 'searchStatusText', 'searchData', 
+                    { error: error.message }, false);
+            }
+        }
+
+        async function fetchDevelopments() {
+            const apiKey = getApiKey();
+            
+            showLoading('developmentsResponse', 'developmentsStatus', 'developmentsStatusText');
+            incrementApiCalls();
+
+            try {
+                const response = await fetch(`${BASE_URL}/development/?format=json&key=${apiKey}&lang=es_ar`);
+                const data = await response.json();
+                
+                displayResponse('developmentsResponse', 'developmentsStatus', 'developmentsStatusText', 'developmentsData', data);
+                
+                if (data.objects) {
+                    document.getElementById('totalDevelopments').textContent = data.objects.length;
+                }
+            } catch (error) {
+                displayResponse('developmentsResponse', 'developmentsStatus', 'developmentsStatusText', 'developmentsData', 
+                    { error: error.message }, false);
+            }
+        }
+
+        async function fetchDevelopmentById() {
+            const apiKey = getApiKey();
+            const developmentId = document.getElementById('developmentId').value;
+            
+            if (!developmentId) {
+                alert('Por favor ingresa un ID de emprendimiento');
+                return;
+            }
+
+            showLoading('developmentByIdResponse', 'developmentByIdStatus', 'developmentByIdStatusText');
+            incrementApiCalls();
+
+            try {
+                const response = await fetch(`${BASE_URL}/development/${developmentId}/?format=json&key=${apiKey}&lang=es_ar`);
+                const data = await response.json();
+                
+                displayResponse('developmentByIdResponse', 'developmentByIdStatus', 'developmentByIdStatusText', 'developmentByIdData', data);
+            } catch (error) {
+                displayResponse('developmentByIdResponse', 'developmentByIdStatus', 'developmentByIdStatusText', 'developmentByIdData', 
+                    { error: error.message }, false);
+            }
+        }
+
+        async function createContact() {
+            const apiKey = getApiKey();
+            const name = document.getElementById('contactName').value;
+            const email = document.getElementById('contactEmail').value;
+            const phone = document.getElementById('contactPhone').value;
+            const propertyId = document.getElementById('contactPropertyId').value;
+            const comment = document.getElementById('contactComment').value;
+
+            if (!name || !email || !propertyId) {
+                alert('Por favor completa nombre, email y ID de propiedad');
+                return;
+            }
+
+            const contactData = {
+                api_key: apiKey,
+                name: name,
+                mail: email,
+                phone: phone,
+                comment: comment,
+                publication_id: `2_1_${apiKey}_${propertyId}`
+            };
+
+            showLoading('contactResponse', 'contactStatus', 'contactStatusText');
+            incrementApiCalls();
+
+            try {
+                const response = await fetch('https://tokkobroker.com/portals/simple_portal/api/v1/contact/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(contactData)
+                });
+                
+                const data = await response.json();
+                displayResponse('contactResponse', 'contactStatus', 'contactStatusText', 'contactData', data);
+            } catch (error) {
+                displayResponse('contactResponse', 'contactStatus', 'contactStatusText', 'contactData', 
+                    { error: error.message }, false);
+            }
+        }
+
+        async function fetchContacts() {
+            const apiKey = getApiKey();
+            
+            showLoading('contactsListResponse', 'contactsListStatus', 'contactsListStatusText');
+            incrementApiCalls();
+
+            try {
+                const response = await fetch(`${BASE_URL}/contact/?format=json&key=${apiKey}&lang=es_ar`);
+                const data = await response.json();
+                
+                displayResponse('contactsListResponse', 'contactsListStatus', 'contactsListStatusText', 'contactsListData', data);
+                
+                if (data.objects) {
+                    document.getElementById('totalContacts').textContent = data.objects.length;
+                }
+            } catch (error) {
+                displayResponse('contactsListResponse', 'contactsListStatus', 'contactsListStatusText', 'contactsListData', 
+                    { error: error.message }, false);
+            }
+        }
+
+        async function fetchCountries() {
+            const apiKey = getApiKey();
+            
+            showLoading('countriesResponse', 'countriesStatus', 'countriesStatusText');
+            incrementApiCalls();
+
+            try {
+                const response = await fetch(`${BASE_URL}/countries/?format=json&key=${apiKey}&lang=es_ar`);
+                const data = await response.json();
+                
+                displayResponse('countriesResponse', 'countriesStatus', 'countriesStatusText', 'countriesData', data);
+            } catch (error) {
+                displayResponse('countriesResponse', 'countriesStatus', 'countriesStatusText', 'countriesData', 
+                    { error: error.message }, false);
+            }
+        }
+
+        async function fetchLocationById() {
+            const apiKey = getApiKey();
+            const locationId = document.getElementById('locationId').value;
+            
+            if (!locationId) {
+                alert('Por favor ingresa un ID de ubicación');
+                return;
+            }
+
+            showLoading('locationResponse', 'locationStatus', 'locationStatusText');
+            incrementApiCalls();
+
+            try {
+                const response = await fetch(`${BASE_URL}/location/${locationId}/?format=json&key=${apiKey}&lang=es_ar`);
+                const data = await response.json();
+                
+                displayResponse('locationResponse', 'locationStatus', 'locationStatusText', 'locationData', data);
+            } catch (error) {
+                displayResponse('locationResponse', 'locationStatus', 'locationStatusText', 'locationData', 
+                    { error: error.message }, false);
+            }
+        }
+
+        async function fetchSearchSummary() {
+            const apiKey = getApiKey();
+            
+            const searchData = {
+                current_localization_id: 1,
+                current_localization_type: "country",
+                price_from: 0,
+                price_to: 999999999,
+                operation_types: [1, 2],
+                property_types: [],
+                currency: "ANY",
+                filters: []
+            };
+
+            showLoading('summaryResponse', 'summaryStatus', 'summaryStatusText');
+            incrementApiCalls();
+
+            try {
+                const url = `${BASE_URL}/property/get_search_summary/?lang=es_ar&key=${apiKey}&data=${encodeURIComponent(JSON.stringify(searchData))}&format=json`;
+                const response = await fetch(url);
+                const data = await response.json();
+                
+                displayResponse('summaryResponse', 'summaryStatus', 'summaryStatusText', 'summaryData', data);
+            } catch (error) {
+                displayResponse('summaryResponse', 'summaryStatus', 'summaryStatusText', 'summaryData', 
+                    { error: error.message }, false);
+            }
+        }
+
+        function copyToClipboard(elementId) {
+            const element = document.getElementById(elementId);
+            const text = element.textContent;
+            
+            navigator.clipboard.writeText(text).then(() => {
+                alert('¡Copiado al portapapeles!');
+            }).catch(err => {
+                console.error('Error al copiar: ', err);
+            });
+        }
+
+        // Cargar algunas estadísticas al iniciar
+        window.addEventListener('load', () => {
+            console.log('🚀 Dashboard de Tokko Broker API cargado correctamente');
+        });
+    </script>
+</body>
+</html>
