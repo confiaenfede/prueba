@@ -1,715 +1,521 @@
-<!doctype html>
-<html lang="es">
-<head>
-<meta charset="utf-8">
-<title>Tueria — El sistema operativo para inmobiliarias</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="logo.png">
-<meta name="theme-color" content="#0F0E0D">
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Subastas – Unidades 4 y 5 – Guía para el oral</title>
 <style>
-:root{
-  
-  --ink:#0f0e0d; --surface:#ffffff; --surface-2:#f4f4f3; --surface-3:#ececeb;
-  --border:#e6e6e4; --muted:#6b6a67; --faint:#9a9a96;
-  --brand:#1F665F; --brand-deep:#194f4a;
-  --brand-soft:#e7f0ef;
-  --r:10px; --r-lg:16px; --maxw:1240px;
-  
-  --font:'Helvetica Neue',Helvetica,Arial,ui-sans-serif,system-ui,sans-serif;
-  --gutter:24px;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:var(--font);background:var(--surface);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.45;letter-spacing:-0.011em}
-img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
-.u-container{max-width:var(--maxw);margin:0 auto;padding:0 var(--gutter)}
-.sec{padding:clamp(64px,8vw,112px) 0;border-top:1px solid var(--border);scroll-margin-top:80px}
-.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.23,1,.32,1),transform .7s cubic-bezier(.23,1,.32,1)}
-.reveal.in{opacity:1;transform:none}
+:root{--bg:#faf8f4;--fg:#1f2430;--mut:#5b6270;--card:#fff;--bd:#e3ded3;--ac:#8a3b12;--tia-bg:#fff4d6;--tia-bd:#e0b84a;--th:#f1ebdd;--key:#fde9e4}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15171c;--fg:#e8e6e1;--mut:#a3a8b3;--card:#1e2128;--bd:#363a44;--ac:#f0a070;--tia-bg:#34290f;--tia-bd:#a07d1c;--th:#2a2e37;--key:#3b2420}}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);height:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 Georgia,"Times New Roman",serif}
+header,main{max-width:860px;margin:auto;padding:0 16px}
+h1{font-size:1.8rem;margin:24px 0 4px;color:var(--ac)}h1+p{color:var(--mut);margin-top:0}
+nav{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:12px 16px;margin:16px 0}
+nav a{display:inline-block;margin:2px 10px 2px 0;color:var(--ac);font:.85rem system-ui,sans-serif;text-decoration:none}
+section{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:6px 18px 16px;margin:18px 0}
+h2{font-size:1.3rem;color:var(--ac);border-bottom:2px solid var(--bd);padding-bottom:6px}
+h3{font-size:1.02rem;margin:14px 0 4px}
+ul,ol{padding-left:22px}li{margin:3px 0}
+.tw{overflow-x:auto}table{border-collapse:collapse;width:100%;font:.9rem/1.4 system-ui,sans-serif;margin:8px 0}
+th,td{border:1px solid var(--bd);padding:6px 8px;text-align:left;vertical-align:top}th{background:var(--th)}
+.key{background:var(--key);border-left:4px solid var(--ac);padding:8px 12px;border-radius:6px;margin:10px 0}
+.tia{background:var(--tia-bg);border:1px solid var(--tia-bd);border-radius:10px;padding:10px 14px;margin-top:14px}
+.tia b:first-child{display:block;margin-bottom:2px}
+.warn{font:.88rem system-ui,sans-serif;color:var(--mut)}
+@media print{nav{display:none}}
+.doc{border-left:3px solid var(--bd);padding-left:14px}.doc h3,.doc h4{margin:12px 0 4px}</style></head><body>
+<header>
+<h1>⚖️ Subastas – Unidades 4 y 5</h1>
+<p>Guía completa para el oral, con el texto textual al final (tema 22). Al final de cada tema hay un cuadro amarillo con la explicación «para la tía».</p>
+<nav id="nav"></nav>
+</header>
+<main>
 
-.btn{display:inline-flex;align-items:center;gap:8px;font:inherit;font-size:15px;font-weight:500;padding:0 18px;height:44px;border-radius:var(--r);border:1px solid transparent;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
-.btn-ink{background:#1F665F;color:#fff}.btn-ink:hover{background:#194f4a}
-.btn-line{background:transparent;color:var(--ink);border-color:var(--border)}.btn-line:hover{border-color:var(--ink);background:var(--surface-2)}
-.btn-dark{background:var(--ink);color:#fff}.btn-dark:hover{background:#000}
-.btn-sm{height:36px;font-size:14px;padding:0 14px}
+<section id="t1"><h2>1. Subastas en general</h2>
+<p>La subasta es el acto de venta de bienes en el que el <b>martillero</b> recibe ofertas a viva voz y cierra la operación con un <b>golpe de martillo</b>.</p>
+<p>Tres tipos: <b>judicial</b>, <b>Ley 24.441</b> y <b>particular</b>.</p>
+<div class="tia"><b>👵 Para la tía</b>Es como una feria donde alguien (el martillero) ofrece una cosa, la gente va diciendo cuánto paga, y se la lleva el que más ofrece. Cuando dice «¡adjudicado!» y baja el martillo, se cerró el trato.</div></section>
 
-.eyebrow{font-size:clamp(15px,1.5vw,17px);color:var(--muted);font-weight:400}
-.h-title{font-size:clamp(28px,3.6vw,42px);font-weight:500;line-height:1.08;letter-spacing:-0.025em}
-.h-hero{font-size:clamp(40px,6.2vw,76px);font-weight:500;line-height:1.02;letter-spacing:-0.035em}
+<section id="t2"><h2>2. Subasta judicial</h2>
+<p>Venta <b>forzada</b> para pagar una deuda que no se canceló voluntariamente. El <b>juez ordena</b> vender un bien (material o inmaterial) después de dispuesto su <b>embargo</b>. Se fija un <b>precio de salida o base</b> y el bien se adjudica a la <b>mejor oferta económica</b>.</p>
+<p><b>Designación del martillero:</b> por propuesta de una de las partes o por <b>sorteo</b>.</p>
+<div class="tia"><b>👵 Para la tía</b>Alguien debe plata y no paga. El juez dice: «vendamos algo suyo para que se pague». Primero se lo «embarga» (se lo deja anotado para que no lo pueda vender por su cuenta) y después se remata al mejor postor.</div></section>
 
-.hl,.hl.v2{font-weight:700;color:var(--ink);
-  background-image:linear-gradient(rgba(22,163,74,.34),rgba(22,163,74,.34));
-  background-repeat:no-repeat;background-position:0 100%;background-size:100% 46%;
-  border-radius:0;padding:0 .04em;
-  -webkit-box-decoration-break:clone;box-decoration-break:clone}
-.desc{font-size:clamp(15px,1.4vw,18px);color:var(--muted);line-height:1.55}
+<section id="t3"><h2>3. Subasta judicial electrónica y presencial</h2>
+<h3>3.1 Provincia de Buenos Aires: electrónica</h3>
+<p>Ya no se hacen subastas judiciales presenciales; es <b>electrónica</b>. Para intervenir hay que registrarse en la página de la <b>Suprema Corte de Justicia</b>.</p>
+<p><b>Requisitos del martillero:</b></p>
+<ul><li>Estar inscripto como <b>perito judicial</b>.</li><li>Aprobar el curso de la <b>Acordada 2728/91</b>.</li><li>Inscribirse <b>cada un año</b> en el Organismo Contralor (subastas ordinarias).</li><li>Estar al día con los aportes de la <b>Ley 7014</b>.</li><li><b>1 año</b> de antigüedad mínima en la matrícula.</li></ul>
+<h3>3.2 Ciudad de Buenos Aires: presencial</h3>
+<p>Presencial, en la <b>Oficina de Subastas de la SCJN</b>. Requisitos:</p>
+<ul><li>Inscripto como perito.</li><li>Inscripción en <b>septiembre y octubre</b>.</li><li>Matrícula vigente.</li><li><b>1 año</b> de antigüedad en la matrícula (para <b>concursos y quiebras: 5 años</b>).</li></ul>
+<h3>3.3 Cuadro comparativo</h3>
+<div class="tw"><table><tr><th>Aspecto</th><th>Electrónica</th><th>Presencial</th></tr>
+<tr><td>Modalidad y lugar</td><td>Por medios electrónicos.</td><td>En el ámbito de la Oficina de Subastas.</td></tr>
+<tr><td>Exhibición</td><td><b>10 días antes</b> del inicio.</td><td>Hasta <b>24 horas antes</b>.</td></tr>
+<tr><td>Postores</td><td>Inscriptos previamente en el Registro General y anotados en la subasta hasta <b>72 hs antes</b>.</td><td>Cualquier persona con <b>DNI</b>.</td></tr>
+<tr><td>Ofertas y adjudicación</td><td>Por sistema electrónico; al final el sistema emite un informe.</td><td>El martillero recibe ofertas y adjudica al mejor postor (última oferta).</td></tr>
+<tr><td>Edictos</td><td>Se envían a la Oficina de Subastas <b>15 días antes de la exhibición</b>, con fotos y descripción.</td><td>Se publican en los diarios asignados.</td></tr>
+<tr><td>Fecha</td><td>Se <b>acuerda</b> con la Oficina de Subastas.</td><td>La <b>asigna</b> la Oficina de Subastas.</td></tr>
+<tr><td>Cierre y documentación</td><td>Dentro de <b>72 hs</b>, comprador, martillero y acreedor van al Juzgado a firmar el <b>acta de adjudicación</b>.</td><td>Al terminar, el martillero firma el <b>boleto de compraventa</b>.</td></tr></table></div>
+<div class="tia"><b>👵 Para la tía</b>En Provincia es «por internet», como una subasta online: hay que anotarse antes. En Capital es «en persona», va quien quiera con su DNI. Lo que cambia es el lugar, los plazos y el papel que se firma al final.</div></section>
 
-.shead{display:grid;grid-template-columns:1fr;gap:14px;margin-bottom:clamp(40px,5vw,64px)}
-.shead-h{display:grid;grid-template-columns:1.1fr 1fr;gap:24px;align-items:end}
-.shead-h .desc{align-self:end}
-@media(max-width:860px){.shead-h{grid-template-columns:1fr}}
+<section id="t4"><h2>4. Subasta según la Ley 24.441</h2>
+<p>Se realiza de manera <b>presencial</b>, en un <b>salón de remates</b>. El martillero debe estar inscripto como perito. A diferencia de la judicial común, <b>el acreedor contrata y elige</b> al martillero.</p>
+<ul>
+<li>La <b>base</b> es el <b>monto de la deuda</b> (actualizada a la fecha de venta).</li>
+<li>Publicación en el <b>Boletín Oficial</b> y en <b>dos diarios</b> (los elige el martillero).</li>
+<li>El inmueble debe estar <b>desocupado</b>.</li>
+<li>El <b>edicto lo firma el martillero</b> (no pasa por el juzgado, no se confronta). Hasta el edicto, el martillero <b>no hace presentaciones en el expediente</b>.</li>
+<li>Asiste un <b>escribano</b> al acto.</li>
+<li>La fecha se notifica al deudor por <b>cédula o carta documento (CD)</b>.</li>
+<li>Subasta <b>progresiva</b> (las ofertas van aumentando): a la hora sale con la base <b>reducida 25 %</b>; si persiste la falta de postores, sale <b>sin base</b>.</li>
+<li>El martillero entrega el dinero al acreedor; si hay <b>varios acreedores</b>, lo <b>deposita judicialmente</b> (el martillero desconoce las proporciones de cada uno).</li>
+</ul>
+<div class="tia"><b>👵 Para la tía</b>Es una venta de una casa hipotecada donde el banco (o quien prestó) <i>no necesita ir a juicio completo</i>. Contrata a su martillero, la casa tiene que estar vacía, y si nadie ofrece, el precio va bajando.</div></section>
 
-.nav{position:sticky;top:0;z-index:50;background:var(--surface);border-bottom:1px solid var(--border)}
-.nav-in{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:64px}
-.brand{display:flex;align-items:center;gap:9px;font-weight:600;font-size:17px;letter-spacing:-0.02em;justify-self:start}
-.brand .mk{width:26px;height:26px;display:grid;place-items:center}
-.brand .mk img{width:100%;height:100%;object-fit:contain}
-.brand::after{content:".";color:var(--brand)}
-.nav-menu{display:flex;gap:4px;justify-self:center}
-.nav-menu a{color:var(--ink);font-size:14px;font-weight:500;padding:7px 12px;border-radius:8px}.nav-menu a:hover{background:var(--surface-2)}
-.nav-cta{display:flex;align-items:center;gap:8px;justify-self:end}
-.nav-cta .login{font-size:14px;font-weight:500;padding:7px 10px}
-@media(max-width:1000px){.nav-menu{display:none}}
+<section id="t5"><h2>5. Comparación: judicial electrónica vs. Ley 24.441</h2>
+<div class="tw"><table><tr><th>Aspecto</th><th>Judicial electrónica</th><th>Ley 24.441</th></tr>
+<tr><td>Origen</td><td>Ordenada por juez; bien embargado.</td><td>Acreedor contrata al martillero.</td></tr>
+<tr><td>Modalidad</td><td>Electrónica (PBA).</td><td>Presencial, salón de remates.</td></tr>
+<tr><td>Martillero</td><td>Por propuesta de parte o sorteo.</td><td>Lo elige el acreedor.</td></tr>
+<tr><td>Requisitos martillero</td><td>Perito judicial + curso + inscripción anual, etc.</td><td>Inscripto como perito.</td></tr>
+<tr><td>Base</td><td>Precio de salida fijado en el proceso.</td><td>Monto de la deuda.</td></tr>
+<tr><td>Publicidad</td><td>Edicto a la Oficina de Subastas 15 días antes de la exhibición, con fotos.</td><td>Boletín Oficial + 2 diarios; lo firma el martillero.</td></tr>
+<tr><td>Bien</td><td>Exhibición 10 días antes.</td><td>Debe estar desocupado.</td></tr>
+<tr><td>Acto y control</td><td>Sistema electrónico; informe final.</td><td>Presencial, con escribano.</td></tr>
+<tr><td>Notificación</td><td>Juzgado; acta de adjudicación en 72 hs.</td><td>Deudor por cédula o CD.</td></tr>
+<tr><td>Dinero</td><td>Va al proceso judicial.</td><td>Al acreedor; si hay varios, depósito judicial.</td></tr></table></div>
+<div class="tia"><b>👵 Para la tía</b>Judicial = manda el juez y todo pasa por el juzgado. 24.441 = manda el acreedor, es más rápido, pero con reglas muy estrictas (escribano, casa vacía, avisos).</div></section>
 
-.hero{padding:0}
-.hero-grid{display:grid;grid-template-columns:5fr 7fr;min-height:min(86vh,860px)}
-.hero-left{display:flex;flex-direction:column;justify-content:flex-end;gap:28px;padding:clamp(40px,6vw,88px) clamp(28px,4vw,56px) clamp(40px,5vw,64px) 0;border-right:1px solid var(--border)}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:15px;color:var(--muted)}
-.hero-eyebrow svg{width:16px;height:16px}
-.hero-left h1{margin-top:6px}
-.hero-img{position:relative;background:var(--surface-2);overflow:hidden}
-.hero-img>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-/* Mockup de dashboard tipo CRM (placeholder nítido; reemplazable por una captura real) */
-.dashmock{position:absolute;top:clamp(26px,4vw,56px);left:clamp(26px,4vw,56px);right:-44px;bottom:-44px;background:#fff;border:1px solid var(--border);border-top-left-radius:18px;box-shadow:0 40px 80px -42px rgba(0,0,0,.32);display:grid;grid-template-columns:clamp(150px,15vw,196px) 1fr;overflow:hidden}
-.dm-side{background:var(--surface-2);border-right:1px solid var(--border);padding:18px 13px;display:flex;flex-direction:column;gap:3px}
-.dm-brand{display:flex;align-items:center;gap:8px;font-weight:700;font-size:15px;margin-bottom:16px;padding:0 4px}
-.dm-logo{width:24px;height:24px;border-radius:7px;background:var(--ink);color:#fff;display:grid;place-items:center;font-size:12px}
-.dm-nav{display:flex;align-items:center;gap:9px;padding:9px 11px;border-radius:9px;color:var(--muted);font-weight:500;font-size:13px}
-.dm-nav svg{width:16px;height:16px;flex-shrink:0}
-.dm-nav.on{background:#fff;color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.06)}
-.dm-main{padding:18px 20px;display:flex;flex-direction:column;gap:15px;min-width:0}
-.dm-top{display:flex;align-items:center;justify-content:space-between}
-.dm-top b{font-size:18px;letter-spacing:-0.02em}
-.dm-btn{background:#1F665F;color:#fff;font-size:12px;font-weight:600;padding:8px 13px;border-radius:8px}
-.dm-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-.dm-kpi{border:1px solid var(--border);border-radius:11px;padding:11px 12px;display:flex;flex-direction:column;gap:3px}
-.dm-kpi small{font-size:11px;color:var(--muted)}
-.dm-kpi b{font-size:21px;font-weight:600;letter-spacing:-0.02em}
-.dm-kpi i{font-size:11px;color:var(--muted);font-style:normal}
-.dm-kpi i.up{color:var(--brand)}
-.dm-chart{border:1px solid var(--border);border-radius:13px;padding:14px 14px 8px;display:flex;flex-direction:column;gap:10px}
-.dm-chart-h{display:flex;align-items:center;justify-content:space-between}
-.dm-chart-h b{font-size:23px;font-weight:600;letter-spacing:-0.02em}
-.dm-chart-h b small{font-size:11px;font-weight:500;color:var(--brand);margin-left:6px}
-.dm-chart-h span{font-size:11px;color:var(--muted);border:1px solid var(--border);border-radius:7px;padding:4px 9px}
-.dm-chart svg{width:100%;height:auto;display:block}
-.dm-rows{display:flex;flex-direction:column;gap:8px}
-.dm-row{display:flex;align-items:center;justify-content:space-between;border:1px solid var(--border);border-radius:9px;padding:9px 12px;font-size:12.5px}
-.dm-row .tag{font-size:10.5px;font-weight:600;padding:3px 9px;border-radius:6px;background:var(--surface-2);color:var(--muted)}
-.dm-row .tag.done{background:var(--brand-soft);color:var(--brand-deep)}
-.dm-row .tag.sch{background:rgba(31,102,95,.12);color:#1F665F}
-@media(max-width:960px){.dashmock{position:relative;inset:auto;height:100%;min-height:440px;border-radius:0;border:none;box-shadow:none}}
-@media(max-width:560px){.dashmock{grid-template-columns:1fr}.dm-side{display:none}.dm-kpis{grid-template-columns:repeat(2,1fr)}}
+<section id="t6"><h2>6. Constatación del bien</h2>
+<p>Antes de subastar judicialmente, el martillero informa sobre las <b>condiciones físicas</b> y el <b>estado de ocupación</b>. El Juzgado libra un <b>mandamiento de constatación</b> con instrucciones para el martillero y el <b>oficial de justicia</b>.</p>
+<p>Puede autorizar: allanar, forzar cerraduras/puertas/portones/candados con <b>cerrajero</b>, pedir <b>fuerza pública</b>, actuar en <b>días y horas inhábiles</b>, y otras facultades que el juez considere.</p>
+<div class="key">Sin constatación <b>no se puede subastar</b>.</div>
+<p><b>En Ley 24.441:</b> el acreedor contrata un <b>escribano</b> para la constatación e <b>intimación al desalojo</b>. El inmueble tiene que estar desocupado; el escribano emite informe: una copia al martillero y otra al expediente.</p>
+<div class="tia"><b>👵 Para la tía</b>Antes de vender una casa hay que ir a ver cómo está y si vive alguien adentro. Es como cuando vas a vender un auto: primero lo revisás. Sin esa visita oficial, no se vende.</div></section>
 
-.logo-marquee{margin-top:clamp(40px,5vw,64px);overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
-.logo-track{display:flex;width:max-content;will-change:transform;animation:logoscroll 55s linear infinite}
-.logo-marquee:hover .logo-track{animation-play-state:paused}
-.logo-track img,.logo-track .logo-item{flex:0 0 auto;height:34px;width:auto;margin:0 clamp(20px,2.6vw,38px);object-fit:contain;opacity:.55;filter:grayscale(1);transition:opacity .2s,filter .2s}
-.logo-track img:hover,.logo-track .logo-item:hover{opacity:1;filter:grayscale(0)}
-@keyframes logoscroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-@media(prefers-reduced-motion:reduce){.logo-track{animation:none}}
+<section id="t7"><h2>7. Pasos de una subasta judicial</h2>
+<ol><li>Aceptación del cargo por el martillero.</li><li>Constatación del bien.</li><li>Fijación de fecha y hora de exhibición y de subasta.</li><li>Presentación de edictos <b>a confronte</b>.</li><li>Publicación de edictos.</li><li>Exhibición.</li><li>Remate.</li><li>Rendición de cuentas e informe del resultado.</li></ol>
+<div class="tia"><b>👵 Para la tía</b>Receta: acepto el trabajo → voy a ver la casa → pongo fechas → armo el aviso y lo reviso con el juzgado → lo publico → muestro la casa → remato → cuento adónde fue la plata.</div></section>
 
-.fgrid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--border);border-left:1px solid var(--border)}
-.fgrid>div{border-right:1px solid var(--border);border-bottom:1px solid var(--border);padding:var(--gutter)}
-.fgrid .ic{width:48px;height:48px;border-radius:10px;background:var(--surface-2);display:grid;place-items:center;margin-bottom:24px;color:var(--ink)}
-.fgrid h3{font-size:17px;font-weight:500}.fgrid p{font-size:14px;color:var(--muted);line-height:1.5;margin-top:7px}
+<section id="t8"><h2>8. Edicto de subasta</h2>
+<p>Documento con la información más importante del bien. Contiene:</p>
+<ul><li>Datos del Juzgado y del martillero.</li><li>Día, hora y lugar del remate.</li><li>Datos y características del bien.</li><li>Condiciones de venta y base.</li><li>Deudas del bien.</li><li>Estado de ocupación.</li><li>Horario de exhibición.</li></ul>
+<p>En el procedimiento judicial lo <b>suscribe el secretario del Juzgado</b> y se <b>lee antes de comenzar</b> la subasta. En el 24.441 lo firma el martillero. En el edicto y el boleto figuran los datos del <b>escribano</b> ante quien se firmará la escritura y se pagará el saldo (no se puede cambiar).</p>
+<div class="tia"><b>👵 Para la tía</b>Es el «cartel de venta» oficial: dice qué se vende, dónde, cuándo, con qué deudas y cómo verlo. Nadie puede decir después «no sabía».</div></section>
 
-.badges{display:flex;flex-wrap:wrap;gap:0}
-.badge{padding:8px 28px 8px 0;margin-right:28px;border-right:1px solid var(--border)}
-.badge:last-child{border-right:none}
-.badge .ic{color:var(--muted);margin-bottom:10px}
-.badge b{font-size:14px;font-weight:500;line-height:1.3;display:block}
+<section id="t9"><h2>9. Martillero enajenador – Art. 261</h2>
+<p>El juez puede designar como enajenadores a <b>martilleros, bancos, intermediarios o entidades especializadas</b> para vender los activos.</p>
+<p>Martilleros: <b>6 años</b> de antigüedad en la matrícula y <b>casa abierta al público</b>. Los gastos autorizados se deducen según la ley; la <b>comisión la paga el comprador</b>.</p>
+<div class="tia"><b>👵 Para la tía</b>En una quiebra, el juez elige quién vende las cosas. Si es un martillero, tiene que tener experiencia (6 años) y local abierto. Su comisión la paga quien compra.</div></section>
 
-.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gutter);align-items:stretch}
-.plan{border:1px solid var(--border);border-radius:18px;padding:28px 26px;display:flex;flex-direction:column}
-.plan-top{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-.plan h3{font-size:20px;font-weight:500}
-.plan .tag{font-size:12.5px;font-weight:600;padding:4px 11px;border-radius:7px;background:var(--surface-2);color:var(--ink)}
-.plan .tag.green{background:rgba(31,102,95,.16);color:var(--brand-deep)}
-.plan .tag.dark{background:var(--ink);color:#fff}
-.plan .price{font-size:46px;font-weight:600;letter-spacing:-0.03em;margin:20px 0 0;display:flex;align-items:baseline;gap:9px}
-.plan .price span{font-size:14px;font-weight:400;color:var(--muted);letter-spacing:0}
-.plan .price.contact{font-size:16px;font-weight:400;color:var(--muted);margin-top:30px}
-.plan .btn{justify-content:center;width:100%;margin:22px 0 6px}
-.plan .feats-label{font-size:14px;color:var(--muted);margin:20px 0 16px}
-.plan ul{list-style:none;display:flex;flex-direction:column;gap:13px;margin:0;flex:1}
-.plan li{display:flex;gap:10px;font-size:14.5px;color:var(--ink)}.plan li svg{flex-shrink:0;color:var(--muted);margin-top:1px}
+<section id="t10"><h2>10. Venta singular – Art. 208</h2>
+<p>La <b>subasta pública</b> es el método <b>obligatorio</b> para vender bienes de manera singular. El juez ordena publicar edictos en el <b>diario de publicaciones legales</b> y en <b>otro diario de gran circulación</b>.</p>
+<table><tr><th>Bien</th><th>Publicación</th></tr><tr><td>Muebles</td><td>2 a 5 días</td></tr><tr><td>Inmuebles</td><td>5 a 10 días</td></tr></table>
+<p>El juez puede ordenar publicidad adicional o aplicar las pautas del <b>art. 205</b>.</p>
+<div class="tia"><b>👵 Para la tía</b>Si se vende una cosa por separado, sí o sí es por remate público con avisos en dos diarios. Para una casa se avisa más días que para un mueble.</div></section>
 
-.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(36px,5vw,72px);align-items:start}
-.faq-aside{position:sticky;top:96px}
-.faq-aside .emblem-art{width:clamp(96px,9vw,124px);height:auto;color:var(--ink)}
-.faq-aside h2{font-size:clamp(28px,3.2vw,40px);font-weight:500;line-height:1.08;letter-spacing:-0.03em;margin-top:22px}
-.faq-aside p{font-size:clamp(15px,1.4vw,17px);color:var(--muted);margin-top:14px;max-width:30ch}
-@media(max-width:860px){.faq-grid{grid-template-columns:1fr}.faq-aside{position:static}}
-.faq{max-width:760px}
-.faq details{border-bottom:1px solid var(--border)}
-.faq summary{list-style:none;cursor:pointer;font-size:clamp(17px,1.8vw,20px);font-weight:400;padding:22px 0;display:flex;justify-content:space-between;gap:16px}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";color:var(--ink)}
-.faq details[open] summary::after{content:"–"}
-.faq .a{font-size:15px;color:var(--muted);line-height:1.6;padding:0 0 22px;max-width:38rem}
+<section id="t11"><h2>11. Remate no judicial – Art. 210</h2>
+<p>En los juicios de quiebra, la ejecución por remate no judicial se remite al <b>art. 24</b>: las reglas sobre <b>radicación, suspensión y fuero de atracción</b> se rigen por el mecanismo general de la quiebra y la conservación o realización de los bienes del activo desapoderado.</p>
+<div class="tia"><b>👵 Para la tía</b>Si había un remate fuera del juzgado y llega la quiebra, no se maneja por separado: queda bajo las reglas y el juez de la quiebra.</div></section>
 
-.foot{background:var(--ink);color:#fff}
-.foot-top{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:clamp(40px,5vw,64px) 0;border-bottom:1px solid #2a2927;flex-wrap:wrap}
-.foot-top h2{font-size:clamp(24px,3vw,36px);font-weight:500;letter-spacing:-0.02em}
-.foot-top p{color:#a3a29f;font-size:16px;margin-top:8px}
-.foot-nav{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;padding:clamp(40px,5vw,64px) 0}
-.foot-nav h5{font-size:14px;color:#a3a29f;font-weight:500;margin-bottom:14px}
-.foot-nav a{display:block;font-size:14px;color:#e6e6e4;padding:5px 0}.foot-nav a:hover{color:#fff}
-.foot-bottom{display:flex;justify-content:space-between;padding:22px 0;border-top:1px solid #2a2927;font-size:13px;color:#a3a29f;flex-wrap:wrap;gap:10px}
+<section id="t12"><h2>12. Prohibición de compensar el precio – Art. 211 (Ley 24.522)</h2>
+<ul><li><b>Regla:</b> si un acreedor compra un bien en la quiebra, <b>no puede compensar</b> el precio con lo que el fallido le debe.</li>
+<li><b>Excepción:</b> sí puede si su crédito tiene <b>garantía real sobre ese mismo bien</b> (hipoteca o prenda).</li>
+<li><b>Requisito:</b> debe dar antes una <b>fianza de acreedor de mejor derecho</b>, antes de la transferencia.</li></ul>
+<div class="tia"><b>👵 Para la tía</b>Si el fallido te debe plata y querés comprarle algo en la quiebra, igual tenés que pagar con dinero, no «descontando» tu deuda. Salvo que tu deuda esté garantizada justo con esa casa; ahí sí, pero dejando una garantía por si aparece otro con mejor derecho.</div></section>
 
-.pipe-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,5vw,72px);align-items:center}
-.pipe-panel{background:rgba(31,102,95,.11);border-radius:20px;padding:clamp(18px,2.6vw,30px)}
-.pipe-panel>img{display:block;width:100%;height:auto;border-radius:14px}
-.pipe-feats{display:grid;grid-template-columns:1fr 1fr;gap:30px 28px;margin-top:10px}
-.pipe-feat .ic{color:var(--ink);margin-bottom:12px}
-.pipe-feat h3{font-size:16px;font-weight:500}.pipe-feat p{font-size:14px;color:var(--muted);line-height:1.5;margin-top:6px}
-@media(max-width:900px){.pipe-grid{grid-template-columns:1fr}}
-@media(max-width:520px){.pipe-feats{grid-template-columns:1fr}}
+<section id="t13"><h2>13. Ofertas bajo sobre</h2>
+<ul><li>Se presentan en el Juzgado <b>al menos 2 días antes</b> de la subasta.</li><li>Los sobres se abren <b>al comenzar el remate</b>.</li><li>El secretario los entrega al martillero <b>el día anterior</b>, bajo recibo.</li></ul>
+<div class="tia"><b>👵 Para la tía</b>Para quien no puede ir: deja su oferta escrita en un sobre cerrado. Nadie la ve hasta que empieza el remate y se abre delante de todos.</div></section>
 
-.divider .u-container{display:grid;justify-items:center;text-align:center;gap:clamp(22px,3vw,30px)}
-.divider h2{font-size:clamp(30px,4.4vw,50px);font-weight:500;line-height:1.08;letter-spacing:-0.03em;max-width:16ch}
-.deyebrow{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.dbadge{width:24px;height:24px;border-radius:7px;background:var(--brand);color:#fff;display:grid;place-items:center}
-.dbadge svg{width:14px;height:14px}
-.divider-checks{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 28px}
-.divider-checks span{display:inline-flex;align-items:center;gap:8px;font-size:15px;color:var(--ink)}
-.divider-checks svg{width:18px;height:18px;color:var(--brand)}
+<section id="t14"><h2>14. Venta directa de bienes</h2>
+<p>El juez puede disponerla, <b>previa vista al síndico</b>, si es útil para el concurso. Casos: venta a una <b>cooperativa de trabajo</b> que continúe la explotación, o cuando la naturaleza de los bienes, su <b>escaso valor</b> o el <b>fracaso de otras formas</b> (remates, licitaciones) la hacen conveniente.</p>
+<ul><li>El juez determina cómo se hace; puede delegar en el síndico, un intermediario o un mercado especializado.</li><li>Requiere <b>aprobación judicial posterior</b> para quedar firme.</li></ul>
+<div class="tia"><b>👵 Para la tía</b>A veces el remate no conviene: la cosa vale poco o ya fracasó. Entonces el juez permite venderla «a dedo» (directo), por ejemplo a los empleados organizados en cooperativa para que sigan trabajando. Pero el juez tiene que aprobar la venta después.</div></section>
 
-.access{border-top:none;padding-top:0}
-.access .u-container{max-width:920px}
-.access-form{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2vw,22px)}
-.access-form .field{display:flex;flex-direction:column;gap:8px}
-.access-form .field.full{grid-column:1 / -1}
-.access-form label{font-size:14px;font-weight:500;color:var(--ink)}
-.access-form label .req{color:var(--brand)}
-.access-form label .opt{color:var(--faint);font-weight:400}
-.access-form input,.access-form textarea{font:inherit;font-size:15px;width:100%;padding:13px 15px;border:1px solid var(--border);border-radius:12px;background:var(--surface);color:var(--ink);transition:border-color .2s,box-shadow .2s}
-.access-form input:focus,.access-form textarea:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-soft)}
-.access-form textarea{resize:vertical;min-height:132px}
-.access-form .btn{grid-column:1 / -1;justify-content:center;height:54px;font-size:16px;margin-top:6px}
-.access-note{text-align:center;font-size:14px;color:var(--faint);margin-top:18px}
-@media(max-width:640px){.access-form{grid-template-columns:1fr}}
+<section id="t15"><h2>15. Bienes invendibles</h2>
+<p>Si no se pudieron vender o fracasó su realización, el juez puede ordenar entregarlos a <b>asociaciones de bien público</b>, previa <b>vista al síndico y al deudor</b> (comunicarles y escuchar su opinión). La resolución es apelable por síndico o deudor si antes presentaron <b>oposición expresa y fundada</b>.</p>
+<div class="tia"><b>👵 Para la tía</b>Si nadie quiere comprar algo, se regala a una entidad de caridad. Antes se pregunta al síndico y al deudor, y si alguno se opone con buenos motivos, puede apelar.</div></section>
 
-.emblem-art{width:clamp(130px,16vw,180px);height:auto;color:var(--ink)}
+<section id="t16"><h2>16. Realización de créditos a favor de la quiebra</h2>
+<p>Según el <b>art. 182</b>. El síndico puede encargar el cobro a <b>bancos oficiales o privados de primera línea</b> o usar métodos habituales de plaza, con <b>garantía suficiente</b> y <b>autorización judicial previa</b>.</p>
+<p>En casos especiales el juez puede autorizar <b>subasta o venta privada</b> de esos créditos, individual o <b>por cartera</b>, con <b>vista al deudor</b> y <b>conformidad del síndico</b>.</p>
+<div class="tia"><b>👵 Para la tía</b>La quiebra también tiene gente que le debe plata. Para cobrarle se puede contratar un banco, o hasta «vender» esas deudas a otro que las cobre, siempre con permiso del juez.</div></section>
 
-.f4-badges{display:flex;align-items:center}
-.f4-card{border-radius:16px;padding:18px;min-height:236px;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
-.f4-card.g{background:rgba(31,102,95,.13)}.f4-card.s{background:var(--surface-2)}
-.f4 h3{font-size:16px;font-weight:500;margin-top:18px}
-.f4 p{font-size:14px;color:var(--muted);line-height:1.5;margin-top:6px}
-.mock{background:#fff;border:1px solid var(--border);border-radius:11px;padding:12px;width:100%}
-.mock .ttl{font-weight:600;font-size:12.5px;margin-bottom:8px;display:flex;align-items:center;gap:7px}
-.mock .row{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);padding:7px 0}
-.mock .row+.row{border-top:1px solid var(--border)}
-.mock .sq{width:20px;height:20px;border-radius:6px;background:var(--surface-2);flex-shrink:0;display:grid;place-items:center;color:var(--ink)}
-.mock .sq.dk{background:var(--ink);color:#fff}
-.mock .sig{font-family:'Segoe Script','Brush Script MT','Comic Sans MS',cursive;font-size:22px;color:var(--ink);line-height:1}
-.mock .pill{font-size:10px;font-weight:600;padding:3px 8px;border-radius:6px;background:var(--surface-2);color:var(--muted);margin-left:auto}
-.mock .mini{font-size:11px;font-weight:600;padding:6px 11px;border-radius:7px;display:inline-block}
-.mock .mini.dk{background:var(--ink);color:#fff}.mock .mini.ln{border:1px solid var(--border);color:var(--ink)}
-.report-grid{display:grid;grid-template-columns:1fr 1.25fr 1fr;gap:clamp(26px,3.5vw,52px);align-items:center}
-.report-col{display:grid;gap:clamp(26px,3.5vw,44px);align-content:center}
-@media(max-width:960px){.report-grid{grid-template-columns:1fr}.report-col{grid-template-columns:1fr 1fr}.report-grid .pipe-panel{order:-1}}
-@media(max-width:560px){.report-col{grid-template-columns:1fr}}
+<section id="t17"><h2>17. Ejecución extrajudicial Ley 24.441 (Financiamiento de la Vivienda y la Construcción)</h2>
+<p><b>Concepto:</b> régimen especial que permite al acreedor hipotecario <b>vender el inmueble por subasta</b> sin tramitar todo el juicio de remate tradicional, con <b>intervención judicial limitada</b>, siempre que se haya <b>pactado expresamente en la escritura</b>. Es un <b>contrato de mutuo</b> con pacto previo.</p>
+<h3>Requisitos</h3>
+<ol><li>Hipoteca válida.</li><li>Mora del deudor.</li><li>Pacto expreso de ejecución extrajudicial en la escritura.</li><li>Intimación de pago.</li><li>Cumplir las formalidades de la ley.</li></ol>
+<h3>Procedimiento</h3>
+<ol><li><b>Mora:</b> opera automáticamente al vencimiento.</li>
+<li><b>Intimación de pago:</b> para que regularice antes de avanzar.</li>
+<li><b>Preparación:</b> se designa martillero; constatación, certificados registrales, edictos, condiciones de venta.</li>
+<li><b>Notificación:</b> deudor, propietario y titulares de derechos reales, <b>fehacientemente, mín. 7 días hábiles</b> antes.</li>
+<li><b>Remate:</b> lo hace el martillero, <b>sin juez</b>.</li></ol>
+<h3>Pasos clave</h3>
+<ul><li>Base = deuda actualizada.</li><li>Edictos: ubicación, superficie, estado de deudas, día y hora.</li><li>Perfeccionamiento: pago del precio + entrega del inmueble (tradición).</li><li>Rendición: liquidar la deuda, cubrir gastos (<b>máx. 3 % del crédito</b>) y depositar el remanente a disposición del deudor.</li></ul>
+<h3>Datos de la clase (apuntes)</h3>
+<ul>
+<li>El <b>acreedor elige</b> al iniciar la acción: 24.441 o método tradicional. <b>Una vez elegido no puede cambiarlo</b>.</li>
+<li>Con la <b>carta de trabajo</b> del martillero, el acreedor contrata un escribano para constatar e intimar el desalojo.</li>
+<li>La subasta es <b>presencial</b> (la única que sigue así), en un salón de remates dentro del <b>radio del juzgado</b> de la ejecución; no hace falta la Oficina de Subastas.</li>
+<li>El escribano labra el <b>acta</b> y transcribe el <b>boleto de compraventa</b>; suele ser el mismo que hace la escritura traslativa de dominio.</li>
+<li>La fecha de subasta se notifica al <b>acreedor con 10 días</b> de anticipación (al deudor, mín. 7 días hábiles).</li>
+<li>Hay horario de exhibición. Se vende y el martillero percibe la <b>seña del 30 %</b> y los honorarios. Firma el boleto; el escribano está presente. Si hay <b>un solo acreedor</b>, se le entrega el dinero (30 % menos gastos); si hay <b>más de uno</b>, se deposita en la cuenta del expediente.</li>
+<li>El martillero asiste a la <b>firma de escritura</b>: ahí se entrega la <b>tenencia</b>. El saldo se paga ante el escribano.</li>
+<li>Dentro de <b>3 días</b> de la subasta, el martillero informa al acreedor, rinde cuentas con comprobantes e informa quién compró. El acreedor presenta ese informe en el expediente.</li>
+<li>El trabajo del martillero <b>termina con la escritura</b>; el proceso termina cuando se <b>rinden cuentas al acreedor</b>.</li>
+<li><b>Sobreseimiento:</b> el deudor puede recuperar la propiedad en <b>30 días</b> pagando gastos + deuda + honorarios (en la subasta tradicional son <b>5 días</b>).</li>
+<li>Aunque no haya gente, el martillero sube a la tarima, lee el edicto, abre el remate y lo da por <b>fracasado por falta de postores</b>. Si llega alguien, no se vuelve a leer el edicto. Se respetan los horarios.</li></ul>
+<div class="tia"><b>👵 Para la tía</b>Cuando alguien pide plata prestada con la casa en garantía, puede firmar desde el principio que, si no paga, el prestamista venda la casa sin juicio largo. Se le avisa, se avisa a todos los interesados, se remata con escribano presente, y lo que sobra de la deuda se le devuelve al deudor. Y si se arrepiente, tiene 30 días para recuperar la casa pagando todo.</div></section>
 
-.vq-grid{display:grid;grid-template-columns:1fr 1.25fr;gap:clamp(36px,5vw,72px);align-items:center}
-.vq-quote{font-size:clamp(26px,3.4vw,42px);font-weight:500;line-height:1.12;letter-spacing:-0.03em}
-.vq-author{display:flex;align-items:center;gap:12px;margin-top:clamp(24px,3vw,34px)}
-.vq-author img{width:46px;height:46px;border-radius:50%;object-fit:cover}
-.vq-author b{display:block;font-size:15px;font-weight:600}
-.vq-author span{font-size:14px;color:var(--muted)}
-.vq-video{position:relative;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:var(--ink);box-shadow:0 28px 60px -30px rgba(0,0,0,.45)}
-.vq-video iframe,.vq-video video,.vq-video>img{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:cover}
-.vq-play{position:absolute;inset:0;display:grid;place-items:center;cursor:pointer;z-index:2}
-.vq-play span{width:68px;height:68px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center;box-shadow:0 10px 30px -8px rgba(0,0,0,.5)}
-.vq-play svg{width:26px;height:26px;color:var(--ink);margin-left:3px}
-@media(max-width:860px){.vq-grid{grid-template-columns:1fr}}
+<section id="t18"><h2>18. Defensas, liquidación, rendición e impugnación (24.441)</h2>
+<h3>Defensas del deudor</h3>
+<p>La ley <b>limita</b> las defensas. Puede pedir judicialmente suspender si demuestra verosímilmente: a) que <b>no está en mora</b>; b) que <b>no fue intimado</b>; c) que <b>no se pactó</b> la vía extrajudicial; d) <b>vicios graves en la publicidad</b>.</p>
+<h3>Liquidación del crédito</h3>
+<p>El acreedor debe: practicar liquidación, descontar gastos, depositar el remanente si lo hubiera y presentar rendición de cuentas documentada.</p>
+<h3>Rendición de cuentas</h3>
+<p>Dentro de <b>5 días</b> de la subasta, acompañar: precio obtenido, liquidación, gastos, remanente. El juez corre traslado al deudor para impugnar o aceptar.</p>
+<h3>Derecho de impugnación</h3>
+<p>Después del remate, el deudor puede cuestionar: la <b>inexistencia de los presupuestos</b> de la ejecución, la <b>liquidación</b>, y el <b>incumplimiento de requisitos legales</b> por el acreedor.</p>
+<h3>Recuperación del inmueble</h3>
+<p>Dentro de <b>30 días</b> posteriores, abonando al adquirente el precio de la subasta más el porcentaje legal.</p>
+<div class="tia"><b>👵 Para la tía</b>El deudor casi no puede frenar la venta: solo si prueba que no debía, que no lo avisaron, que no firmó ese sistema o que el aviso estaba mal hecho. Después de vender, el acreedor muestra las cuentas y el deudor puede decir «esto está mal».</div></section>
 
-.firmashow{text-align:center}
-.fs-layout{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(24px,3.5vw,52px);align-items:center;max-width:1160px;margin:0 auto;text-align:left}
-.fs-layout .fs-stage{margin:0;max-width:none;min-height:520px}
-.fs-right{display:flex;flex-direction:column;gap:clamp(26px,3vw,40px)}
-.fs-cards{display:grid;grid-template-columns:1fr 1fr;gap:var(--gutter)}
-.fs-head{max-width:660px;margin:0 auto clamp(40px,5vw,60px)}
-.fs-squig{display:block;width:42px;height:auto;margin:0 auto 16px;color:var(--ink)}
-.fs-head h2{font-size:clamp(30px,4.4vw,50px);font-weight:500;line-height:1.06;letter-spacing:-0.03em}
-.fs-head h2 .hl::after{content:none}
-.fs-head p{font-size:clamp(15px,1.4vw,18px);color:var(--muted);line-height:1.55;margin-top:16px}
-.fs-stage{position:relative;max-width:760px;margin:0 auto;min-height:600px;display:grid;place-items:center}
-.fs-photo{width:min(360px,72%);aspect-ratio:3/3.5;border-radius:22px;overflow:hidden;background:var(--surface-2)}
-.fs-photo>img{width:100%;height:100%;object-fit:cover}
-.fs-pill{position:absolute;background:var(--brand);color:#fff;font-size:13px;font-weight:600;padding:9px 15px;border-radius:999px;display:inline-flex;align-items:center;gap:7px;box-shadow:0 14px 28px -10px rgba(31,102,95,.5);z-index:3}
-.fs-pill svg{width:15px;height:15px}
-.fs-card{position:absolute;background:#fff;border:1px solid var(--border);border-radius:12px;box-shadow:0 20px 44px -20px rgba(0,0,0,.24);padding:14px 16px;width:236px;text-align:left;z-index:3}
-.fs-card .top{display:flex;align-items:center;justify-content:space-between;gap:8px}
-.fs-card .ttl{display:flex;align-items:center;gap:8px;font-size:13.5px;font-weight:600}
-.fs-card .ic{width:24px;height:24px;border-radius:7px;background:var(--brand-soft);color:var(--brand);display:grid;place-items:center}
-.fs-card .ai{font-size:10px;font-weight:700;color:var(--brand);background:var(--brand-soft);padding:3px 7px;border-radius:6px}
-.fs-card .sub{font-size:12px;color:var(--muted);margin-top:9px}
-.fs-chip{position:absolute;background:var(--surface-2);border:1px solid var(--border);border-radius:11px;padding:10px 12px;width:212px;font-size:12px;color:var(--muted);display:flex;gap:8px;align-items:flex-start;text-align:left;z-index:2}
-.fs-chip b{color:var(--ink);font-weight:600}
-.fs-chip svg{width:15px;height:15px;color:var(--brand);flex-shrink:0;margin-top:1px}
-.fs-signers{position:absolute;right:-6px;top:30%;display:flex;flex-direction:column;gap:10px;width:240px;z-index:3}
-.fs-signer{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--border);border-radius:12px;padding:11px 13px;box-shadow:0 14px 30px -16px rgba(0,0,0,.16)}
-.fs-signer.dim{opacity:.45}
-.fs-signer .av{width:30px;height:30px;border-radius:50%;background:var(--surface-2);color:var(--muted);display:grid;place-items:center;font-size:11px;font-weight:700;flex-shrink:0}
-.fs-signer.on .av{background:var(--brand);color:#fff}
-.fs-signer b{font-size:13px}.fs-signer small{display:block;font-size:11px;color:var(--faint)}
+<section id="t19"><h2>19. Judicial vs. extrajudicial (24.441) y consideraciones</h2>
+<div class="tw"><table><tr><th>Aspecto</th><th>Judicial</th><th>Extrajudicial 24.441</th></tr>
+<tr><td>Control judicial</td><td>Permanente</td><td>Limitado</td></tr><tr><td>Trámite</td><td>Más extenso</td><td>Más rápido</td></tr><tr><td>Base legal</td><td>CPCC</td><td>Ley 24.441</td></tr><tr><td>Remate</td><td>Ordenado por el juez</td><td>Ejecutado por acreedor y martillero</td></tr><tr><td>Defensas</td><td>Amplias</td><td>Limitadas</td></tr><tr><td>Costos</td><td>Generalmente mayores</td><td>Generalmente menores</td></tr><tr><td>Recuperar el bien</td><td>5 días</td><td>30 días</td></tr></table></div>
+<h3>Consideraciones legales importantes</h3>
+<ul><li><b>Vivienda única:</b> se cuestiona la constitucionalidad cuando afecta bienes de familia o vivienda única y permanente; hay que analizar la jurisprudencia.</li>
+<li><b>Deudas previas:</b> según la jurisprudencia, el comprador no debe afrontar deudas de impuestos, tasas y contribuciones anteriores a la toma de posesión si el dinero del remate no alcanzó para cubrirlas.</li>
+<li><b>Pacto de partes:</b> si el deudor aceptó voluntariamente la cláusula, suele ser improcedente frenar el remate alegando inconstitucionalidad, salvo vicios graves.</li></ul>
+<p><b>Conclusión:</b> es un procedimiento especial para agilizar el cobro de créditos con garantía hipotecaria, manteniendo controles judiciales mínimos para proteger el derecho de defensa y la legalidad.</p>
+<div class="tia"><b>👵 Para la tía</b>Judicial: lento, con el juez mirando todo, el deudor se defiende más. Extrajudicial: más rápido y barato, pero el deudor tiene menos herramientas. Y ojo: si es la única vivienda de la familia, los jueces miran con lupa.</div></section>
 
-.fs-pill{left:1%;top:34%}
-.fs-c1{left:-2%;top:43%}
-.fs-ch1{left:9%;top:63%}
-.fs-c2{left:2%;top:73%}
-.fs-ch2{left:13%;top:90%}
+<section id="t20"><h2>20. Repaso rápido: no confundir</h2>
+<ul><li><b>Subasta judicial:</b> la ordena el juez; bien embargado.</li><li><b>Electrónica:</b> PBA. <b>Presencial:</b> CABA y 24.441.</li><li><b>24.441:</b> acreedor elige martillero; base = deuda; escribano presente.</li><li><b>Constatación:</b> estado físico y de ocupación; obligatoria.</li><li><b>Edicto:</b> datos esenciales del remate.</li><li><b>Venta singular (208):</b> subasta pública obligatoria.</li><li><b>Venta directa:</b> requiere utilidad + aprobación judicial posterior.</li><li><b>Invendibles:</b> a asociaciones de bien público, con vista previa.</li><li><b>Compensación (211):</b> prohibida, salvo garantía real + fianza.</li><li><b>Plazos:</b> 72 hs (inscripción/acta), 10 días exhibición, 15 días edictos, 7 días hábiles notificación, 30 % seña, 25 % reducción de base, 3 % tope de gastos, 30 días recuperación.</li></ul>
+<p class="warn">Nota: una foto de los apuntes salió borrosa y no pude leerla; si ese tema falta, mandame una foto nítida y lo agrego. La página del art. 50 (créditos hipotecarios para la vivienda) estaba cortada.</p>
+</section>
+<section id="glosario"><h2>21. Glosario y preguntas tipo oral</h2>
+<h3>Glosario</h3>
+<ul><li><b>Martillero:</b> profesional que conduce la subasta y recibe las ofertas.</li><li><b>Base:</b> precio de salida desde el que se empiezan a recibir ofertas.</li><li><b>Embargo:</b> medida judicial que inmoviliza un bien para garantizar el pago de una deuda.</li><li><b>Edicto:</b> aviso público con los datos del remate y del bien.</li><li><b>A confronte:</b> el edicto se presenta al juzgado para ser revisado antes de publicarse.</li><li><b>Constatación:</b> verificación del estado físico y de ocupación del inmueble.</li><li><b>Acta de adjudicación:</b> documento que se firma en el Juzgado tras la subasta electrónica.</li><li><b>Boleto de compraventa:</b> contrato que firma el martillero con el comprador; fija plazos, escribano y saldo.</li><li><b>Escritura traslativa de dominio:</b> documento ante escribano que perfecciona la venta.</li><li><b>Tradición:</b> entrega de la posesión o tenencia del inmueble.</li><li><b>Sobreseimiento:</b> en el apunte, plazo en que el deudor recupera el bien pagando.</li><li><b>Remanente:</b> sobrante del precio una vez pagadas deuda y gastos; se devuelve al deudor.</li><li><b>Síndico:</b> auxiliar del juez en la quiebra.</li><li><b>Fallido:</b> persona o empresa cuya quiebra fue declarada.</li><li><b>Fianza de acreedor de mejor derecho:</b> garantía que da el acreedor que compra y compensa.</li><li><b>Mutuo:</b> contrato de préstamo; el pacto de la 24.441 va en la hipoteca de ese mutuo.</li></ul>
+<h3>Preguntas para practicar</h3>
+<ol><li>¿Qué diferencia hay entre subasta judicial electrónica (PBA) y presencial (CABA)? <i>Lugar, exhibición 10 días vs 24 hs, postores inscriptos vs DNI, acta de adjudicación vs boleto.</i></li>
+<li>¿Quién elige al martillero en cada tipo? <i>Judicial: parte o sorteo. 24.441: el acreedor.</i></li>
+<li>¿Cuáles son los requisitos del martillero en PBA y CABA? <i>Ver tema 3.</i></li>
+<li>¿Por qué es fundamental la constatación? <i>Sin ella no se puede subastar; en la 24.441 el inmueble debe estar desocupado.</i></li>
+<li>¿Qué pasa si no hay postores en la 24.441? <i>A la hora sale con base reducida 25 %; si persiste, sin base.</i></li>
+<li>¿Cuándo puede el acreedor elegir entre 24.441 y la vía tradicional? <i>Al iniciar la acción; después no puede cambiar.</i></li>
+<li>¿Qué defensas tiene el deudor? <i>No mora, no intimado, no pactada la vía, vicios graves en la publicidad.</i></li>
+<li>¿Cómo recupera el deudor el bien? <i>30 días en 24.441 (gastos + deuda + honorarios); 5 días en la judicial.</i></li>
+<li>¿Qué dice el art. 211? <i>Prohíbe compensar el precio, salvo garantía real sobre el bien y fianza previa.</i></li>
+<li>¿Cuándo procede la venta directa? <i>Utilidad para el concurso y aprobación judicial posterior.</i></li>
+<li>¿Qué se hace con bienes invendibles? <i>Se entregan a asociaciones de bien público con vista al síndico y deudor.</i></li>
+<li>¿Quién cobra y cuánto el martillero en la 24.441? <i>Seña del 30 % y honorarios; con un solo acreedor, se le entrega el dinero.</i></li></ol>
+<div class="tia"><b>👵 Para la tía</b>Si te toman el oral, contá siempre en el mismo orden: qué es, quién la ordena, quién la hace, qué se publica, cómo se vende, adónde va la plata y qué puede hacer el deudor.</div></section>
+<section id="textual"><h2>22. TEXTO TEXTUAL – Documento y apuntes completos</h2>
+<p class="warn">A) Resumen Word «RESUMEN DE SUBASTAS – Unidades 4 y 5», copiado exacto del archivo. B) Apuntes impresos (fotos), transcriptos tal cual se leen. [ilegible] marca lo que no se ve.</p>
+<h3>A) Documento Word (textual)</h3>
+<div class="doc"><p><strong>RESUMEN DE SUBASTAS<br />
+UNIDADES 4 Y 5</strong></p>
+<h4 id="subastas-en-general">1. Subastas en general</h3>
+<p>La subasta es el acto de venta de bienes en el que el martillero recibe ofertas a viva voz y cierra la operación con un golpe de martillo.</p>
+<p>Según el material, existen tres tipos de subasta: judicial, Ley 24.441 y particular.</p>
+<h4 id="subasta-judicial">2. Subasta judicial</h3>
+<p>Es un procedimiento de venta forzada que se realiza para pagar una deuda que no fue cancelada voluntariamente. El juez ordena vender un bien material o inmaterial, luego de que se haya dispuesto su embargo. En el procedimiento se establece un precio de salida o base y el bien se adjudica a quien realiza la mejor oferta económica.</p>
+<p>Designación del martillero: puede ser nombrado por propuesta de una de las partes o mediante sorteo.</p>
+<h4 id="subasta-judicial-electrónica-y-presencial">3. Subasta judicial electrónica y presencial</h3>
+<h4 id="provincia-de-buenos-aires-modalidad-electrónica">3.1. Provincia de Buenos Aires: modalidad electrónica</h4>
+<p>El material indica que en la Provincia de Buenos Aires ya no se realizan subastas judiciales presenciales y que el procedimiento se lleva adelante de manera electrónica. Para intervenir, se debe realizar el registro correspondiente en la página de la Suprema Corte de Justicia.</p>
+<p>Requisitos del martillero para actuar en subastas judiciales en la Provincia de Buenos Aires:</p>
+<ul>
+<li><p>Estar inscripto como perito judicial.</p></li>
+<li><p>Aprobar el curso previsto por la Acordada 2728/91.</p></li>
+<li><p>Inscribirse cada un año en el Organismo Contralor, para las subastas ordinarias.</p></li>
+<li><p>Estar al día con los aportes de la Ley 7014.</p></li>
+<li><p>Tener una antigüedad mínima de un año en la matrícula.</p></li>
+</ul>
+<h4 id="ciudad-de-buenos-aires-modalidad-presencial">3.2. Ciudad de Buenos Aires: modalidad presencial</h4>
+<p>En la Ciudad de Buenos Aires, según el material, las subastas se realizan de manera presencial en la Oficina de Subastas de la SCJN.</p>
+<p>Requisitos indicados:</p>
+<ul>
+<li><p>Estar inscripto como perito.</p></li>
+<li><p>Realizar la inscripción durante los meses de septiembre y octubre.</p></li>
+<li><p>Tener la matrícula vigente.</p></li>
+<li><p>Contar con una antigüedad de un año en la matrícula.</p></li>
+<li><p>Para concursos y quiebras, se indica una antigüedad de cinco años.</p></li>
+</ul>
+<h4 id="cuadro-comparativo-subasta-electrónica-y-presencial">3.3. Cuadro comparativo: subasta electrónica y presencial</h4>
+<div class="tw"><table>
 
-/* Los activos aparecen escalonados (pop-in) al entrar y luego flotan en loop */
-.fs-pill,.fs-card,.fs-chip,.fs-signer{opacity:0}
-.fs-pop.in .fs-pill,.fs-pop.in .fs-card,.fs-pop.in .fs-chip,.fs-pop.in .fs-signer{animation:fsPop .55s cubic-bezier(.23,1,.32,1) forwards,fsFloat 6s ease-in-out infinite}
-.fs-pop.in .fs-pill{animation-delay:.05s,.60s}
-.fs-pop.in .fs-c1{animation-delay:.18s,.73s}
-.fs-pop.in .fs-ch1{animation-delay:.31s,.86s}
-.fs-pop.in .fs-c2{animation-delay:.44s,.99s}
-.fs-pop.in .fs-ch2{animation-delay:.57s,1.12s}
-.fs-pop.in .fs-signers .fs-signer:nth-child(1){animation-delay:.34s,.90s}
-.fs-pop.in .fs-signers .fs-signer:nth-child(2){animation-delay:.46s,1.05s}
-.fs-pop.in .fs-signers .fs-signer:nth-child(3){animation-delay:.58s,1.20s}
-@keyframes fsPop{from{opacity:0;transform:translateY(16px) scale(.96)}to{opacity:1;transform:translateY(0) scale(1)}}
-@keyframes fsFloat{0%,100%{transform:scale(1)}50%{transform:scale(1.018)}}
-@media(prefers-reduced-motion:reduce){.fs-pill,.fs-card,.fs-chip,.fs-signer{opacity:1;animation:none}}
+<thead>
+<tr class="header">
+<th><strong>Aspecto</strong></th>
+<th><strong>Electrónica</strong></th>
+<th><strong>Presencial</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Modalidad y lugar</td>
+<td>Se realiza por medios electrónicos.</td>
+<td>Se realiza presencialmente, en el ámbito de la Oficina de Subastas.</td>
+</tr>
+<tr class="even">
+<td>Exhibición del bien</td>
+<td>Se realiza 10 días antes del inicio de la subasta.</td>
+<td>Puede realizarse hasta 24 horas antes de la subasta.</td>
+</tr>
+<tr class="odd">
+<td>Inscripción de postores</td>
+<td>Los postores deben estar inscriptos previamente en el Registro General y anotarse en la subasta específica hasta 72 horas antes de su inicio.</td>
+<td>Puede asistir cualquier persona que tenga DNI.</td>
+</tr>
+<tr class="even">
+<td>Ofertas y adjudicación</td>
+<td>Las ofertas se realizan mediante el sistema electrónico. Al finalizar, el sistema emite un informe.</td>
+<td>El martillero recibe las distintas ofertas y adjudica al mejor postor, es decir, a quien hizo la última oferta.</td>
+</tr>
+<tr class="odd">
+<td>Edictos</td>
+<td>Se envían a la Oficina de Subastas 15 días antes de la exhibición, publicados y con fotografías y descripción del bien.</td>
+<td>Se publican en los diarios asignados.</td>
+</tr>
+<tr class="even">
+<td>Fecha</td>
+<td>La fecha se acuerda con la Oficina de Subastas.</td>
+<td>La fecha la asigna la Oficina de Subastas.</td>
+</tr>
+<tr class="odd">
+<td>Cierre y documentación</td>
+<td>Dentro de las 72 horas posteriores a la finalización, comprador, martillero y acreedor concurren al Juzgado para firmar el acta de adjudicación.</td>
+<td>Al terminar la subasta, el martillero suscribe el boleto de compraventa.</td>
+</tr>
+</tbody>
+</table></div>
+<h4 id="subasta-según-la-ley-24.441">4. Subasta según la Ley 24.441</h3>
+<p>La subasta prevista en la Ley 24.441 se realiza de manera presencial y en un salón de remates. El martillero debe estar inscripto como perito. A diferencia de la subasta judicial común, la contratación y elección del martillero queda a cargo del acreedor.</p>
+<p>Características principales:</p>
+<ul>
+<li><p>El acreedor contrata al martillero.</p></li>
+<li><p>La base de la subasta es el monto de la deuda.</p></li>
+<li><p>La publicación se realiza en el Boletín Oficial y en dos diarios.</p></li>
+<li><p>El inmueble debe encontrarse desocupado.</p></li>
+<li><p>El edicto es firmado por el martillero.</p></li>
+<li><p>Al acto de subasta asiste un escribano.</p></li>
+<li><p>La fecha de la subasta se notifica al deudor mediante cédula o carta documento (CD).</p></li>
+<li><p>La subasta es progresiva: las ofertas van aumentando.</p></li>
+<li><p>El martillero entrega el dinero al acreedor. Si hay varios acreedores, el dinero se deposita judicialmente.</p></li>
+</ul>
+<h4 id="cuadro-comparativo-subasta-judicial-electrónica-y-subasta-ley-24.441">5. Cuadro comparativo: subasta judicial electrónica y subasta Ley 24.441</h3>
+<p>Este cuadro compara las dos modalidades principales desarrolladas en el material: la subasta judicial electrónica de la Provincia de Buenos Aires y la subasta regulada por la Ley 24.441.</p>
+<div class="tw"><table>
 
-@media(max-width:900px){
-  .fs-layout{grid-template-columns:1fr;gap:clamp(32px,6vw,48px)}
-  .fs-layout .fs-stage{min-height:0}
-  .fs-stage{display:flex;flex-direction:column;align-items:center;gap:14px;min-height:0}
-  .fs-pill,.fs-card,.fs-chip,.fs-signers{position:static}
-  .fs-card,.fs-chip,.fs-signers{width:100%;max-width:360px}
-}
-@media(max-width:520px){.fs-cards{grid-template-columns:1fr}}
-
-.tst-wrap{position:relative}
-.tst-track{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 24px)/2);gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;-ms-overflow-style:none;scrollbar-width:none;padding:2px 0}
-.tst-track::-webkit-scrollbar{display:none}
-.tcard{scroll-snap-align:start;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:clamp(26px,3vw,38px);display:flex;flex-direction:column;gap:22px}
-.tcard .stars{display:flex;gap:3px;color:var(--brand)}
-.tcard blockquote{font-size:clamp(17px,1.7vw,21px);line-height:1.5;font-weight:400;letter-spacing:-0.015em;flex:1}
-.tcard .who2{display:flex;align-items:center;gap:13px}
-.tcard .who2 img{width:50px;height:50px;border-radius:50%;object-fit:cover;flex-shrink:0}
-.tcard .who2 b{display:block;font-size:15px;font-weight:600}
-.tcard .who2 span{font-size:13.5px;color:var(--muted)}
-.tst-nav{display:flex;gap:10px;margin-top:clamp(28px,3.5vw,40px);justify-content:flex-end}
-.tst-nav button{width:46px;height:46px;border-radius:50%;border:1px solid var(--border);background:var(--surface);color:var(--ink);display:grid;place-items:center;cursor:pointer;transition:background .2s,border-color .2s}
-.tst-nav button:hover{border-color:var(--ink);background:var(--surface-2)}
-@media(max-width:760px){.tst-track{grid-auto-columns:88%}}
-
-.steps3{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(28px,3.4vw,56px);padding-top:4px}
-.steps3::before{content:"";position:absolute;top:20px;left:20px;right:8%;height:2px;background:var(--border);z-index:0}
-.step3{position:relative;z-index:1;padding-top:58px;padding-right:18px}
-.step3 .n{position:absolute;top:0;left:0;width:40px;height:40px;border-radius:50%;background:var(--surface);border:1px solid var(--border);display:grid;place-items:center;font-size:15px;font-weight:600;color:var(--ink);transition:background .45s ease,border-color .45s ease,color .45s ease}
-.step3 h3{font-size:19px;font-weight:500;letter-spacing:-0.02em}
-.step3 p{font-size:15px;color:var(--muted);line-height:1.55;margin-top:9px}
-/* Secuencia: los pasos aparecen escalonados y se ponen verdes uno tras otro */
-.steps3.seq{opacity:1;transform:none;transition:none}
-.steps3.seq .step3{opacity:0;transform:translateY(14px);transition:opacity .55s cubic-bezier(.23,1,.32,1),transform .55s cubic-bezier(.23,1,.32,1)}
-.steps3.seq.in .step3{opacity:1;transform:none}
-.steps3.seq.in .step3:nth-child(2){transition-delay:.45s}
-.steps3.seq.in .step3:nth-child(3){transition-delay:.9s}
-.steps3.seq.in .step3 .n{background:#1F665F;border-color:#1F665F;color:#fff}
-.steps3.seq.in .step3:nth-child(2) .n{transition-delay:.45s}
-.steps3.seq.in .step3:nth-child(3) .n{transition-delay:.9s}
-@media(max-width:760px){
-  .steps3{grid-template-columns:1fr;gap:0;padding-top:0}
-  .steps3::before{top:0;bottom:0;left:20px;right:auto;width:2px;height:auto}
-  .step3{padding:0 0 30px 60px;min-height:64px}
-  .step3:last-child{padding-bottom:0}
-}
-
-@media(max-width:960px){
-  .hero-grid{grid-template-columns:1fr}.hero-left{border-right:none;border-bottom:1px solid var(--border);padding-right:0}.hero-img{min-height:420px}
-  .fgrid,.plans{grid-template-columns:1fr}
-  .foot-nav{grid-template-columns:1fr 1fr}
-}
-</style>
-</head>
-<body>
-
-<nav class="nav"><div class="u-container nav-in">
-  <div class="brand"><span class="mk"><img src="logo.png" alt=""></span>Tueria</div>
-  <div class="nav-menu"><a href="#plataforma">Producto</a><a href="#reportes">Reportes</a><a href="#firma">Firma</a><a href="#nosotros">Nosotros</a><a href="#precios">Precios</a></div>
-  <div class="nav-cta"><a class="login" href="#">Ingresar</a><a class="btn btn-ink btn-sm" href="#">Solicitar demo</a></div>
-</div></nav>
-
-<header class="hero"><div class="u-container" style="padding:0"><div class="hero-grid">
-  <div class="hero-left u-container" style="max-width:none">
-    <a class="hero-eyebrow" href="#"><span>Plataforma operativa para inmobiliarias</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-    <h1 class="h-hero">Gestioná tu <span class="hl">Inmobiliaria</span> desde <span class="hl">un solo lugar</span></h1>
-    <p class="desc">Clientes, Tasaciones, Propiedades, Seguimientos, Reportes, Leads, Firma Electrónica mucho mas. La plataforma operativa para inmobiliarias que te invita  crecer sin sumar carga.</p>
-    <div><a class="btn btn-ink" href="#">Solicitar demo</a></div>
-  </div>
-  <div class="hero-img">
-    <div class="dashmock" role="img" aria-label="Panel de gestión de Tueria">
-      <aside class="dm-side">
-        <div class="dm-brand"><span class="dm-logo">T</span>Tueria</div>
-        <span class="dm-nav on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>Dashboard</span>
-        <span class="dm-nav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg>Propiedades</span>
-        <span class="dm-nav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Calendario</span>
-        <span class="dm-nav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Clientes</span>
-        <span class="dm-nav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>Reportes</span>
-      </aside>
-      <main class="dm-main">
-        <div class="dm-top"><b>Dashboard</b><span class="dm-btn">Crear propiedad</span></div>
-        <div class="dm-kpis">
-          <div class="dm-kpi"><small>Clientes activos</small><b>124</b><i class="up">+12% · 30 días</i></div>
-          <div class="dm-kpi"><small>Propiedades</small><b>36</b><i>−3 · 30 días</i></div>
-          <div class="dm-kpi"><small>Operaciones</small><b>79</b><i class="up">+2 · 30 días</i></div>
-          <div class="dm-kpi"><small>Conversión</small><b>18.4%</b><i class="up">+2.1% · 30 días</i></div>
-        </div>
-        <div class="dm-chart">
-          <div class="dm-chart-h"><b>55<small>+12% actividad</small></b><span>12 meses</span></div>
-          <svg viewBox="0 0 320 96">
-            <path d="M0 74 L29 64 L58 68 L87 50 L116 58 L145 40 L174 46 L203 30 L232 42 L261 22 L290 34 L320 18 L320 96 L0 96 Z" fill="rgba(31,102,95,.12)"/>
-            <path d="M0 74 L29 64 L58 68 L87 50 L116 58 L145 40 L174 46 L203 30 L232 42 L261 22 L290 34 L320 18" fill="none" stroke="#1F665F" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <div class="dm-rows">
-          <div class="dm-row"><span>Palma Living Flats · Ethan Miller</span><span class="tag done">Completado</span></div>
-          <div class="dm-row"><span>Riverside Residences · Emma Brown</span><span class="tag sch">Agendado</span></div>
-          <div class="dm-row"><span>One Park Residence · Noah Williams</span><span class="tag">Negociación</span></div>
-        </div>
-      </main>
-    </div>
-  </div>
-</div></div></header>
-
-<section class="sec" id="plataforma"><div class="u-container">
-  <div class="shead"><p class="eyebrow">¿Por qué Tueria?</p>
-    <div class="shead-h" style="align-items:start"><h2 class="h-title">Controla de manera <span class="hl v2">sencilla</span>,<br>todo tu negocio y el de tu equipo<br></h2>
-    <div><p class="desc">En Tueria tenes todo de manera visual y sencilla tu negocio. Al ser multicuenta todo tu equipo nutre la misma plataforma de manera automatica.</p>
-    <p class="desc" style="margin-top:16px">Llevá el control y seguimiento de tus tasaciones, propiedades, reservas y clientes, todo desde un solo lugar de manera facil. Ademas firma documentos sin salir de la plataforma, todo desde un mismo panel.</p>
-     </div></div>
-  </div>
-  <div class="fgrid">
-    <div><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></div><h3>Base de clientes</h3><p>Propietarios, compradores, inquilinos e inversores, con calificación e historial.</p></div>
-    <div><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></div><h3>Tasaciones</h3><p>Embudo de valuaciones: pre-listing → aceptación, con propietario, zona y seguimiento.</p></div>
-    <div><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg></div><h3>Propiedades</h3><p>Ficha y ciclo de vida de cada inmueble: publicación, reserva, conformada y cierre.</p></div>
-    <div><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg></div><h3>Pipeline</h3><p>Oportunidades y reservas por etapa, con un pipeline en tiempo real que se actualiza solo.</p></div>
-    <div><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div><h3>Seguimiento</h3><p>WhatsApp y email automáticos por etapa. Ningún lead se enfría sin querer.</p></div>
-    <div><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><h3>Agenda</h3><p>Día, semana y mes con arrastrar y soltar. Tus visitas y tasaciones siempre a la vista.</p></div>
-    <div><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg></div><h3>Dashboard</h3><p>KPIs, embudo y desglose por estado. Sabé cómo viene el negocio de un vistazo.</p></div>
-    <div><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></svg></div><h3>Multi-agente</h3><p>Cada agente ve y trabaja lo suyo; el admin ve y gestiona todo el equipo.</p></div>
-    <div><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg></div><h3>Mapa colaborativo</h3><p>Con nuestro mapa colaborativo podes encontrar lo que estas necesitando, según operación y zona.</p></div>
-  </div>
+<thead>
+<tr class="header">
+<th><strong>Aspecto</strong></th>
+<th><strong>Subasta judicial electrónica</strong></th>
+<th><strong>Subasta Ley 24.441</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Origen y finalidad</td>
+<td>Es ordenada por un juez para vender un bien embargado y obtener fondos para pagar una deuda impaga.</td>
+<td>Se realiza en el marco de la Ley 24.441; el acreedor contrata al martillero para llevar adelante la venta.</td>
+</tr>
+<tr class="even">
+<td>Modalidad</td>
+<td>Electrónica en la Provincia de Buenos Aires, según el material.</td>
+<td>Presencial, en un salón de remates.</td>
+</tr>
+<tr class="odd">
+<td>Elección del martillero</td>
+<td>Puede ser designado por propuesta de parte o por sorteo.</td>
+<td>Lo contrata y elige el acreedor.</td>
+</tr>
+<tr class="even">
+<td>Intervención del martillero</td>
+<td>Debe cumplir los requisitos de inscripción y capacitación indicados para actuar como perito judicial.</td>
+<td>Debe estar inscripto como perito.</td>
+</tr>
+<tr class="odd">
+<td>Base</td>
+<td>Se fija un precio de salida o base en el procedimiento judicial.</td>
+<td>La base es el monto de la deuda.</td>
+</tr>
+<tr class="even">
+<td>Publicidad</td>
+<td>El edicto se remite a la Oficina de Subastas, publicado y acompañado de fotos y descripción del bien, 15 días antes de la exhibición.</td>
+<td>Se publica en el Boletín Oficial y en dos diarios. El edicto lo firma el martillero.</td>
+</tr>
+<tr class="odd">
+<td>Exhibición / estado del bien</td>
+<td>La exhibición se realiza 10 días antes del inicio de la subasta electrónica.</td>
+<td>El inmueble debe estar desocupado.</td>
+</tr>
+<tr class="even">
+<td>Acto y control</td>
+<td>Se desarrolla mediante el sistema electrónico; al finalizar, el sistema emite un informe.</td>
+<td>Se realiza presencialmente y al acto asiste un escribano.</td>
+</tr>
+<tr class="odd">
+<td>Notificación</td>
+<td>El material describe la intervención del Juzgado y la firma del acta de adjudicación dentro de las 72 horas posteriores al cierre.</td>
+<td>Se notifica al deudor la fecha mediante cédula o carta documento.</td>
+</tr>
+<tr class="even">
+<td>Destino del dinero</td>
+<td>Se aplica al procedimiento judicial para atender el crédito reclamado.</td>
+<td>El martillero entrega el dinero al acreedor; si hay varios, lo deposita judicialmente.</td>
+</tr>
+</tbody>
+</table></div>
+<h4 id="constatación-del-bien">6. Constatación del bien</h3>
+<p>Antes de subastar un bien en el procedimiento judicial, el martillero debe realizar un informe sobre sus condiciones físicas y su estado de ocupación. Para ello, el Juzgado libra un mandamiento de constatación con instrucciones para el martillero y el oficial de justicia.</p>
+<p>El mandamiento puede autorizar al oficial de justicia a allanar el domicilio, forzar cerraduras, puertas, portones o candados con ayuda de un cerrajero, solicitar el auxilio de la fuerza pública y actuar en días y horas inhábiles. El juez también puede otorgar otras facultades que considere necesarias para cumplir la diligencia.</p>
+<p>Dato fundamental: según el material, sin la constatación no se puede realizar la subasta.</p>
+<h4 id="pasos-de-una-subasta-judicial">7. Pasos de una subasta judicial</h3>
+<ol type="1">
+<li><p>Aceptación del cargo por parte del martillero.</p></li>
+<li><p>Constatación del bien.</p></li>
+<li><p>Fijación de la fecha y hora de exhibición y de subasta.</p></li>
+<li><p>Presentación de los edictos a confronte.</p></li>
+<li><p>Publicación de los edictos.</p></li>
+<li><p>Realización de la exhibición.</p></li>
+<li><p>Remate.</p></li>
+<li><p>Rendición de cuentas e informe del resultado de la subasta.</p></li>
+</ol>
+<h4 id="edicto-de-subasta">8. Edicto de subasta</h3>
+<p>El edicto es el documento que reúne la información más importante del bien que se ofrece en subasta. Debe incluir:</p>
+<ul>
+<li><p>Datos del Juzgado interviniente y del martillero.</p></li>
+<li><p>Día, hora y lugar del remate.</p></li>
+<li><p>Datos y características del bien.</p></li>
+<li><p>Condiciones de venta y base.</p></li>
+<li><p>Deudas del bien.</p></li>
+<li><p>Estado de ocupación.</p></li>
+<li><p>Horario de exhibición.</p></li>
+</ul>
+<p>En el procedimiento descripto, el edicto lo suscribe el secretario del Juzgado y debe leerse antes de comenzar la subasta.</p>
+<h4 id="el-martillero-como-enajenador-artículo-261">9. El martillero como enajenador – Artículo 261</h3>
+<p>El juez puede designar como enajenadores a martilleros, bancos, intermediarios o entidades especializadas para vender los activos.</p>
+<p>En el caso de los martilleros, el material señala dos requisitos: seis años de antigüedad en la matrícula y contar con una casa abierta al público. Los gastos autorizados se deducen conforme a la ley y la comisión queda a cargo del comprador.</p>
+<h4 id="venta-singular-artículo-208">10. Venta singular – Artículo 208</h3>
+<p>La subasta pública es el método obligatorio para vender los bienes de manera singular. El juez ordena publicar edictos en el diario de publicaciones legales y en otro diario de gran circulación.</p>
+<p>Plazos de publicación indicados:</p>
+<ul>
+<li><p>Bienes muebles: entre 2 y 5 días.</p></li>
+<li><p>Bienes inmuebles: entre 5 y 10 días.</p></li>
+</ul>
+<p>El juez puede disponer medidas adicionales de publicidad o aplicar, cuando corresponda, las pautas generales del artículo 205 de la misma ley.</p>
+<h4 id="ejecución-por-remate-no-judicial-artículo-210">11. Ejecución por remate no judicial – Artículo 210</h3>
+<p>El artículo 210 establece que, en los juicios de quiebra, la ejecución por remate no judicial se remite al artículo 24. Según la explicación del material, esto implica que las reglas sobre radicación, suspensión y fuero de atracción de las ejecuciones o remates no judiciales se rigen por el mecanismo general previsto para la quiebra y para la conservación o realización de los bienes del activo desapoderado.</p>
+<h4 id="prohibición-de-compensación-del-precio-artículo-211">12. Prohibición de compensación del precio – Artículo 211</h3>
+<p>El artículo 211 de la Ley de Concursos y Quiebras 24.522 regula la prohibición de compensar el precio en las subastas o liquidaciones.</p>
+<ul>
+<li><p>Regla general: si un acreedor compra un bien en la quiebra, no puede compensar el precio que debe pagar con la deuda que la persona o empresa fallida tiene con él.</p></li>
+<li><p>Excepción: se admite la compensación cuando el crédito del comprador tiene una garantía real sobre ese mismo bien, por ejemplo, hipoteca o prenda.</p></li>
+<li><p>Requisito: en ese caso, el adquirente debe entregar previamente una fianza de acreedor de mejor derecho, antes de que se concrete la transferencia de la propiedad.</p></li>
+</ul>
+<h4 id="ofertas-bajo-sobre">13. Ofertas bajo sobre</h3>
+<p>Las ofertas bajo sobre tienen reglas y plazos específicos:</p>
+<ul>
+<li><p>Deben presentarse en el Juzgado al menos dos días antes de la fecha fijada para la subasta.</p></li>
+<li><p>Los sobres se abren al comenzar el acto del remate.</p></li>
+<li><p>El secretario del Juzgado entrega las ofertas al martillero el día anterior al remate, bajo recibo.</p></li>
+</ul>
+<h4 id="venta-directa-de-bienes">14. Venta directa de bienes</h3>
+<p>El juez puede disponer la venta directa, previa vista al síndico, cuando resulte útil para el concurso. El material contempla especialmente dos supuestos: que la venta se realice a favor de una cooperativa de trabajo que continúe la explotación de la empresa, o que la naturaleza de los bienes, su escaso valor o el fracaso de otras formas de venta hagan conveniente este mecanismo.</p>
+<p>Puntos principales:</p>
+<ul>
+<li><p>Procede cuando existe una utilidad evidente para el concurso por la naturaleza de los bienes, su escaso valor o el fracaso de otros métodos, como remates o licitaciones.</p></li>
+<li><p>Se contempla prioritariamente la venta a una cooperativa de trabajo que continúe la explotación de la empresa quebrada.</p></li>
+<li><p>El juez determina cómo se realiza la operación y puede delegarla en el síndico, un intermediario o un mercado especializado.</p></li>
+<li><p>La venta directa requiere aprobación judicial posterior para quedar firme.</p></li>
+</ul>
+<h4 id="bienes-invendibles">15. Bienes invendibles</h3>
+<p>Cuando los bienes no pudieron venderse o su realización comercial fracasó, el juez puede ordenar que sean entregados a asociaciones de bien público.</p>
+<p>Antes de decidirlo, debe dar vista al síndico y al deudor, es decir, comunicarles la medida y escuchar sus opiniones. La resolución puede ser apelada por el síndico o por el deudor, siempre que previamente hayan presentado una oposición expresa y fundada.</p>
+<h4 id="realización-de-créditos-a-favor-de-la-quiebra">16. Realización de créditos a favor de la quiebra</h3>
+<p>Los créditos a favor de la quiebra deben realizarse de acuerdo con el artículo 182. El síndico puede encargar su cobro a bancos oficiales o privados de primera línea, o utilizar métodos habituales de plaza, siempre con garantía suficiente y autorización judicial previa.</p>
+<p>En circunstancias especiales, el juez puede autorizar la subasta o la venta privada de esos créditos, tanto de manera individual como por cartera. Para ello, se requiere dar vista al deudor y contar con la conformidad del síndico.</p>
+<h4 id="repaso-rápido-conceptos-que-no-hay-que-confundir">17. Repaso rápido: conceptos que no hay que confundir</h3>
+<ul>
+<li><p>Subasta judicial: venta ordenada por un juez para pagar una deuda impaga; el bien se encuentra sujeto a embargo.</p></li>
+<li><p>Subasta electrónica: modalidad utilizada en la Provincia de Buenos Aires, de acuerdo con el material.</p></li>
+<li><p>Subasta presencial: modalidad indicada para la Ciudad de Buenos Aires y para la subasta de la Ley 24.441.</p></li>
+<li><p>Subasta Ley 24.441: el acreedor elige y contrata al martillero; la base es la deuda y participa un escribano.</p></li>
+<li><p>Constatación: informe sobre el estado físico y de ocupación del bien; es necesaria antes de subastar judicialmente.</p></li>
+<li><p>Edicto: informa los datos esenciales del remate y del bien.</p></li>
+<li><p>Venta singular: el artículo 208 establece la subasta pública como método obligatorio.</p></li>
+<li><p>Venta directa: alternativa que requiere utilidad para el concurso y aprobación judicial posterior.</p></li>
+<li><p>Bienes invendibles: pueden entregarse a asociaciones de bien público con intervención previa del síndico y del deudor.</p></li>
+</ul>
+</div>
+<h3>B) Apuntes impresos – Ley 24441 (textual)</h3>
+<div class="doc">
+<h4>Ejecuciones Ley 24.441 – Subasta Extrajudicial</h4>
+<p>La Ley 24.441 de Financiamiento de la Vivienda y la Construcción creó un régimen especial de ejecución hipotecaria extrajudicial, que permite al acreedor ejecutar la garantía hipotecaria sin necesidad de tramitar todo el proceso de remate judicial tradicional, siempre que esa facultad haya sido pactada expresamente en la escritura hipotecaria.</p>
+<h4>Concepto</h4>
+<p>La ejecución extrajudicial es un procedimiento especial mediante el cual el acreedor hipotecario puede vender el inmueble gravado mediante subasta para cobrar su crédito, con una intervención judicial limitada. Se trata de una excepción al sistema ordinario de ejecución judicial.</p>
+<h4>Requisitos para su Procedencia</h4>
+<ol><li>Existencia de una hipoteca válida.</li><li>Mora del deudor.</li><li>Pacto expreso de ejecución extrajudicial incorporado en la escritura hipotecaria.</li><li>Intimación de pago al deudor.</li><li>Cumplimiento de las formalidades previstas en la Ley 24.441.</li></ol>
+<h4>Procedimiento</h4>
+<p><b>1. Mora del Deudor</b><br>La mora se produce por el incumplimiento de las obligaciones garantizadas con la hipoteca. La ley prevé que, cumplidos ciertos requisitos, la mora opera automáticamente al vencimiento.</p>
+<p><b>2. Intimación de Pago</b><br>El acreedor debe intimar al deudor para que regularice la deuda antes de avanzar con la ejecución.</p>
+<p><b>3. Preparación de la Subasta</b><br>Se designa martillero y se realizan las diligencias necesarias:</p>
+<ul><li>Constatación del inmueble.</li><li>Obtención de certificados registrales.</li><li>Publicación de edictos.</li><li>Determinación de condiciones de venta.</li></ul>
+<p><b>4. Notificación de la Subasta</b><br>El deudor, propietario y demás titulares de derechos reales deben ser notificados fehacientemente de la fecha de la subasta con una anticipación mínima de siete días hábiles.</p>
+<p><b>5. Realización del Remate</b><br>El martillero lleva adelante la venta pública del inmueble conforme las condiciones establecidas.</p>
+<h4>Defensas del Deudor</h4>
+<p>La Ley 24.441 limita las defensas que pueden suspender la subasta.</p>
+<p>El ejecutado puede solicitar judicialmente la suspensión cuando demuestre verosímilmente:</p>
+<p>a) Que no está en mora.<br>b) Que no fue intimado de pago.<br>c) Que no se pactó la vía extrajudicial.<br>d) Que existen vicios graves en la publicidad de la subasta.</p>
+<h4>Liquidación del Crédito</h4>
+<p>Realizada la subasta, el acreedor debe:</p>
+<ul><li>Practicar liquidación de la deuda.</li><li>Descontar gastos de ejecución.</li><li>Depositar el remanente si lo hubiera.</li><li>Presentar rendición de cuentas documentada.</li></ul>
+<h4>Rendición de Cuentas</h4>
+<p>Dentro de los cinco días posteriores a la subasta, el acreedor debe acompañar:</p>
+<ul><li>Precio obtenido.</li><li>Liquidación del crédito.</li><li>Gastos efectuados.</li><li>Remanente existente.</li></ul>
+<p>El juez corre traslado al deudor para que pueda impugnar o aceptar la liquidación.</p>
+<h4>Derecho de Impugnación</h4>
+<p>Luego de realizada la subasta, el deudor puede cuestionar judicialmente:</p>
+<ul><li>La inexistencia de los presupuestos que habilitaban la ejecución.</li><li>La liquidación practicada.</li><li>El incumplimiento de los requisitos legales por parte del acreedor.</li></ul>
+<h4>Recuperación del Inmueble</h4>
+<p>La ley reconoce al deudor la posibilidad de recuperar la propiedad dentro de los treinta días posteriores a la ejecución, abonando al adquirente el precio de la subasta más el porcentaje legal correspondiente.</p>
+<h4>Diferencias entre Subasta Judicial y Extrajudicial</h4>
+<div class="tw"><table><tr><th>Aspecto</th><th>Subasta Judicial</th><th>Subasta Extrajudicial Ley 24.441</th></tr><tr><td>Control judicial</td><td>Permanente</td><td>Limitado</td></tr><tr><td>Trámite</td><td>Más extenso</td><td>Más rápido</td></tr><tr><td>Base legal</td><td>CPCC</td><td>Ley 24.441</td></tr><tr><td>Remate</td><td>Ordenado por el juez</td><td>Ejecutado por el acreedor y martillero</td></tr><tr><td>Defensas del deudor</td><td>Amplias</td><td>Limitadas</td></tr><tr><td>Costos</td><td>Generalmente mayores</td><td>Generalmente menores</td></tr></table></div>
+<h4>Conclusión</h4>
+<p>La ejecución hipotecaria extrajudicial prevista en la Ley 24.441 constituye un procedimiento especial destinado a agilizar el cobro de créditos garantizados con hipoteca. Permite la realización de la subasta sin el desarrollo completo de un juicio ejecutivo tradicional, aunque mantiene controles judiciales mínimos para proteger el derecho de defensa y la legalidad del procedimiento.</p>
+<h4>De los créditos hipotecarios para la vivienda</h4>
+<p>ARTICULO 50. — En los créditos hipotecarios para la vivienda otorgados de conformidad con las disposiciones de esta ley, los gastos de escrituración por la [el texto se corta en la foto; ilegible]</p>
+</div>
+<h3>C) Apuntes de clase (textual, según las fotos)</h3>
+<div class="doc">
+<p>En el Boleto de Compraventa y en el edicto también va a figurar cuando se va firmar la escritura, por ante que Escribano, todos sus datos y ahí se va a abonar el saldo del precio. En el Edicto va a figurar todos los datos del escribano. No se va a poder cambiar el Martillero tendrá que asistir a la firma de la escritura porque es cuando se le va entregar la tenencia de la propiedad. Dentro de los tres días de realizada la subasta, el Martillero le va informar al acreedor le va a rendir cuentas de los gastos que hizo, le va a adjuntar los comprobantes de todos los gastos que hizo y lo va a notificar sobre quien resultó comprador. El acreedor está obligado a presentar ese informe en el expediente. El trabajo del Martillero termina cuando firma la escritura. El proceso de subasta va a terminar cuando se le rinden cuentas al acreedor. Otra diferencia con la subasta tradicional es el sobreseimiento. El deudor puede recuperar la propiedad en un plazo de 30 días abonando los gastos que generó, mas la deuda, mas los honorarios y recupera la propiedad. En la subasta tradicional son 5 días para recuperar la propiedad desde el momento en que se realizó la subasta.</p>
+<p>Aunque no haya gente, el Martillero debe subirse a la tarima, leer el edicto, abrir el remate y darlo por fracasado por falta de postores. Si llega alguien no hay que volver a leer el Edicto. Se respetan los horarios. Es una subasta judicial.</p>
+<p>La <b>subasta extrajudicial</b> regulada por el Título V de la <b>Ley 24.441</b> permite a los acreedores ejecutar hipotecas sin intervención judicial directa. Este procedimiento es rápido pero muy estricto, y requiere que ambas partes hayan acordado previamente esta vía de ejecución en el contrato de mutuo.</p>
+<h4>Pasos Clave del Procedimiento</h4>
+<ul><li><b>Base de la subasta:</b> El monto base para el remate es el total de la deuda actualizada a la fecha de la venta.</li><li><b>Notificaciones:</b> El deudor y demás titulares de derechos reales deben ser notificados de forma fehaciente con un mínimo de 7 días hábiles de anticipación al remate.</li><li><b>Publicación de edictos:</b> Deben publicarse anuncios detallando la ubicación del inmueble, superficie, estado de deudas, y el día y hora del acto.</li><li><b>Acto de remate:</b> Se realiza mediante un martillero designado por el acreedor, sin la presencia de un juez.</li><li><b>Perfeccionamiento y posesión:</b> La venta se concreta con el pago del precio estipulado y la entrega del inmueble (tradición).</li><li><b>Rendición de cuentas:</b> Tras la venta, el acreedor debe liquidar la deuda, cubrir los gastos de ejecución (que no pueden superar el 3% del crédito) y depositar el remanente a disposición del deudor. [1]</li></ul>
+<h4>Consideraciones Legales Importantes</h4>
+<p>[...] oficio. El acreedor puede elegir si quiere que la subasta se realice conforme a esta ley o por el método tradicional al momento de iniciar la acción. Una vez que inició la acción, no puede cambiarlo. Si es una ejecución hipotecaria tradicional, no puede elegir hacerla por la ejecución de la Ley 24441.</p>
+<p>Cuando el Martillero firma la carta de trabajo, el acreedor va a contratar un escribano que es el que va a hacer la constatación e intimación al desalojo. Es fundamental en esta ley que el inmueble esté desocupado. Si el inmueble no está desocupado, no se puede subastar. El escribano va a intimar al desalojo una vez que hace la constatación y va a emitir el informe, le va a dar una copia al martillero y la otra va ir al expediente.</p>
+<p>La base ya va a estar determinada por el monto de la deuda. El Martillero va a fijar fecha de remate. Este remate es presencial. Es la única subasta que se sigue haciendo presencial. Vamos a ir a un salón de remate. No vamos a necesitar que la oficina de subastas nos de fecha. Ese salón tiene que estar en el ámbito del radio del juzgado donde se lleva a cabo la ejecución.</p>
+<p>Al remate va a asistir un escribano. El escribano va a labrar el acta donde va a detallar todo lo que acontece en el momento de la subasta y va a transcribir en esa acta el Boleto de Compraventa. Por lo general ese escribano es el mismo escribano que realiza la escritura traslativa de dominio.</p>
+<p>La subasta va a ser progresiva. Salimos con una base y a la hora va a salir con usa base reducida en un 25% y de persistir la falta de postores va a salir automáticamente sin base. El Edicto de subasta es totalmente distinto al otro, no va a ir a confronte. No va a pasar por el juzgado. Lo vamos a confeccionar nosotros y lo vamos a firmar nosotros. Acá se va a publicar en el Boletín Oficial y en dos diarios particulares. Esos diarios los va a elegir el Martillero. Este, hasta el edicto, no hace presentaciones en el expediente.</p>
+<p>La fecha de subasta hay que notificarla al acreedor con 10 días de anticipación</p>
+<p>Una vez que el Martillero notifica al deudor, va a dejar el Edicto, va a armar el Edicto, lo va a firmar y lo va a publicar. Va a hacer horario de exhibición. Va a ir al Acto de Remate. En el Acto de remate va a estar el escribano y el Martillero va a manejar el remate. Se vende. Una vez que se vende el Martillero va a percibir el 30% de seña igual que cualquier remate y los honorarios. Va a firmar el Boleto de Compraventa por subasta Judicial y se va a firmar el acta que hace el escribano. El Escribano va a estar presente en el momento en que el Martillero firma el Boleto y el dinero que le entregan, si hay un solo acreedor, le va a entregar directamente el dinero al acreedor (el 30% descontados los gastos). Si hay mas de un acreedor, va a depositar el dinero en la cuenta del expediente para que el juzgado haga la distribución del dinero porque el Martillero desconoce las proporciones de cada uno. En el Boleto de Compraventa, van a figurar los plazos, va a firmarse la Escritura para perfeccionar la venta.</p>
+<p>Vivienda única: La constitucionalidad de este mecanismo abreviado suele ser cuestionada cuando afecta bienes de familia o viviendas únicas y de uso permanente, debiendo analizarse la jurisprudencia aplicable.</p>
+<p>Deudas previas: Según la jurisprudencia, el comprador en subasta extrajudicial no debe afrontar las deudas por impuestos, tasas y contribuciones anteriores a la toma de posesión si el dinero del remate no alcanzó para cubrirlas.</p>
+<p>Pacto de partes: Si el deudor se sometió voluntariamente a esta cláusula en el contrato, suele ser improcedente intentar frenar el remate alegando inconstitucionalidad salvo vicios graves</p>
+<p class="warn">Nota: el orden de las últimas hojas puede no ser el original de tu impresión. Una foto borrosa no se pudo transcribir.</p>
 </div></section>
-
-<section class="sec" id="ia"><div class="u-container">
-  <div class="shead"><p class="eyebrow" style="text-transform:uppercase;letter-spacing:.08em;font-size:13px">Empezar es simple</p>
-    <div class="shead-h"><h2 class="h-title">Listo en menos de <span class="hl">5 minutos</span></h2>
-    <p class="desc">Sin instalaciones ni curvas de semanas. El tiempo que "perdés" configurándolo lo recuperás la primera semana.</p></div>
-  </div>
-  <div class="steps3 reveal seq">
-    <div class="step3"><div class="n">1</div><h3>Entrá con Google</h3><p>Te registrás con tu cuenta de Google y tu calendario se sincroniza automáticamente. Nada que configurar.</p></div>
-    <div class="step3"><div class="n">2</div><h3>Importá tu base</h3><p>Sincronizas todas tus Propiedades desde Mercadolibre, todo ordenado desde el día uno.</p></div>
-    <div class="step3"><div class="n">3</div><h3>Operá</h3><p>Cargás tus tasaciones, seguís leads, agendás visitas y firma documentos sin salir de la plataforma.</p></div>
-  </div>
-</div></section>
-
-<section class="sec" id="reportes"><div class="u-container">
-  <div class="report-grid">
-    <div class="report-col reveal">
-      <p class="eyebrow" style="text-transform:uppercase;letter-spacing:.08em;font-size:13px;margin-bottom:14px">Actulizacion inmediata </p>
-      <h2 class="h-title" style="margin:0 0 8px">La plataforma se encarga de trabajar <span class="hl">por vos.</span></h2>
-      <div class="pipe-feat"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><h3>Actividad en tiempo real</h3><p>Cada acción del equipo aparece al instante en tu feed, sin recargar.</p></div>
-    </div>
-    <div class="pipe-panel reveal">
-      <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&q=80&auto=format&fit=crop" alt="Reportes y actividad en Tueria">
-    </div>
-    <div class="report-col reveal">
-      <div class="pipe-feat"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4.09 12.11a1 1 0 0 0 .77 1.64H11l-1 8 8.91-10.11a1 1 0 0 0-.77-1.64H13z"/></svg></div><h3>Se registra solo</h3><p>Nada de cargar actividad a mano: el feed se arma con cada movimiento del equipo.</p></div>
-      <div class="pipe-feat"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div><h3>Visibilidad de punta a punta</h3><p>De la primera tasación al cierre, seguís toda la operación sin perseguir a nadie.</p></div>
-    </div>
-  </div>
-</div></section>
-
-<section class="sec firmashow" id="firma"><div class="u-container">
-  <p class="eyebrow reveal" style="text-align:left;margin-bottom:clamp(20px,3vw,36px)">Firma</p>
-  <div class="fs-head reveal">
-    <svg class="fs-squig" viewBox="0 0 48 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 14C9 4 15 4 21 11s12 7 18-5"/></svg>
-    <h2>Cada firma, con <span class="hl v2">evidencia completa</span>.</h2>
-    <p>Verificación de identidad, sello de tiempo y registro de auditoría — respaldando cada documento, sin imprimir nada. Generá el documento desde los datos del cliente, firmá con validez legal (Ley 25.506 y Decreto 182/2019) y archivá — en minutos, no días.</p>
-  </div>
-  <div class="fs-layout reveal fs-pop">
-    <div class="fs-stage">
-    <div class="fs-photo"><img src="https://images.unsplash.com/photo-1730641884128-3b6be2fb33e5?w=900&q=80&auto=format&fit=crop" alt="Firma digital de un documento en una tablet"></div>
-
-    <div class="fs-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Documento enviado</div>
-
-    <div class="fs-card fs-c1">
-      <div class="top"><span class="ttl"><span class="ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M15 8h3M15 12h3M7 16h10"/></svg></span>Verificación de identidad</span><span class="ai">IA</span></div>
-      <div class="sub">DNI + OTP del firmante validados</div>
-    </div>
-
-    <div class="fs-chip fs-ch1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/></svg><span>OTP validado · <b>IP registrada</b></span></div>
-
-    <div class="fs-card fs-c2">
-      <div class="top"><span class="ttl"><span class="ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>Sello de tiempo</span><span class="ai">RFC 3161</span></div>
-      <div class="sub">Timestamp aplicado y certificado</div>
-    </div>
-
-    <div class="fs-chip fs-ch2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/></svg><span>Hash <b>SHA-256</b> · registro de auditoría</span></div>
-
-    <div class="fs-signers">
-      <div class="fs-signer dim"><span class="av">IN</span><div><b>Inmobiliaria</b><small>Emisor · validado</small></div></div>
-      <div class="fs-signer dim"><span class="av">JP</span><div><b>Juan Pérez</b><small>Comprador · OTP enviado</small></div></div>
-      <div class="fs-signer on"><span class="av">MG</span><div><b>María González</b><small>Vendedora · Firmado ✓</small></div></div>
-    </div>
-  </div>
-    <div class="fs-right">
-      <div class="fs-cards">
-        <div class="f4">
-          <div class="f4-card g"><div class="mock">
-            <div class="ttl"><span class="sq dk">T</span>Tueria</div>
-            <div class="row"><span class="sq">🇦🇷</span>Datos alojados en Argentina</div>
-            <div class="row"><span class="sq" style="color:var(--brand)">✓</span>Sello de tiempo RFC 3161</div>
-          </div></div>
-          <h3>Soberanía de datos</h3><p>Tus documentos y datos siempre dentro del país, con validez legal.</p>
-        </div>
-        <div class="f4">
-          <div class="f4-card s"><div class="mock">
-            <div class="ttl">Firmar seleccionados <span class="pill">3</span></div>
-            <div class="row"><span class="sq">✓</span>Reserva — Palermo</div>
-            <div class="row"><span class="sq">✓</span>Autorización — Caballito</div>
-            <div class="row"><span class="mini dk">Firmar 3</span></div>
-          </div></div>
-          <h3>Firma por lote</h3><p>Firmá todos tus documentos de una sola vez, sin repetir pasos.</p>
-        </div>
-      </div>
-      <div class="f4-badges">
-        <div class="badges">
-          <div class="badge"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7z"/><path d="m9 12 2 2 4-4"/></svg></div><b>Datos en<br>Argentina</b></div>
-          <div class="badge"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="5.5"/><path d="M21 2l-9.6 9.6"/></svg></div><b>Hash<br>SHA-256</b></div>
-          <div class="badge"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><b>Sello de tiempo<br>RFC 3161</b></div>
-          <div class="badge"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><b>Permisos<br>granulares</b></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div></section>
-
-<section class="sec" id="testimonios"><div class="u-container">
-  <div class="shead"><p class="eyebrow">Testimonios</p>
-    <div class="shead-h"><h2 class="h-title">Lo que dicen las inmobiliarias<br>que ya trabajan en <span class="hl">piloto automático</span></h2>
-    <p class="desc">Equipos que cambiaron las planillas y el seguimiento manual por una operación que corre sola.</p></div>
-  </div>
-  <div class="tst-wrap reveal">
-    <div class="tst-track" id="tstTrack">
-      <article class="tcard">
-        <div class="stars"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg></div>
-        <blockquote>Tenía todo en planillas porque no quería sumar otro sistema. Con Tueria conecté mis datos e invité al equipo. La IA hizo que no tuviera que aprender un flujo nuevo. Hoy todos ven el pipeline y firmo sin imprimir.</blockquote>
-        <div class="who2"><img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=200&q=80&auto=format&fit=crop" alt=""><div><b>Paula Chávez</b><span>Directora · Paula Chávez Propiedades</span></div></div>
-      </article>
-      <article class="tcard">
-        <div class="stars"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg></div>
-        <blockquote>Antes se me enfriaban leads sin darme cuenta. Ahora el seguimiento por WhatsApp sale solo y yo me dedico a vender. Cerré tres operaciones más este trimestre sin sumar horas.</blockquote>
-        <div class="who2"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80&auto=format&fit=crop" alt=""><div><b>Martín Quiroga</b><span>Asesor · Grupo Sur</span></div></div>
-      </article>
-      <article class="tcard">
-        <div class="stars"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg></div>
-        <blockquote>Firmar una reserva nos llevaba días entre idas y vueltas. Con la firma electrónica y el sello de tiempo lo resolvemos en minutos, con toda la evidencia legal guardada. Un antes y un después.</blockquote>
-        <div class="who2"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80&auto=format&fit=crop" alt=""><div><b>Lucía Bentancur</b><span>Operaciones · Nordelta Propiedades</span></div></div>
-      </article>
-      <article class="tcard">
-        <div class="stars"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg></div>
-        <blockquote>Por primera vez veo en tiempo real qué hace cada asesor y dónde se traba el embudo. Los reportes salen solos cada semana. Tomo decisiones con datos, no con intuición.</blockquote>
-        <div class="who2"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80&auto=format&fit=crop" alt=""><div><b>Diego Almada</b><span>Dueño · Cultura Inmobiliaria</span></div></div>
-      </article>
-    </div>
-    <div class="tst-nav">
-      <button id="tstPrev" aria-label="Anterior"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
-      <button id="tstNext" aria-label="Siguiente"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
-    </div>
-  </div>
-
-  <!-- Logo Tintorero embebido (definido 1 vez, referenciado con <use> en los 20). Para otro cliente: cambiá un <use> por <img src="..." class="logo-item"> o editá este símbolo. -->
-  <svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
-    <symbol id="logoTintorero" viewBox="0 0 560 100">
-      <defs>
-        <pattern id="tHatch" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-          <line x1="0" y1="0" x2="0" y2="5" stroke="#6f6f6f" stroke-width="2"/>
-        </pattern>
-      </defs>
-      <path d="M28 22 H96 M28 22 V82 M28 82 H96" fill="none" stroke="#6f6f6f" stroke-width="2.5"/>
-      <g fill="#6f6f6f">
-        <circle cx="28" cy="22" r="4"/><circle cx="96" cy="22" r="4"/><circle cx="28" cy="82" r="4"/><circle cx="96" cy="82" r="4"/>
-        <rect x="38" y="30" width="48" height="11"/>
-        <rect x="54" y="30" width="14" height="46"/>
-      </g>
-      <rect x="38" y="30" width="15" height="11" fill="url(#tHatch)"/>
-      <text x="112" y="60" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="46" letter-spacing="2" fill="#6f6f6f">TINTORERO</text>
-      <text x="113" y="84" font-family="Arial,Helvetica,sans-serif" font-size="12" letter-spacing="5" fill="#8c8c8c" textLength="286" lengthAdjust="spacing">INTELIGENCIA EN BIENES RAICES</text>
-    </symbol>
-  </svg>
-  <div class="logo-marquee reveal">
-    <div class="logo-track" id="logoTrack">
-      <svg class="logo-item" role="img" aria-label="Tintorero"><use href="#logoTintorero"/></svg>
-      <svg class="logo-item" role="img" aria-label="Tintorero"><use href="#logoTintorero"/></svg>
-      <svg class="logo-item" role="img" aria-label="Tintorero"><use href="#logoTintorero"/></svg>
-      <svg class="logo-item" role="img" aria-label="Tintorero"><use href="#logoTintorero"/></svg>
-      <svg class="logo-item" role="img" aria-label="Tintorero"><use href="#logoTintorero"/></svg>
-      <svg class="logo-item" role="img" aria-label="Tintorero"><use href="#logoTintorero"/></svg>
-      <svg class="logo-item" role="img" aria-label="Tintorero"><use href="#logoTintorero"/></svg>
-      <svg class="logo-item" role="img" aria-label="Tintorero"><use href="#logoTintorero"/></svg>
-      <svg class="logo-item" role="img" aria-label="Tintorero"><use href="#logoTintorero"/></svg>
-      <svg class="logo-item" role="img" aria-label="Tintorero"><use href="#logoTintorero"/></svg>
-      <svg class="logo-item" role="img" aria-label="Tintorero"><use href="#logoTintorero"/></svg>
-      <svg class="logo-item" role="img" aria-label="Tintorero"><use href="#logoTintorero"/></svg>
-      <svg class="logo-item" role="img" aria-label="Tintorero"><use href="#logoTintorero"/></svg>
-      <svg class="logo-item" role="img" aria-label="Tintorero"><use href="#logoTintorero"/></svg>
-      <svg class="logo-item" role="img" aria-label="Tintorero"><use href="#logoTintorero"/></svg>
-      <svg class="logo-item" role="img" aria-label="Tintorero"><use href="#logoTintorero"/></svg>
-      <svg class="logo-item" role="img" aria-label="Tintorero"><use href="#logoTintorero"/></svg>
-      <svg class="logo-item" role="img" aria-label="Tintorero"><use href="#logoTintorero"/></svg>
-      <svg class="logo-item" role="img" aria-label="Tintorero"><use href="#logoTintorero"/></svg>
-      <svg class="logo-item" role="img" aria-label="Tintorero"><use href="#logoTintorero"/></svg>
-    </div>
-  </div>
-</div></section>
-
-<section class="sec" id="nosotros"><div class="u-container">
-  <div class="shead" style="margin-bottom:clamp(28px,3.5vw,44px)"><p class="eyebrow">Nosotros</p></div>
-  <div class="vq-grid">
-  <div class="reveal">
-    <h2 class="vq-quote">Detrás de Tueria hay alguien<br>que <span class="hl">vivió tu día a día</span>.</h2>
-    <p class="desc" style="margin-top:20px;max-width:42ch">Te cuento en un minuto por qué construimos Tueria y cómo te va a ahorrar la parte operativa para que vuelvas a enfocarte en vender.</p>
-  </div>
-  <div class="vq-video reveal">
-    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1400&q=80&auto=format&fit=crop" alt="">
-    <a class="vq-play" href="#" aria-label="Reproducir video"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></a>
-  </div>
-  </div>
-</div></section>
-
-<section class="sec" id="precios"><div class="u-container">
-  <p class="eyebrow reveal" style="margin-bottom:clamp(20px,3vw,36px)">Precios</p>
-  <div class="fs-head reveal" style="text-align:center">
-    <svg class="fs-squig" viewBox="0 0 48 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 14C9 4 15 4 21 11s12 7 18-5"/></svg>
-    <h2>Planes simples,<br>sin <span class="hl">sorpresas</span></h2>
-    <p>14 días gratis · firma incluida en todos los planes.</p>
-  </div>
-  <div class="plans">
-    <article class="plan reveal"><div class="plan-top"><h3>Tueria</h3><span class="tag green">Plan completo</span></div>
-      <div class="price">USD 80<span>/mes</span></div>
-      <a class="btn btn-ink" href="#">Solicitar demo</a>
-      <p class="feats-label">Incluye:</p>
-      <ul><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg>Admin + 1 usuario</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg>CRM + Pipeline ilimitado</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg>Firma electrónica integrada</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg>IA operativa + automatizaciones</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg>Mapa colaborativo · Soporte incluido</li></ul></article>
-    <article class="plan reveal"><div class="plan-top"><h3>Usuario adicional</h3><span class="tag dark">Sumá tu equipo</span></div>
-      <div class="price">USD 15<span>/usuario/mes</span></div>
-      <a class="btn btn-dark" href="#">Agregar usuarios</a>
-      <p class="feats-label">Incluye:</p>
-      <ul><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg>Acceso total a la plataforma</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg>Mismas funciones que el admin</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg>Se suma a tu plan base</li></ul></article>
-    <article class="plan reveal"><div class="plan-top"><h3>Enterprise</h3><span class="tag dark">Equipos grandes</span></div>
-      <div class="price contact">Consultá el precio</div>
-      <a class="btn btn-line" href="#">Hablar con ventas</a>
-      <p class="feats-label">Incluye:</p>
-      <ul><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg>Más de 20 usuarios</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg>Onboarding dedicado</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg>SLA garantizado · Soporte VIP</li></ul></article>
-  </div>
-</div></section>
-
-<section class="sec" id="faq"><div class="u-container faq-grid">
-  <aside class="faq-aside reveal">
-    <svg class="emblem-art" viewBox="0 0 24 30" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M8.5 3.4 7.6 1.4M12 2.6V.6M15.5 3.4l1-2"/>
-      <g transform="translate(0,5)">
-        <path d="m11 17 2 2a1 1 0 1 0 3-3"/>
-        <path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/>
-        <path d="m21 3 1 11h-2"/>
-        <path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/>
-        <path d="M3 4h8"/>
-      </g>
-    </svg>
-    <h2><span class="hl">Más que</span> un CRM,<br>una extensión de tu equipo</h2>
-    <p>Enfocate en lo que de verdad importa.</p>
-  </aside>
-  <div class="reveal">
-  <div class="shead" style="margin-bottom:clamp(28px,3vw,40px)"><p class="eyebrow">Más info</p><h2 class="h-title">Preguntas frecuentes</h2></div>
-  <div class="faq" style="max-width:none">
-    <details open><summary>¿Qué es Tueria?</summary><div class="a">El sistema operativo para inmobiliarias: CRM, firma electrónica, automatizaciones e IA en una sola plataforma. Cubre todo el ciclo, del lead a la firma.</div></details>
-    <details><summary>¿En qué se diferencia de un CRM tradicional?</summary><div class="a">Un CRM clásico es un fichero donde cargás datos a mano. Tueria es la capa operativa: hace el seguimiento, genera los documentos, firma y reporta automáticamente.</div></details>
-    <details><summary>¿La firma tiene validez legal?</summary><div class="a">Sí. Firma electrónica conforme a la Ley 25.506 y Decreto 182/2019, con evidencia completa (DNI + OTP, IP, sello de tiempo RFC 3161 y registro de auditoría). No es firma digital certificada; sirve para autorizaciones, reservas y documentos privados entre partes.</div></details>
-    <details><summary>¿Se integra con mi CRM actual?</summary><div class="a">Sí. Conectás Tokko Broker, KiteProp o 2clics por API key y sincronizás propiedades, contactos y operaciones, sin migrar nada.</div></details>
-    <details><summary>¿Cuánto cuesta?</summary><div class="a">El plan completo (admin + 1 usuario) es USD 80/mes e incluye todo. Cada usuario adicional USD 15/mes. Para más de 20 usuarios, Enterprise a consultar. 14 días gratis.</div></details>
-  </div>
-  </div>
-</div></section>
-
-<section class="sec divider"><div class="u-container reveal">
-  <p class="deyebrow"><span class="dbadge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span>Automatizá con Tueria</p>
-  <h2>Empezá gratis hoy.</h2>
-  <div class="divider-checks">
-    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Probá 14 días</span>
-    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Sin tarjeta</span>
-  </div>
-</div></section>
-
-<section class="sec access" id="acceso"><div class="u-container reveal">
-  <form class="access-form" action="#" method="post" novalidate>
-    <div class="field">
-      <label for="ac-nombre">Nombre <span class="req">*</span></label>
-      <input id="ac-nombre" name="nombre" type="text" autocomplete="name" required>
-    </div>
-    <div class="field">
-      <label for="ac-email">Email <span class="req">*</span></label>
-      <input id="ac-email" name="email" type="email" autocomplete="email" required>
-    </div>
-    <div class="field">
-      <label for="ac-inmo">Inmobiliaria / Agente</label>
-      <input id="ac-inmo" name="inmobiliaria" type="text" autocomplete="organization">
-    </div>
-    <div class="field">
-      <label for="ac-tel">Teléfono <span class="opt">(opcional)</span></label>
-      <input id="ac-tel" name="telefono" type="tel" autocomplete="tel">
-    </div>
-    <div class="field full">
-      <label for="ac-msg">Mensaje <span class="opt">(opcional)</span></label>
-      <textarea id="ac-msg" name="mensaje"></textarea>
-    </div>
-    <button class="btn btn-ink" type="submit">Solicitar acceso</button>
-  </form>
-  <p class="access-note">No compartimos tus datos. Te contactamos solo por el acceso.</p>
-</div></section>
-
-<footer class="foot"><div class="u-container">
-  <nav class="foot-nav">
-    <div><h5>Producto</h5><a href="#plataforma">Plataforma</a><a href="#reportes">Reportes en vivo</a><a href="#firma">Firma electrónica</a><a href="#ia">Cómo empezar</a></div>
-    <div><h5>Empresa</h5><a href="#nosotros">Nosotros</a><a href="#testimonios">Testimonios</a><a href="#precios">Precios</a></div>
-    <div><h5>Recursos</h5><a href="#faq">Preguntas frecuentes</a><a href="#firma">Seguridad</a><a href="#precios">Solicitar demo</a></div>
-    <div><h5>Legal</h5><a href="#">Marco normativo</a><a href="#">Privacidad</a><a href="#">Términos</a></div>
-  </nav>
-  <div class="foot-bottom"><span>© 2026 Tueria · Firma electrónica conforme a la Ley 25.506 y Decreto 182/2019.</span><span>Hecho en Argentina 🇦🇷</span></div>
-</div></footer>
-
+</main>
 <script>
-const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target)}}),{threshold:.08,rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.reveal:not(.seq):not(.fs-pop)').forEach(el=>obs.observe(el));
-
-// Los activos de la firma aparecen y flotan cuando la sección entra bien en pantalla
-const popObs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');popObs.unobserve(e.target)}}),{threshold:0,rootMargin:'0px 0px -22% 0px'});
-document.querySelectorAll('.fs-pop').forEach(el=>popObs.observe(el));
-
-// La línea de tiempo arranca recién cuando su parte superior cruza hacia el centro de la pantalla
-const seqObs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');seqObs.unobserve(e.target)}}),{threshold:0,rootMargin:'0px 0px -38% 0px'});
-document.querySelectorAll('.seq').forEach(el=>seqObs.observe(el));
-
-// Cinta de logos: duplica el contenido para un scroll infinito sin cortes
-(function(){const t=document.getElementById('logoTrack');if(!t)return;const c=t.innerHTML;t.insertAdjacentHTML('beforeend',c);})();
-
-(function(){
-  const track=document.getElementById('tstTrack');
-  if(!track)return;
-  const step=()=>{const c=track.querySelector('.tcard');return c?c.getBoundingClientRect().width+24:track.clientWidth;};
-  const prev=document.getElementById('tstPrev'),next=document.getElementById('tstNext');
-  if(prev)prev.addEventListener('click',()=>track.scrollBy({left:-step(),behavior:'smooth'}));
-  if(next)next.addEventListener('click',()=>track.scrollBy({left:step(),behavior:'smooth'}));
-})();
+var n=document.getElementById('nav');
+document.querySelectorAll('section').forEach(function(s){var a=document.createElement('a');a.href='#'+s.id;a.textContent=s.querySelector('h2').textContent.split(' ')[0].replace('.','')+'·'+s.querySelector('h2').textContent.split(' ').slice(1,3).join(' ');n.appendChild(a)});
 </script>
-</body>
-</html>
+</body></html>
