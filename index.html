@@ -1,1627 +1,214 @@
 <!DOCTYPE html>
-<html lang="es"><head><meta charset="utf-8">
+<html lang="es">
+<head>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Subastas – Unidades 4 y 5 – Guía para el oral</title>
+<title>Resumen de estudio: Martillero y subasta judicial</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Literata:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#faf8f4;--fg:#1f2430;--mut:#5b6270;--card:#fff;--bd:#e3ded3;--ac:#8a3b12;--tia-bg:#fff4d6;--tia-bd:#e0b84a;--th:#f1ebdd;--key:#fde9e4}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15171c;--fg:#e8e6e1;--mut:#a3a8b3;--card:#1e2128;--bd:#363a44;--ac:#f0a070;--tia-bg:#34290f;--tia-bd:#a07d1c;--th:#2a2e37;--key:#3b2420}}
-:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-html{scroll-padding-top:env(safe-area-inset-top,0px);height:100%}
-body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 Georgia,"Times New Roman",serif}
-header,main{max-width:860px;margin:auto;padding:0 16px}
-h1{font-size:1.8rem;margin:24px 0 4px;color:var(--ac)}h1+p{color:var(--mut);margin-top:0}
-nav{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:12px 16px;margin:16px 0}
-nav a{display:inline-block;margin:2px 10px 2px 0;color:var(--ac);font:.85rem system-ui,sans-serif;text-decoration:none}
-section{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:6px 18px 16px;margin:18px 0}
-h2{font-size:1.3rem;color:var(--ac);border-bottom:2px solid var(--bd);padding-bottom:6px}
-h3{font-size:1.02rem;margin:14px 0 4px}
-ul,ol{padding-left:22px}li{margin:3px 0}
-.tw{overflow-x:auto}table{border-collapse:collapse;width:100%;font:.9rem/1.4 system-ui,sans-serif;margin:8px 0}
-th,td{border:1px solid var(--bd);padding:6px 8px;text-align:left;vertical-align:top}th{background:var(--th)}
-.key{background:var(--key);border-left:4px solid var(--ac);padding:8px 12px;border-radius:6px;margin:10px 0}
-.tia{background:var(--tia-bg);border:1px solid var(--tia-bd);border-radius:10px;padding:10px 14px;margin-top:14px}
-.tia b:first-child{display:block;margin-bottom:2px}
-.warn{font:.88rem system-ui,sans-serif;color:var(--mut)}
-@media print{nav{display:none}}
-.doc{border-left:3px solid var(--bd);padding-left:14px}.doc h3,.doc h4{margin:12px 0 4px}.raw{white-space:pre-wrap;word-wrap:break-word;font:.88rem/1.5 Georgia,serif;border-left:3px solid var(--bd);padding-left:14px}</style></head><body>
-<header>
-<h1>⚖️ Subastas – Unidades 4 y 5</h1>
-<p>Guía completa para el oral, con el texto textual al final (temas 29 y 30). Al final de cada tema hay un cuadro amarillo con la explicación «para la tía».</p>
-<nav id="nav"></nav>
-</header>
+:root{--bg:#f4f6f9;--surf:#fff;--ink:#1b2333;--mut:#5a6577;--acc:#1f4a85;--hl:#ffc9e0;--line:#d8dee8;--warn:#fff1c9;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#131925;--surf:#1b2333;--ink:#e8ecf4;--mut:#9aa6ba;--acc:#8fb4ee;--hl:#6b2a4a;--line:#2c3649;--warn:#4a3d14;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#131925;--surf:#1b2333;--ink:#e8ecf4;--mut:#9aa6ba;--acc:#8fb4ee;--hl:#6b2a4a;--line:#2c3649;--warn:#4a3d14;color-scheme:dark}
+html{scroll-padding-top:calc(60px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 Literata,Georgia,serif}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--surf);border-bottom:1px solid var(--line);display:flex;gap:6px;align-items:center;padding:8px 12px;overflow-x:auto}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--surf);z-index:10}
+nav a,nav button{font:600 14px Archivo,Arial,sans-serif;color:var(--acc);text-decoration:none;padding:6px 12px;border:1px solid var(--line);border-radius:999px;white-space:nowrap;background:transparent;cursor:pointer}
+nav button[aria-pressed="true"]{background:var(--acc);color:var(--surf)}
+nav .sp{flex:1}
+main{max-width:760px;margin:0 auto;padding:28px 18px 80px}
+h1{font:800 clamp(28px,6vw,42px)/1.1 Archivo,Arial,sans-serif;margin:0 0 8px}
+.lead{color:var(--mut);margin:0 0 28px}
+h2{font:800 26px/1.2 Archivo,Arial,sans-serif;margin:56px 0 6px;padding-top:18px;border-top:3px solid var(--acc)}
+h3{font:700 19px Archivo,Arial,sans-serif;margin:30px 0 8px;color:var(--acc)}
+dl{margin:0}
+.t{padding:12px 0;border-bottom:1px solid var(--line)}
+dt{font:700 17px Archivo,Arial,sans-serif;margin-bottom:2px}
+dt mark{background:linear-gradient(transparent 35%,var(--hl) 35%);color:inherit;padding:0 3px}
+dd{margin:0}
+ul{margin:6px 0;padding-left:22px}li{margin:3px 0}
+mark{background:linear-gradient(transparent 40%,var(--hl) 40%);color:inherit}
+.box{background:var(--warn);border-radius:8px;padding:12px 16px;margin:14px 0;font-size:15.5px}
+.rev dd{filter:blur(7px);cursor:pointer;user-select:none;transition:filter .2s}
+.rev dd.open{filter:none;user-select:auto}
+.tw{overflow-x:auto;margin:12px 0}
+table{border-collapse:collapse;width:100%;font-size:15.5px;min-width:520px}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--surf);font-family:Archivo,Arial,sans-serif}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:600px){.two{grid-template-columns:1fr}}
+.two>div{background:var(--surf);border:1px solid var(--line);border-radius:8px;padding:4px 16px 12px}
+:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+</style>
+</head>
+<body>
+<nav>
+<a href="#u1">Unidad 1</a><a href="#u2">Unidad 2</a><a href="#u3">Unidad 3</a><a href="#ref">Referencia rápida</a>
+<span class="sp"></span>
+<button id="rv" aria-pressed="false" title="Oculta las definiciones; tocá una para verla">Modo repaso</button>
+</nav>
 <main>
+<h1>Martillero y subasta judicial</h1>
+<p class="lead">Resumen completo de tus apuntes (Unidades 1, 2 y 3). Lo rosa es lo que tenías subrayado. Con <b>Modo repaso</b> se tapan las definiciones y las destapás tocándolas.</p>
 
-<section id="t1"><h2>1. Subastas en general</h2>
-<p>La subasta es el acto de venta de bienes en el que el <b>martillero</b> recibe ofertas a viva voz y cierra la operación con un <b>golpe de martillo</b>.</p>
-<p>Tres tipos: <b>judicial</b>, <b>Ley 24.441</b> y <b>particular</b>.</p>
-<div class="tia"><b>👵 Para la tía</b>Es como una feria donde alguien (el martillero) ofrece una cosa, la gente va diciendo cuánto paga, y se la lleva el que más ofrece. Cuando dice «¡adjudicado!» y baja el martillo, se cerró el trato.</div></section>
+<h2 id="u1">Unidad 1: Rol, notificaciones, subasta y expediente</h2>
 
-<section id="t2"><h2>2. Subasta judicial</h2>
-<p>Venta <b>forzada</b> para pagar una deuda que no se canceló voluntariamente. El <b>juez ordena</b> vender un bien (material o inmaterial) después de dispuesto su <b>embargo</b>. Se fija un <b>precio de salida o base</b> y el bien se adjudica a la <b>mejor oferta económica</b>.</p>
-<p><b>Designación del martillero:</b> por propuesta de una de las partes o por <b>sorteo</b>.</p>
-<div class="tia"><b>👵 Para la tía</b>Alguien debe plata y no paga. El juez dice: «vendamos algo suyo para que se pague». Primero se lo «embarga» (se lo deja anotado para que no lo pueda vender por su cuenta) y después se remata al mejor postor.</div></section>
+<h3>Naturaleza y rol del martillero</h3>
+<dl>
+<div class="t"><dt><mark>Subasta judicial</mark></dt><dd>El martillero es <mark>delegado del juez</mark>, por ende <mark>oficial público</mark>. No actúa en nombre del vendedor ni del acreedor sino del juzgado. <mark>Debe actuar según las instrucciones del juez</mark>, no puede extralimitarse y debe pedirle al magistrado las facultades necesarias.</dd></div>
+<div class="t"><dt><mark>Subasta particular</mark></dt><dd>Actúa como <mark>mandatario o comisionista</mark>, a cargo del comitente.</dd></div>
+<div class="t"><dt>Auxiliar de justicia</dt><dd>En un proceso judicial somos auxiliares de justicia. Se rinde un curso de 4 meses en el colegio departamental para ser perito; con el examen aprobado nos anotamos en las listas de oficio para ser sorteados (desinsaculados). Inscripción en septiembre; se participa desde el año siguiente. Se genera un token de firma digital.</dd></div>
+</dl>
 
-<section id="t3"><h2>3. Subasta judicial electrónica y presencial</h2>
-<h3>3.1 Provincia de Buenos Aires: electrónica</h3>
-<p>Ya no se hacen subastas judiciales presenciales; es <b>electrónica</b>. Para intervenir hay que registrarse en la página de la <b>Suprema Corte de Justicia</b>.</p>
-<p><b>Requisitos del martillero:</b></p>
-<ul><li>Estar inscripto como <b>perito judicial</b>.</li><li>Aprobar el curso de la <b>Acordada 2728/91</b>.</li><li>Inscribirse <b>cada un año</b> en el Organismo Contralor (subastas ordinarias).</li><li>Estar al día con los aportes de la <b>Ley 7014</b>.</li><li><b>1 año</b> de antigüedad mínima en la matrícula.</li></ul>
-<h3>3.2 Ciudad de Buenos Aires: presencial</h3>
-<p>Presencial, en la <b>Oficina de Subastas de la SCJN</b>. Requisitos:</p>
-<ul><li>Inscripto como perito.</li><li>Inscripción en <b>septiembre y octubre</b>.</li><li>Matrícula vigente.</li><li><b>1 año</b> de antigüedad en la matrícula (para <b>concursos y quiebras: 5 años</b>).</li></ul>
-<h3>3.3 Cuadro comparativo</h3>
-<div class="tw"><table><tr><th>Aspecto</th><th>Electrónica</th><th>Presencial</th></tr>
-<tr><td>Modalidad y lugar</td><td>Por medios electrónicos.</td><td>En el ámbito de la Oficina de Subastas.</td></tr>
-<tr><td>Exhibición</td><td><b>10 días antes</b> del inicio.</td><td>Hasta <b>24 horas antes</b>.</td></tr>
-<tr><td>Postores</td><td>Inscriptos previamente en el Registro General y anotados en la subasta hasta <b>72 hs antes</b>.</td><td>Cualquier persona con <b>DNI</b>.</td></tr>
-<tr><td>Ofertas y adjudicación</td><td>Por sistema electrónico; al final el sistema emite un informe.</td><td>El martillero recibe ofertas y adjudica al mejor postor (última oferta).</td></tr>
-<tr><td>Edictos</td><td>Se envían a la Oficina de Subastas <b>15 días antes de la exhibición</b>, con fotos y descripción.</td><td>Se publican en los diarios asignados.</td></tr>
-<tr><td>Fecha</td><td>Se <b>acuerda</b> con la Oficina de Subastas.</td><td>La <b>asigna</b> la Oficina de Subastas.</td></tr>
-<tr><td>Cierre y documentación</td><td>Dentro de <b>72 hs</b>, comprador, martillero y acreedor van al Juzgado a firmar el <b>acta de adjudicación</b>.</td><td>Al terminar, el martillero firma el <b>boleto de compraventa</b>.</td></tr></table></div>
-<div class="tia"><b>👵 Para la tía</b>En Provincia es «por internet», como una subasta online: hay que anotarse antes. En Capital es «en persona», va quien quiera con su DNI. Lo que cambia es el lugar, los plazos y el papel que se firma al final.</div></section>
+<h3>Podemos actuar de 2 maneras</h3>
+<div class="two">
+<div><dl><div class="t"><dt><mark>Particular</mark> (perito consultor de parte)</dt><dd>Tenemos un <b>mandante</b>: respondemos a una sola persona. Trabajamos de forma particular pero debemos estar inscriptos en la lista de oficio. Hay dos partes: actora y demandada. Hacemos un informe y los honorarios los paga quien nos contrató (por ley o acuerdo).</dd></div></dl></div>
+<div><dl><div class="t"><dt><mark>Funcionario</mark> (perito oficial)</dt><dd>Dependemos de las decisiones del juez. Nos designa el juzgado, <b>no dependemos de ninguna parte</b> y debemos actuar de forma <b>imparcial</b>.</dd></div></dl></div>
+</div>
 
-<section id="t4"><h2>4. Subasta según la Ley 24.441</h2>
-<p>Se realiza de manera <b>presencial</b>, en un <b>salón de remates</b>. El martillero debe estar inscripto como perito. A diferencia de la judicial común, <b>el acreedor contrata y elige</b> al martillero.</p>
+<h3>Perito oficial: cómo se trabaja</h3>
 <ul>
-<li>La <b>base</b> es el <b>monto de la deuda</b> (actualizada a la fecha de venta).</li>
-<li>Publicación en el <b>Boletín Oficial</b> y en <b>dos diarios</b> (los elige el martillero).</li>
-<li>El inmueble debe estar <b>desocupado</b>.</li>
-<li>El <b>edicto lo firma el martillero</b> (no pasa por el juzgado, no se confronta). Hasta el edicto, el martillero <b>no hace presentaciones en el expediente</b>.</li>
-<li>Asiste un <b>escribano</b> al acto.</li>
-<li>La fecha se notifica al deudor por <b>cédula o carta documento (CD)</b>.</li>
-<li>Subasta <b>progresiva</b> (las ofertas van aumentando): a la hora sale con la base <b>reducida 25 %</b>; si persiste la falta de postores, sale <b>sin base</b>.</li>
-<li>El martillero entrega el dinero al acreedor; si hay <b>varios acreedores</b>, lo <b>deposita judicialmente</b> (el martillero desconoce las proporciones de cada uno).</li>
+<li>Salimos sorteados y nos informan qué hacer. <b>Solo podemos hacer lo indicado en el expediente</b>; si hacemos algo por fuera, hay que consultarlo con el juzgado.</li>
+<li>El perito oficial <b>convoca a los peritos de parte</b> (demandado y actora) indicando día y hora; el perito de parte tiene que ir obligatoriamente.</li>
+<li>Si no los convocamos, pueden <b>impugnar la pericia</b> porque no cumplimos con nuestra parte.</li>
+<li>Si ninguna de las partes está de acuerdo con el informe: el perito oficial hace un informe y cada perito de parte hace el suyo explicando por qué no está de acuerdo. <b>El juzgado decide quién tiene razón</b>; si la tiene el perito oficial, debe explicar por qué. El juzgado puede designar otro perito para desempatar.</li>
+<li>Luego del contacto viene la notificación judicial.</li>
 </ul>
-<div class="tia"><b>👵 Para la tía</b>Es una venta de una casa hipotecada donde el banco (o quien prestó) <i>no necesita ir a juicio completo</i>. Contrata a su martillero, la casa tiene que estar vacía, y si nadie ofrece, el precio va bajando.</div></section>
 
-<section id="t5"><h2>5. Comparación: judicial electrónica vs. Ley 24.441</h2>
-<div class="tw"><table><tr><th>Aspecto</th><th>Judicial electrónica</th><th>Ley 24.441</th></tr>
-<tr><td>Origen</td><td>Ordenada por juez; bien embargado.</td><td>Acreedor contrata al martillero.</td></tr>
-<tr><td>Modalidad</td><td>Electrónica (PBA).</td><td>Presencial, salón de remates.</td></tr>
-<tr><td>Martillero</td><td>Por propuesta de parte o sorteo.</td><td>Lo elige el acreedor.</td></tr>
-<tr><td>Requisitos martillero</td><td>Perito judicial + curso + inscripción anual, etc.</td><td>Inscripto como perito.</td></tr>
-<tr><td>Base</td><td>Precio de salida fijado en el proceso.</td><td>Monto de la deuda.</td></tr>
-<tr><td>Publicidad</td><td>Edicto a la Oficina de Subastas 15 días antes de la exhibición, con fotos.</td><td>Boletín Oficial + 2 diarios; lo firma el martillero.</td></tr>
-<tr><td>Bien</td><td>Exhibición 10 días antes.</td><td>Debe estar desocupado.</td></tr>
-<tr><td>Acto y control</td><td>Sistema electrónico; informe final.</td><td>Presencial, con escribano.</td></tr>
-<tr><td>Notificación</td><td>Juzgado; acta de adjudicación en 72 hs.</td><td>Deudor por cédula o CD.</td></tr>
-<tr><td>Dinero</td><td>Va al proceso judicial.</td><td>Al acreedor; si hay varios, depósito judicial.</td></tr></table></div>
-<div class="tia"><b>👵 Para la tía</b>Judicial = manda el juez y todo pasa por el juzgado. 24.441 = manda el acreedor, es más rápido, pero con reglas muy estrictas (escribano, casa vacía, avisos).</div></section>
+<h3>Notificación judicial</h3>
+<dl>
+<div class="t"><dt><mark>Qué es</mark></dt><dd>Cédula que nos indica qué tenemos que hacer. <mark>Proceso legal mediante el cual se informa formalmente a una persona sobre un proceso judicial que le concierne.</mark> Es fundamental para garantizar el derecho de defensa. Si tenemos letrado, llega a su domicilio electrónico.</dd></div>
+<div class="t"><dt>3 puntos clave</dt><dd><mark>Garantiza el derecho a la defensa</mark>; puede llegar de varias formas (personal, correo o domicilio electrónico, que se activa al inscribirnos en las listas); <mark>es esencial para la validez de los actos judiciales</mark>, da formalidad y transparencia.</dd></div>
+<div class="t"><dt>Qué se notifica</dt><dd><mark>Demanda</mark>: el tribunal informa por cédula el porqué, cómo y el procedimiento de defensa. <mark>Sentencia</mark>: resolución del juez; se notifica la decisión y sus implicancias. <mark>Embargos</mark>: se notifica al afectado.</dd></div>
+<div class="t"><dt><mark>Desventajas</mark></dt><dd>Posibles errores en la notificación, demoras, costos adicionales según la forma de notificar.</dd></div>
+</dl>
 
-<section id="t6"><h2>6. Constatación del bien</h2>
-<p>Antes de subastar judicialmente, el martillero informa sobre las <b>condiciones físicas</b> y el <b>estado de ocupación</b>. El Juzgado libra un <b>mandamiento de constatación</b> con instrucciones para el martillero y el <b>oficial de justicia</b>.</p>
-<p>Puede autorizar: allanar, forzar cerraduras/puertas/portones/candados con <b>cerrajero</b>, pedir <b>fuerza pública</b>, actuar en <b>días y horas inhábiles</b>, y otras facultades que el juez considere.</p>
-<div class="key">Sin constatación <b>no se puede subastar</b>.</div>
-<p><b>En Ley 24.441:</b> el acreedor contrata un <b>escribano</b> para la constatación e <b>intimación al desalojo</b>. El inmueble tiene que estar desocupado; el escribano emite informe: una copia al martillero y otra al expediente.</p>
-<div class="tia"><b>👵 Para la tía</b>Antes de vender una casa hay que ir a ver cómo está y si vive alguien adentro. Es como cuando vas a vender un auto: primero lo revisás. Sin esa visita oficial, no se vende.</div></section>
+<h3>La subasta</h3>
+<dl>
+<div class="t"><dt>Qué es</dt><dd>Un profesional recibe ofertas a viva voz, en el idioma del país, y cierra la venta con el golpe de martillo. Se adjudica al <b>mejor postor</b>.</dd></div>
+<div class="t"><dt>Fueros</dt><dd>Principales: <mark>familia, laboral, civil y comercial</mark>. No elegís en cuál te anotás: te anotás, salís sorteado y luego te dicen qué harías.</dd></div>
+</dl>
+<h3>Tipos de subasta</h3>
+<dl>
+<div class="t"><dt><mark>Judicial</mark></dt><dd>Venta ordenada por el juez para saldar una deuda impaga. Propuesta de partes o sorteo.</dd></div>
+<div class="t"><dt><mark>Ley 24.441</mark> (presencial)</dt><dd>El acreedor elige y contrata al martillero. Base = monto de la deuda. Se publica en el Boletín Oficial y en dos diarios; el inmueble debe estar desocupado; asiste un escribano. Se notifica por cédula o CD. Es <b>subasta progresiva</b>: si no hay oferentes se remata de nuevo con <b>reducción del 25%</b>, y se repite hasta que sale <b>sin base</b>.</dd></div>
+<div class="t"><dt>Particular</dt><dd>Actúa a cargo del comitente.</dd></div>
+<div class="t"><dt><mark>Ley 14.238</mark></dt><dd>Bienes muebles, inmuebles y animales.</dd></div>
+</dl>
 
-<section id="t7"><h2>7. Pasos de una subasta judicial</h2>
-<ol><li>Aceptación del cargo por el martillero.</li><li>Constatación del bien.</li><li>Fijación de fecha y hora de exhibición y de subasta.</li><li>Presentación de edictos <b>a confronte</b>.</li><li>Publicación de edictos.</li><li>Exhibición.</li><li>Remate.</li><li>Rendición de cuentas e informe del resultado.</li></ol>
-<div class="tia"><b>👵 Para la tía</b>Receta: acepto el trabajo → voy a ver la casa → pongo fechas → armo el aviso y lo reviso con el juzgado → lo publico → muestro la casa → remato → cuento adónde fue la plata.</div></section>
+<h3>Electrónica vs. presencial</h3>
+<div class="tw"><table>
+<tr><th></th><th>Electrónica</th><th>Presencial</th></tr>
+<tr><td>Exhibición</td><td>10 días antes del inicio</td><td>Hasta 24 hs antes</td></tr>
+<tr><td>Postores</td><td>Inscriptos en el registro general, 72 hs antes</td><td>Cualquier persona con DNI</td></tr>
+<tr><td>Edicto</td><td>Enviado y publicado con fotos y descripción a la oficina de subastas 15 días antes de la exhibición</td><td>Se publica en los diarios asignados</td></tr>
+<tr><td>Fecha</td><td>Se acuerda con la oficina de subastas</td><td>La asigna la oficina de subastas</td></tr>
+<tr><td>Ofertas</td><td>Por sistema; al terminar se imprime el informe que emite el sistema</td><td>El martillero recibe ofertas y adjudica al mejor postor</td></tr>
+<tr><td>Cierre</td><td>Las partes firman el acta de adjudicación con el juzgado 72 hs después del remate</td><td>El martillero suscribe el boleto de compraventa al finalizar</td></tr>
+</table></div>
 
-<section id="t8"><h2>8. Edicto de subasta</h2>
-<p>Documento con la información más importante del bien. Contiene:</p>
-<ul><li>Datos del Juzgado y del martillero.</li><li>Día, hora y lugar del remate.</li><li>Datos y características del bien.</li><li>Condiciones de venta y base.</li><li>Deudas del bien.</li><li>Estado de ocupación.</li><li>Horario de exhibición.</li></ul>
-<p>En el procedimiento judicial lo <b>suscribe el secretario del Juzgado</b> y se <b>lee antes de comenzar</b> la subasta. En el 24.441 lo firma el martillero. En el edicto y el boleto figuran los datos del <b>escribano</b> ante quien se firmará la escritura y se pagará el saldo (no se puede cambiar).</p>
-<div class="tia"><b>👵 Para la tía</b>Es el «cartel de venta» oficial: dice qué se vende, dónde, cuándo, con qué deudas y cómo verlo. Nadie puede decir después «no sabía».</div></section>
+<h3>Resolución judicial</h3>
+<dl>
+<div class="t"><dt><mark>Qué es</mark></dt><dd>Dictamen del juez o del tribunal, vinculada a la aplicación de leyes y desarrollo del juicio.</dd></div>
+<div class="t"><dt>Para ser válida debe tener</dt><dd><mark>Lugar, hora y fecha, nombre de los jueces que la emiten y desarrollo de la decisión.</mark></dd></div>
+<div class="t"><dt><mark>Providencias</mark></dt><dd>Resoluciones del juez sobre cuestiones procesales que necesitan una decisión judicial según la ley.</dd></div>
+<div class="t"><dt><mark>Sentencias</mark></dt><dd>De 1.ª y 2.ª instancia. Ponen fin a un proceso. Deciden los recursos interpuestos cumpliendo los plazos legales.</dd></div>
+<div class="t"><dt><mark>Resoluciones firmes</mark></dt><dd>No se puede presentar ningún recurso, porque la ley lo dice así o porque se superó el plazo. Ponen fin a la 1.ª instancia.</dd></div>
+<div class="t"><dt><mark>Diligencias y decretos</mark></dt><dd>Se realizan cuando se tiene competencia exclusiva para poner término al procedimiento, una vez que la demanda fue admitida.</dd></div>
+</dl>
 
-<section id="t9"><h2>9. Martillero enajenador – Art. 261</h2>
-<p>El juez puede designar como enajenadores a <b>martilleros, bancos, intermediarios o entidades especializadas</b> para vender los activos.</p>
-<p>Martilleros: <b>6 años</b> de antigüedad en la matrícula y <b>casa abierta al público</b>. Los gastos autorizados se deducen según la ley; la <b>comisión la paga el comprador</b>.</p>
-<div class="tia"><b>👵 Para la tía</b>En una quiebra, el juez elige quién vende las cosas. Si es un martillero, tiene que tener experiencia (6 años) y local abierto. Su comisión la paga quien compra.</div></section>
-
-<section id="t10"><h2>10. Venta singular – Art. 208</h2>
-<p>La <b>subasta pública</b> es el método <b>obligatorio</b> para vender bienes de manera singular. El juez ordena publicar edictos en el <b>diario de publicaciones legales</b> y en <b>otro diario de gran circulación</b>.</p>
-<table><tr><th>Bien</th><th>Publicación</th></tr><tr><td>Muebles</td><td>2 a 5 días</td></tr><tr><td>Inmuebles</td><td>5 a 10 días</td></tr></table>
-<p>El juez puede ordenar publicidad adicional o aplicar las pautas del <b>art. 205</b>.</p>
-<div class="tia"><b>👵 Para la tía</b>Si se vende una cosa por separado, sí o sí es por remate público con avisos en dos diarios. Para una casa se avisa más días que para un mueble.</div></section>
-
-<section id="t11"><h2>11. Remate no judicial – Art. 210</h2>
-<p>En los juicios de quiebra, la ejecución por remate no judicial se remite al <b>art. 24</b>: las reglas sobre <b>radicación, suspensión y fuero de atracción</b> se rigen por el mecanismo general de la quiebra y la conservación o realización de los bienes del activo desapoderado.</p>
-<div class="tia"><b>👵 Para la tía</b>Si había un remate fuera del juzgado y llega la quiebra, no se maneja por separado: queda bajo las reglas y el juez de la quiebra.</div></section>
-
-<section id="t12"><h2>12. Prohibición de compensar el precio – Art. 211 (Ley 24.522)</h2>
-<ul><li><b>Regla:</b> si un acreedor compra un bien en la quiebra, <b>no puede compensar</b> el precio con lo que el fallido le debe.</li>
-<li><b>Excepción:</b> sí puede si su crédito tiene <b>garantía real sobre ese mismo bien</b> (hipoteca o prenda).</li>
-<li><b>Requisito:</b> debe dar antes una <b>fianza de acreedor de mejor derecho</b>, antes de la transferencia.</li></ul>
-<div class="tia"><b>👵 Para la tía</b>Si el fallido te debe plata y querés comprarle algo en la quiebra, igual tenés que pagar con dinero, no «descontando» tu deuda. Salvo que tu deuda esté garantizada justo con esa casa; ahí sí, pero dejando una garantía por si aparece otro con mejor derecho.</div></section>
-
-<section id="t13"><h2>13. Ofertas bajo sobre</h2>
-<ul><li>Se presentan en el Juzgado <b>al menos 2 días antes</b> de la subasta.</li><li>Los sobres se abren <b>al comenzar el remate</b>.</li><li>El secretario los entrega al martillero <b>el día anterior</b>, bajo recibo.</li></ul>
-<div class="tia"><b>👵 Para la tía</b>Para quien no puede ir: deja su oferta escrita en un sobre cerrado. Nadie la ve hasta que empieza el remate y se abre delante de todos.</div></section>
-
-<section id="t14"><h2>14. Venta directa de bienes</h2>
-<p>El juez puede disponerla, <b>previa vista al síndico</b>, si es útil para el concurso. Casos: venta a una <b>cooperativa de trabajo</b> que continúe la explotación, o cuando la naturaleza de los bienes, su <b>escaso valor</b> o el <b>fracaso de otras formas</b> (remates, licitaciones) la hacen conveniente.</p>
-<ul><li>El juez determina cómo se hace; puede delegar en el síndico, un intermediario o un mercado especializado.</li><li>Requiere <b>aprobación judicial posterior</b> para quedar firme.</li></ul>
-<div class="tia"><b>👵 Para la tía</b>A veces el remate no conviene: la cosa vale poco o ya fracasó. Entonces el juez permite venderla «a dedo» (directo), por ejemplo a los empleados organizados en cooperativa para que sigan trabajando. Pero el juez tiene que aprobar la venta después.</div></section>
-
-<section id="t15"><h2>15. Bienes invendibles</h2>
-<p>Si no se pudieron vender o fracasó su realización, el juez puede ordenar entregarlos a <b>asociaciones de bien público</b>, previa <b>vista al síndico y al deudor</b> (comunicarles y escuchar su opinión). La resolución es apelable por síndico o deudor si antes presentaron <b>oposición expresa y fundada</b>.</p>
-<div class="tia"><b>👵 Para la tía</b>Si nadie quiere comprar algo, se regala a una entidad de caridad. Antes se pregunta al síndico y al deudor, y si alguno se opone con buenos motivos, puede apelar.</div></section>
-
-<section id="t16"><h2>16. Realización de créditos a favor de la quiebra</h2>
-<p>Según el <b>art. 182</b>. El síndico puede encargar el cobro a <b>bancos oficiales o privados de primera línea</b> o usar métodos habituales de plaza, con <b>garantía suficiente</b> y <b>autorización judicial previa</b>.</p>
-<p>En casos especiales el juez puede autorizar <b>subasta o venta privada</b> de esos créditos, individual o <b>por cartera</b>, con <b>vista al deudor</b> y <b>conformidad del síndico</b>.</p>
-<div class="tia"><b>👵 Para la tía</b>La quiebra también tiene gente que le debe plata. Para cobrarle se puede contratar un banco, o hasta «vender» esas deudas a otro que las cobre, siempre con permiso del juez.</div></section>
-
-<section id="t17"><h2>17. Ejecución extrajudicial Ley 24.441 (Financiamiento de la Vivienda y la Construcción)</h2>
-<p><b>Concepto:</b> régimen especial que permite al acreedor hipotecario <b>vender el inmueble por subasta</b> sin tramitar todo el juicio de remate tradicional, con <b>intervención judicial limitada</b>, siempre que se haya <b>pactado expresamente en la escritura</b>. Es un <b>contrato de mutuo</b> con pacto previo.</p>
-<h3>Requisitos</h3>
-<ol><li>Hipoteca válida.</li><li>Mora del deudor.</li><li>Pacto expreso de ejecución extrajudicial en la escritura.</li><li>Intimación de pago.</li><li>Cumplir las formalidades de la ley.</li></ol>
-<h3>Procedimiento</h3>
-<ol><li><b>Mora:</b> opera automáticamente al vencimiento.</li>
-<li><b>Intimación de pago:</b> para que regularice antes de avanzar.</li>
-<li><b>Preparación:</b> se designa martillero; constatación, certificados registrales, edictos, condiciones de venta.</li>
-<li><b>Notificación:</b> deudor, propietario y titulares de derechos reales, <b>fehacientemente, mín. 7 días hábiles</b> antes.</li>
-<li><b>Remate:</b> lo hace el martillero, <b>sin juez</b>.</li></ol>
-<h3>Pasos clave</h3>
-<ul><li>Base = deuda actualizada.</li><li>Edictos: ubicación, superficie, estado de deudas, día y hora.</li><li>Perfeccionamiento: pago del precio + entrega del inmueble (tradición).</li><li>Rendición: liquidar la deuda, cubrir gastos (<b>máx. 3 % del crédito</b>) y depositar el remanente a disposición del deudor.</li></ul>
-<h3>Datos de la clase (apuntes)</h3>
+<h3>Fuentes del derecho</h3>
+<p>Son todo aquello donde se originan el derecho y las normas que se aplican a la persona: actos y hechos del pasado que sirvieron para ordenar y regular el comportamiento. <b>3 tipos:</b></p>
 <ul>
-<li>El <b>acreedor elige</b> al iniciar la acción: 24.441 o método tradicional. <b>Una vez elegido no puede cambiarlo</b>.</li>
-<li>Con la <b>carta de trabajo</b> del martillero, el acreedor contrata un escribano para constatar e intimar el desalojo.</li>
-<li>La subasta es <b>presencial</b> (la única que sigue así), en un salón de remates dentro del <b>radio del juzgado</b> de la ejecución; no hace falta la Oficina de Subastas.</li>
-<li>El escribano labra el <b>acta</b> y transcribe el <b>boleto de compraventa</b>; suele ser el mismo que hace la escritura traslativa de dominio.</li>
-<li>La fecha de subasta se notifica al <b>acreedor con 10 días</b> de anticipación (al deudor, mín. 7 días hábiles).</li>
-<li>Hay horario de exhibición. Se vende y el martillero percibe la <b>seña del 30 %</b> y los honorarios. Firma el boleto; el escribano está presente. Si hay <b>un solo acreedor</b>, se le entrega el dinero (30 % menos gastos); si hay <b>más de uno</b>, se deposita en la cuenta del expediente.</li>
-<li>El martillero asiste a la <b>firma de escritura</b>: ahí se entrega la <b>tenencia</b>. El saldo se paga ante el escribano.</li>
-<li>Dentro de <b>3 días</b> de la subasta, el martillero informa al acreedor, rinde cuentas con comprobantes e informa quién compró. El acreedor presenta ese informe en el expediente.</li>
-<li>El trabajo del martillero <b>termina con la escritura</b>; el proceso termina cuando se <b>rinden cuentas al acreedor</b>.</li>
-<li><b>Sobreseimiento:</b> el deudor puede recuperar la propiedad en <b>30 días</b> pagando gastos + deuda + honorarios (en la subasta tradicional son <b>5 días</b>).</li>
-<li>Aunque no haya gente, el martillero sube a la tarima, lee el edicto, abre el remate y lo da por <b>fracasado por falta de postores</b>. Si llega alguien, no se vuelve a leer el edicto. Se respetan los horarios.</li></ul>
-<div class="tia"><b>👵 Para la tía</b>Cuando alguien pide plata prestada con la casa en garantía, puede firmar desde el principio que, si no paga, el prestamista venda la casa sin juicio largo. Se le avisa, se avisa a todos los interesados, se remata con escribano presente, y lo que sobra de la deuda se le devuelve al deudor. Y si se arrepiente, tiene 30 días para recuperar la casa pagando todo.</div></section>
+<li><b>Derecho natural</b>: la moral y la justicia son inalienables al ser humano.</li>
+<li><b>Derecho escrito</b>: documentos que establecen una regla de conducta de carácter obligatorio.</li>
+<li><b>Derecho anglosajón</b>: basado en la jurisprudencia, resoluciones previas utilizables en un proceso judicial.</li>
+</ul>
 
-<section id="t18"><h2>18. Defensas, liquidación, rendición e impugnación (24.441)</h2>
-<h3>Defensas del deudor</h3>
-<p>La ley <b>limita</b> las defensas. Puede pedir judicialmente suspender si demuestra verosímilmente: a) que <b>no está en mora</b>; b) que <b>no fue intimado</b>; c) que <b>no se pactó</b> la vía extrajudicial; d) <b>vicios graves en la publicidad</b>.</p>
-<h3>Liquidación del crédito</h3>
-<p>El acreedor debe: practicar liquidación, descontar gastos, depositar el remanente si lo hubiera y presentar rendición de cuentas documentada.</p>
-<h3>Rendición de cuentas</h3>
-<p>Dentro de <b>5 días</b> de la subasta, acompañar: precio obtenido, liquidación, gastos, remanente. El juez corre traslado al deudor para impugnar o aceptar.</p>
-<h3>Derecho de impugnación</h3>
-<p>Después del remate, el deudor puede cuestionar: la <b>inexistencia de los presupuestos</b> de la ejecución, la <b>liquidación</b>, y el <b>incumplimiento de requisitos legales</b> por el acreedor.</p>
-<h3>Recuperación del inmueble</h3>
-<p>Dentro de <b>30 días</b> posteriores, abonando al adquirente el precio de la subasta más el porcentaje legal.</p>
-<div class="tia"><b>👵 Para la tía</b>El deudor casi no puede frenar la venta: solo si prueba que no debía, que no lo avisaron, que no firmó ese sistema o que el aviso estaba mal hecho. Después de vender, el acreedor muestra las cuentas y el deudor puede decir «esto está mal».</div></section>
-
-<section id="t19"><h2>19. Judicial vs. extrajudicial (24.441) y consideraciones</h2>
-<div class="tw"><table><tr><th>Aspecto</th><th>Judicial</th><th>Extrajudicial 24.441</th></tr>
-<tr><td>Control judicial</td><td>Permanente</td><td>Limitado</td></tr><tr><td>Trámite</td><td>Más extenso</td><td>Más rápido</td></tr><tr><td>Base legal</td><td>CPCC</td><td>Ley 24.441</td></tr><tr><td>Remate</td><td>Ordenado por el juez</td><td>Ejecutado por acreedor y martillero</td></tr><tr><td>Defensas</td><td>Amplias</td><td>Limitadas</td></tr><tr><td>Costos</td><td>Generalmente mayores</td><td>Generalmente menores</td></tr><tr><td>Recuperar el bien</td><td>5 días</td><td>30 días</td></tr></table></div>
-<h3>Consideraciones legales importantes</h3>
-<ul><li><b>Vivienda única:</b> se cuestiona la constitucionalidad cuando afecta bienes de familia o vivienda única y permanente; hay que analizar la jurisprudencia.</li>
-<li><b>Deudas previas:</b> según la jurisprudencia, el comprador no debe afrontar deudas de impuestos, tasas y contribuciones anteriores a la toma de posesión si el dinero del remate no alcanzó para cubrirlas.</li>
-<li><b>Pacto de partes:</b> si el deudor aceptó voluntariamente la cláusula, suele ser improcedente frenar el remate alegando inconstitucionalidad, salvo vicios graves.</li></ul>
-<p><b>Conclusión:</b> es un procedimiento especial para agilizar el cobro de créditos con garantía hipotecaria, manteniendo controles judiciales mínimos para proteger el derecho de defensa y la legalidad.</p>
-<div class="tia"><b>👵 Para la tía</b>Judicial: lento, con el juez mirando todo, el deudor se defiende más. Extrajudicial: más rápido y barato, pero el deudor tiene menos herramientas. Y ojo: si es la única vivienda de la familia, los jueces miran con lupa.</div></section>
-
-<section id="t20"><h2>20. Repaso rápido: no confundir</h2>
-<ul><li><b>Subasta judicial:</b> la ordena el juez; bien embargado.</li><li><b>Electrónica:</b> PBA. <b>Presencial:</b> CABA y 24.441.</li><li><b>24.441:</b> acreedor elige martillero; base = deuda; escribano presente.</li><li><b>Constatación:</b> estado físico y de ocupación; obligatoria.</li><li><b>Edicto:</b> datos esenciales del remate.</li><li><b>Venta singular (208):</b> subasta pública obligatoria.</li><li><b>Venta directa:</b> requiere utilidad + aprobación judicial posterior.</li><li><b>Invendibles:</b> a asociaciones de bien público, con vista previa.</li><li><b>Compensación (211):</b> prohibida, salvo garantía real + fianza.</li><li><b>Plazos:</b> 72 hs (inscripción/acta), 10 días exhibición, 15 días edictos, 7 días hábiles notificación, 30 % seña, 25 % reducción de base, 3 % tope de gastos, 30 días recuperación.</li></ul>
-<p class="warn">Nota: una foto de los apuntes salió borrosa y no pude leerla; si ese tema falta, mandame una foto nítida y lo agrego. La página del art. 50 (créditos hipotecarios para la vivienda) estaba cortada.</p>
-</section>
-<section id="glosario"><h2>21. Glosario y preguntas tipo oral</h2>
-<h3>Glosario</h3>
-<ul><li><b>Martillero:</b> profesional que conduce la subasta y recibe las ofertas.</li><li><b>Base:</b> precio de salida desde el que se empiezan a recibir ofertas.</li><li><b>Embargo:</b> medida judicial que inmoviliza un bien para garantizar el pago de una deuda.</li><li><b>Edicto:</b> aviso público con los datos del remate y del bien.</li><li><b>A confronte:</b> el edicto se presenta al juzgado para ser revisado antes de publicarse.</li><li><b>Constatación:</b> verificación del estado físico y de ocupación del inmueble.</li><li><b>Acta de adjudicación:</b> documento que se firma en el Juzgado tras la subasta electrónica.</li><li><b>Boleto de compraventa:</b> contrato que firma el martillero con el comprador; fija plazos, escribano y saldo.</li><li><b>Escritura traslativa de dominio:</b> documento ante escribano que perfecciona la venta.</li><li><b>Tradición:</b> entrega de la posesión o tenencia del inmueble.</li><li><b>Sobreseimiento:</b> en el apunte, plazo en que el deudor recupera el bien pagando.</li><li><b>Remanente:</b> sobrante del precio una vez pagadas deuda y gastos; se devuelve al deudor.</li><li><b>Síndico:</b> auxiliar del juez en la quiebra.</li><li><b>Fallido:</b> persona o empresa cuya quiebra fue declarada.</li><li><b>Fianza de acreedor de mejor derecho:</b> garantía que da el acreedor que compra y compensa.</li><li><b>Mutuo:</b> contrato de préstamo; el pacto de la 24.441 va en la hipoteca de ese mutuo.</li></ul>
-<h3>Preguntas para practicar</h3>
-<ol><li>¿Qué diferencia hay entre subasta judicial electrónica (PBA) y presencial (CABA)? <i>Lugar, exhibición 10 días vs 24 hs, postores inscriptos vs DNI, acta de adjudicación vs boleto.</i></li>
-<li>¿Quién elige al martillero en cada tipo? <i>Judicial: parte o sorteo. 24.441: el acreedor.</i></li>
-<li>¿Cuáles son los requisitos del martillero en PBA y CABA? <i>Ver tema 3.</i></li>
-<li>¿Por qué es fundamental la constatación? <i>Sin ella no se puede subastar; en la 24.441 el inmueble debe estar desocupado.</i></li>
-<li>¿Qué pasa si no hay postores en la 24.441? <i>A la hora sale con base reducida 25 %; si persiste, sin base.</i></li>
-<li>¿Cuándo puede el acreedor elegir entre 24.441 y la vía tradicional? <i>Al iniciar la acción; después no puede cambiar.</i></li>
-<li>¿Qué defensas tiene el deudor? <i>No mora, no intimado, no pactada la vía, vicios graves en la publicidad.</i></li>
-<li>¿Cómo recupera el deudor el bien? <i>30 días en 24.441 (gastos + deuda + honorarios); 5 días en la judicial.</i></li>
-<li>¿Qué dice el art. 211? <i>Prohíbe compensar el precio, salvo garantía real sobre el bien y fianza previa.</i></li>
-<li>¿Cuándo procede la venta directa? <i>Utilidad para el concurso y aprobación judicial posterior.</i></li>
-<li>¿Qué se hace con bienes invendibles? <i>Se entregan a asociaciones de bien público con vista al síndico y deudor.</i></li>
-<li>¿Quién cobra y cuánto el martillero en la 24.441? <i>Seña del 30 % y honorarios; con un solo acreedor, se le entrega el dinero.</i></li></ol>
-<div class="tia"><b>👵 Para la tía</b>Si te toman el oral, contá siempre en el mismo orden: qué es, quién la ordena, quién la hace, qué se publica, cómo se vende, adónde va la plata y qué puede hacer el deudor.</div></section>
-
-<section id="act"><h2>22. Actualización importante: Provincia y CABA (Guía actualizada)</h2>
-<div class="key"><b>Ojo, cambia lo que dijimos antes:</b> la guía nueva indica que <b>CABA también tiene subasta electrónica</b> para tribunales nacionales y federales con asiento en la Ciudad (Acordada 15/2025 CSJN, obligatoria desde el <b>1/10/2025</b>). Tu apunte anterior decía que en CABA era presencial. <b>Confirmá con tu profesor cuál te toma.</b></div>
-<div class="tw"><table><tr><th>Aspecto</th><th>Provincia de Buenos Aires</th><th>CABA (nacional/federal)</th></tr>
-<tr><td>Norma</td><td>Acuerdo 3604 SCBA (8/8/2012), Anexo I y modificatorias</td><td>Acordada 15/2025 CSJN + CPCCN</td></tr>
-<tr><td>Portal</td><td>subastas.scba.gov.ar</td><td>subastaselectronicasjudiciales.csjn.gov.ar</td></tr>
-<tr><td>Administración</td><td>Registro General y seccionales departamentales</td><td>Oficina de Subastas Judiciales (Centro de Asistencia Judicial Federal)</td></tr>
-<tr><td>Registro general</td><td>Vigencia 1 año</td><td>Vigencia 1 año</td></tr>
-<tr><td>Inscripción a cada remate</td><td>Mínimo 3 días hábiles antes</td><td>Habilitado hasta el día hábil anterior; depósito (si se exige) acreditado 3 días hábiles antes</td></tr>
-<tr><td>Garantía</td><td>Si la exige el juez (en clase suele ser 5 % de la base)</td><td>Si la exige el juez; monto en portal/edicto</td></tr>
-<tr><td>Publicación</td><td>Mín. 10 días hábiles antes</td><td>Mín. 10 días hábiles antes</td></tr>
-<tr><td>Duración</td><td>10 días hábiles</td><td>10 días hábiles</td></tr>
-<tr><td>Extensión</td><td>Oferta superior en últimos 3 min: +10 min, renovable</td><td>Igual</td></tr>
-<tr><td>Tramos</td><td>+5 % sobre el tramo inicial</td><td>Igual</td></tr>
-<tr><td>Acta</td><td>3 días hábiles</td><td>3 días hábiles</td></tr></table></div>
-<p>La <b>Acordada 15/2025</b> no extiende automáticamente el sistema a todos los tribunales federales del interior. La <b>Ley 24.441</b> es otra cosa: ley nacional con régimen especial de ejecución de hipotecas, <b>no es un portal</b> ni una variante del sistema electrónico; puede hacerse por remate público presencial.</p>
-<p><b>Otras diferencias entre tus apuntes y las guías (preguntalas):</b></p>
-<ul><li>Aviso de fecha: apunte de clase dice <b>acreedor 10 días</b>; la ley (art. 59) dice <b>deudor y titulares 7 días hábiles</b>, excluido el día del remate.</li>
-<li>Base reducida: clase dice «a la hora sale con 25 % menos»; el art. 61 dice <b>otro remate</b> con base reducida 25 %, y si tampoco hay postores, venta sin limitación de precio.</li>
-<li>Edictos 24.441: la ley pide avisos <b>3 días</b> en diario oficial y 2 diarios de gran circulación; el último aviso con anticipación <b>no mayor a 2 días</b>.</li>
-<li>Inmueble ocupado: tus apuntes dicen que debe estar desocupado; la guía aclara que la ley (art. 54) prevé intimar la desocupación en <b>10 días</b> y lanzamiento con fuerza pública.</li></ul>
-<div class="tia"><b>👵 Para la tía</b>Hoy hay dos subastas «por internet»: la de la Provincia y la de la Justicia nacional en Capital, cada una con su página y sus reglas. La Ley 24.441 es distinta: es la ley que permite al banco vender una casa hipotecada sin juicio completo.</div></section>
-
-<section id="uni4"><h2>23. Unidad 4 – Subasta electrónica: concepto, historia y martillero</h2>
-<p><b>Concepto:</b> subasta judicial donde las ofertas se hacen por una <b>plataforma digital</b> durante un período establecido. El público mira; solo postores habilitados pujan, con <b>código de postor</b>. Sigue siendo judicial: hay expediente, orden del juez, martillero y reglas procesales; solo cambia cómo se publicita y se reciben ofertas.</p>
-<p><b>Finalidades:</b> ampliar la participación, acceso desde cualquier lugar, publicidad en tiempo real, <b>anonimato</b> de oferentes ante el público y evitar problemas de la puja presencial.</p>
-<p><b>Historia:</b> la Corte bonaerense empezó a pensarla ~2011; <b>Acuerdo 3604 del 8/8/2012</b>; implementación gradual (empezó en La Plata y se extendió). Existe <b>Registro General de Subastas Judiciales</b> y seccionales; la Oficina/Seccional coordina lo operativo y verifica recaudos, pero <b>no reemplaza al juzgado</b>.</p>
-<h3>Rol del martillero</h3>
-<p>Auxiliar de la justicia y <b>delegado del juez</b> en la dirección del remate. No puede apartarse de la resolución ni inventar condiciones. Debe: estudiar el expediente, cumplir instrucciones, coordinar con la Oficina, informar datos correctos del bien, preparar publicidad, organizar exhibición, atender consultas, controlar la puja y hacer el <b>acta de resultado</b> en plazo; rendir gastos con comprobantes. Una constatación equivocada, información falsa, edicto incorrecto o plazos incumplidos pueden causar <b>suspensión, nulidad, pérdida de honorarios o responsabilidad por daños</b>.</p>
-<h3>Procedimiento paso a paso</h3>
-<ol><li><b>Orden judicial y revisión del expediente:</b> el juez fija bien, base, modalidad, plazos, depósito, etc.</li>
-<li><b>Constatación:</b> estado físico y de ocupación; ambientes, conservación, instalaciones, mejoras, deterioros; fotos y, si se pide, video (frente, fondo, interior).</li>
-<li><b>Valuación y base:</b> el martillero informa el valor; el juzgado fija la base. En los apuntes: 2/3 de la tasación, deuda actualizada o 2/3 de la valuación fiscal. <b>No es regla universal</b>: depende del código y del juez.</li>
-<li><b>Coordinación con la Oficina de Subastas:</b> fechas de inicio y cierre, cierre de acreditación, exhibición, publicación. Puede observar faltantes.</li>
-<li><b>Edicto y portal:</b> el edicto va <b>a confronte</b>; luego se envía al portal (imágenes, fechas, tramos, martillero, visitas). Publicación con mínimo <b>10 días hábiles</b> antes (Acuerdo 3604 y Acordada 15/2025).</li>
-<li><b>Exhibición:</b> en apuntes, habitualmente una semana antes; el horario surge del edicto y la orden.</li>
-<li><b>Registro general e inscripción a la subasta:</b> son dos pasos (ver tema 24).</li>
-<li><b>Depósito de garantía:</b> no es el precio ni la seña; garantiza la seriedad del postor. Solo si lo exige el juez (en clase, 5 % de la base). Acreditado con al menos <b>3 días hábiles</b> antes.</li>
-<li><b>Apertura y puja:</b> comienza automáticamente; puja continua; el portal muestra código, monto, fecha y hora.</li>
-<li><b>Cierre, acta y adjudicación:</b> cierre automático salvo extensión/suspensión; el martillero hace el acta (ganador y siguientes ofertas) y la presenta en <b>3 días hábiles</b>. <b>Cierre ≠ adjudicación/aprobación</b>: en inmuebles y registrables el juzgado interviene después.</li></ol>
-<div class="tia"><b>👵 Para la tía</b>Primero el juez ordena vender; el martillero va a ver la casa, saca fotos, avisa por internet con tiempo, deja que la gente la visite, y después todos ofertan en la página. El que gana todavía necesita que el juez apruebe la venta.</div></section>
-
-<section id="uni4b"><h2>24. Registro, pujas, extensión, acta, postor remiso, Oficina y edicto</h2>
-<h3>Registro de postores</h3>
-<ul><li><b>Registro general:</b> habilita a operar en el portal; vigencia <b>1 año</b>. No anota en todas las subastas.</li><li><b>Inscripción particular:</b> en cada remate; da un <b>código de postor</b> personal y secreto, que identifica sin mostrar la identidad.</li><li>Provincia: inscripción al remate con mínimo <b>3 días hábiles</b> de antelación. CABA: empadronamiento validado ante la Oficina de Subastas; habilitado hasta el día hábil anterior.</li><li>En clase: cualquier mayor de edad; las normas permiten personas físicas y jurídicas con la documentación.</li><li><b>Reserva de postura:</b> permite considerar a ciertos postores no ganadores si el primero incumple.</li></ul>
-<h3>Pujas, tramos y postura máxima secreta</h3>
-<p><b>Tramos:</b> escalones predeterminados; el postor elige el número de tramo. Si hay base, es el primer tramo; los siguientes suben <b>5 % del monto inicial</b>.</p>
-<p><b>Postura máxima secreta:</b> el postor fija su tope y el sistema puja solo por él, un tramo sobre el anterior oferente, hasta ese límite. Si puja manualmente, se desactiva. Si dos coinciden, prioriza <b>fecha y hora de ingreso</b>.</p>
-<h3>Extensión: últimos 3 minutos</h3>
-<p>Si entra una oferta superior en los últimos <b>3 minutos</b>, se extiende <b>10 minutos</b>; se renueva mientras haya ofertas superiores, hasta que pasen 10 minutos sin ninguna. Evita ganar ofertando en el último segundo.</p>
-<h3>Acta, adjudicación y postor remiso</h3>
-<ul><li><b>Acta de resultado:</b> monto, ganador y mejores ofertas; en el expediente en <b>3 días hábiles</b>.</li><li><b>Adjudicación/aprobación:</b> formaliza judicialmente. En Provincia hay audiencia ante el secretario del Juzgado para el acta definitiva en bienes registrables.</li><li><b>Postor remiso:</b> ganador que no paga en plazo; puede perder el depósito o seña y responder por daños. En Provincia, la reserva de postura permite consultar al siguiente (CPCC art. 585). <b>No confundir con 24.441</b>, donde rige el art. 62.</li></ul>
-<h3>Oficina de Subastas</h3>
-<p>Órgano de apoyo y coordinación: recibe documentación, controla pasos, coordina calendario, gestiona la publicación y advierte faltantes. <b>Ordenar, suspender, aplazar o cancelar</b> lo decide el órgano judicial, que lo comunica para actualizar el portal.</p>
-<h3>Contenido del edicto y de la publicación digital</h3>
-<ul><li>Juzgado, secretaría, expediente; martillero y contacto.</li><li>Bien: ubicación, matrícula/datos registrales, superficie, características.</li><li>Estado de ocupación y físico (constatación).</li><li>Base, condiciones, deudas informadas, forma de pago.</li><li>Fechas de inicio y cierre; fecha límite de inscripción.</li><li>Monto y cuenta del depósito si corresponde; tramos de puja.</li><li>Exhibición; fecha de acta o audiencia de adjudicación.</li><li>Imágenes y demás información que el juez considere relevante.</li></ul>
-<div class="tia"><b>👵 Para la tía</b>Para pujar tenés que anotarte dos veces: una para entrar a la página (dura un año) y otra para cada remate (te dan un número secreto). Si alguien ofrece justo al final, el reloj se estira 10 minutos para que los demás puedan contestar. El que gana y no paga pierde lo que dejó como garantía.</div></section>
-
-<section id="acu"><h2>25. Acuerdo 3604 SCBA – Anexo I (Reglamento de Subastas Electrónicas)</h2>
-<p><b>Cuerpo principal:</b> art. 1 aprueba el Reglamento (Anexo I); art. 2 encomienda a la Subsecretaría de Tecnología Informática el sistema; art. 3 implementación gradual y progresiva; art. 4 publicación en Boletín Oficial y web.</p>
-<div class="tw"><table><tr><th>Capítulo / artículos</th><th>Contenido</th></tr>
-<tr><td>I Generalidades (1-5)</td><td>Rige todas las subastas electrónicas. Portal de la Suprema Corte; el público mira de forma anónima, solo registrados pujan. Publicación: edictos, fotos, fechas de inicio y cierre de acreditación, tramos, martillero, precio de reserva, horarios de visita; con <b>10 días hábiles</b> de antelación. Registro General con sede en <b>La Plata</b> y Seccionales.</td></tr>
-<tr><td>II Registro de postores (6-20)</td><td>Persona física o jurídica, cualquier fuero. Trámite en Seccionales; abierto todo el año (salvo ferias), dura <b>1 año</b>, renovable <b>15 días antes</b> del vencimiento. Formulario online que se imprime y presenta. Datos con carácter de declaración jurada (nombre/razón social, DNI/CUIT, domicilio real, email, teléfono). Documentación: DNI original y copia, personería si hay apoderado, estatutos y autoridades para jurídicas. Usuario responsable de datos veraces. El funcionario decide en el acto; constancia de alta por duplicado; Seccionales guardan la documentación <b>2 años</b>. Usuario y clave llegan por email y se personalizan al primer ingreso. Si falta un requisito, se deniega; reconsideración en <b>3 días</b>. Cuenta personal e intransferible. Incumplimientos: el Registro puede <b>revocar el acceso</b>.</td></tr>
-<tr><td>III Inscripción a subastas (21-24)</td><td>Se inscribe individualmente, indicando si hace <b>reserva de postura</b> o <b>compra en comisión</b>. Si hay depósito, se acredita ante la Seccional <b>3 días hábiles</b> antes y recibe código de postor. Sin depósito, se perfecciona online y llega por email. Límite para inscribirse: <b>3 días hábiles</b> antes del inicio.</td></tr>
-<tr><td>IV Dirección (25-27)</td><td>El martillero recibe herramientas informáticas; lleva a la Seccional datos del bien y acredita edictos <b>10 días hábiles antes de la publicación virtual (≈20 días antes del remate)</b>; abre formalmente la participación el día fijado.</td></tr>
-<tr><td>V Celebración (28-33)</td><td>Dura el tiempo fijado, en días hábiles, 24 hs. Si el inicio cae en día inhábil pasa al siguiente hábil; si hay inhábiles durante el proceso, el plazo se suspende y retoma. Sala virtual de puja continua con montos y códigos en tiempo real. Tramos: base = primer tramo; luego +5 % del valor inicial; el postor indica el número de tramo.</td></tr>
-<tr><td>VI Postura máxima secreta (34)</td><td>Fija precio máximo; puja automática un tramo arriba del anterior; si puja manualmente se anula.</td></tr>
-<tr><td>VII Actos posteriores (35-39)</td><td>Cierre automático; ganador notificado por email; precio final informado a los demás. Acta del martillero en <b>3 días hábiles</b>. La Seccional envía al Juzgado listado de postores acreditados y depósitos a los <b>3 días</b> del cierre. Bienes registrables: acta definitiva en <b>audiencia ante el Secretario</b>; el ganador acredita identidad con código y comprobantes. Depósitos de no ganadores se devuelven por orden judicial, salvo <b>reserva de postura</b>.</td></tr>
-<tr><td>VIII-XIII Técnicos (40-49)</td><td>Art. 40 reserva de postura: el segundo mejor mantiene su oferta por si el ganador incumple (<b>art. 585 CPCC</b>). Art. 41 horario oficial de Provincia. Art. 42 extensión 3 min → +10 min. Art. 43 suspensión o anulación judicial se publica de inmediato. Art. 44-45 Registro Central en La Plata, Seccionales en cabeceras departamentales. Art. 47-48 disponibilidad 24/7; si se interrumpe, los plazos se suspenden y reanudan solos. Art. 49 la Corte no responde por fallas por fuerza mayor o terceros.</td></tr></table></div>
-<div class="tia"><b>👵 Para la tía</b>Es el «reglamento del juego» de la subasta bonaerense: quién puede anotarse, qué papeles llevar, cuánto dura, cómo suben las ofertas y qué pasa si se cae internet (se frena el reloj y sigue después).</div></section>
-
-<section id="uni5"><h2>26. Unidad 5 – Pericia judicial</h2>
-<p><b>Concepto:</b> prueba que incorpora conocimientos técnicos, científicos o artísticos que el juez no tiene por qué dominar. El perito <b>no decide el juicio</b>: da una opinión fundada. Para el martillero/tasador puede ser constatar, describir o <b>tasar</b>; la tasación se fundamenta (de dónde sale el valor y cómo se llegó).</p>
-<ul><li>Responde preguntas técnicas, no jurídicas.</li><li>Trabaja dentro de los puntos de pericia y del objeto de su designación.</li><li>Objetivo, claro, imparcial; fundamenta sus conclusiones.</li><li>Informa si no pudo ingresar, si faltó documentación o si hay diferencias entre papeles y realidad.</li></ul>
-<h3>Perito oficial y perito de parte</h3>
-<p><b>Oficial (de oficio):</b> nombrado por el juzgado; auxiliar del juez; independiente, no representa a las partes. <b>De parte (consultor técnico en el CPCCN):</b> asesora a una parte, controla la tarea y observa; no sustituye al perito designado. Según clase, el oficial debe <b>convocar a los de parte</b> al relevamiento y dejar explicitadas las diferencias técnicas.</p>
-<h3>Puntos de pericia</h3>
-<p>Preguntas técnicas concretas que delimitan el trabajo. Ejemplo en tasación: valor de mercado a una fecha, estado de conservación, superficie y mejoras, valor locativo, valor histórico a la fecha del hecho.</p>
 <h3>Expediente</h3>
-<p>Conjunto ordenado de escritos, resoluciones, actas, informes y pruebas. Antes de inspeccionar, el perito lee: resolución de designación, puntos, datos del inmueble, documentación, planteos y plazos. Después hace la tarea, presenta dictamen y contesta observaciones. Partes: <b>carátula</b> (juicio, partes, juzgado, número), <b>escritos</b>, <b>resoluciones</b>, <b>pruebas</b>, <b>actas</b>. Hoy tiende a ser digital.</p>
-<h3>Constatación para pericia</h3>
-<p>Inspección directa: ubicación, entorno, accesos, superficie, distribución, ambientes, materiales, antigüedad aparente, conservación, instalaciones, servicios, mejoras, deterioros y ocupación. Compara documentos con la realidad y describe diferencias; si no puede ingresar, deja constancia y explica la limitación. Respalda con fotos, mediciones, planos y comparables con origen identificado.</p>
-<h3>Dictamen pericial (estructura para el oral)</h3>
-<ol><li>Identificación (expediente, juzgado, perito, objeto).</li><li>Antecedentes (documentación revisada, puntos).</li><li>Tarea realizada (fecha, presentes, acceso, relevamientos).</li><li>Descripción del bien.</li><li>Metodología y por qué es adecuada.</li><li>Datos y cálculos (comparables, fuentes, coeficientes, planillas).</li><li>Respuesta a cada punto.</li><li>Conclusión: valor y fecha de referencia.</li><li>Anexos (fotos, planos, documentación).</li></ol>
-<h3>Métodos de tasación</h3>
-<p><b>Comparativo o de mercado:</b> inmuebles comparables, homogeneizados con coeficientes (ubicación, superficie, frente y fondo, antigüedad, estado, fecha); hay que justificar. <b>Reposición:</b> cuánto costaría reconstruir en condiciones equivalentes, con costos actuales y depreciación por antigüedad, estado y obsolescencia. Se puede usar más de uno y explicar la ponderación.</p>
-<h3>Valor histórico</h3>
-<p>Valor en una fecha pasada. <b>No</b> se obtiene aplicando un coeficiente de inflación a la tasación actual. Hay que conseguir información de la época (ventas comparables, publicaciones, registros) con fecha y fuente. Si no hay datos suficientes, decirlo; <b>no inventar comparables</b>.</p>
-<h3>Medios y formas de prueba</h3>
-<p><b>Prueba:</b> elementos para acreditar hechos relevantes y controvertidos. <b>Medio</b> = clase de elemento; <b>forma de producción</b> = procedimiento para ofrecerlo, ordenarlo, producirlo, incorporarlo y controlarlo. Medios: documental, testimonial, pericial, informativa, reconocimiento o inspección judicial, confesional/declaración de parte, presunciones.</p>
-<h3>Traslado, observaciones e impugnación</h3>
-<p>Presentado el dictamen, se da <b>traslado</b> a las partes para observarlo o impugnarlo en plazo. El perito contesta con fundamentos y puede aclarar errores, pero <b>no cambia la conclusión para conformar a una parte</b>. El juez valora el dictamen con el resto de la prueba; <b>no lo obliga</b>.</p>
-<h3>Tribunal de Tasaciones</h3>
-<p>Tema de investigación de la cátedra, sin detalle en las clases. Idea general: organismo técnico estatal (de la Nación) que interviene en valuaciones de competencia nacional, como bienes del Estado y expropiaciones. No es lo mismo que el perito designado en una causa. Su procedimiento interno no surge de los apuntes: <b>confirmar con la cátedra</b>.</p>
-<div class="tia"><b>👵 Para la tía</b>El perito es como un mecánico que le explica al juez lo que el juez no sabe. Mira el bien, mide, compara con otras casas y escribe un informe fundamentado. No decide quién gana: ayuda a decidir. Si una parte no está de acuerdo, puede observarlo y el perito tiene que explicar.</div></section>
+<dl>
+<div class="t"><dt><mark>EXPEDIENTE</mark></dt><dd>Conjunto de documentos, actas, informes y pruebas que conforman el registro del proceso legal ante una autoridad judicial. <mark>Es de vital importancia</mark>: base documental de los actos judiciales, garantiza su legalidad.</dd></div>
+<div class="t"><dt><mark>Lo componen</mark></dt><dd>Debe contener carátula (nro. de juzgado, órgano judicial, fecha, letra por categoría, nro. de causa y de expediente) y contracarátula.
+<ul><li><mark>Escritos de las partes</mark>: argumentos, pruebas y peticiones al juez.</li><li><mark>Resoluciones y actas judiciales</mark>: decisiones del juez y actuaciones.</li><li><mark>Pruebas</mark>: elementos probatorios para demostrar la veracidad de los hechos.</li><li><mark>Informes periciales</mark>: elaborados por peritos especializados.</li></ul></dd></div>
+<div class="t"><dt>Cómo se elabora</dt><dd><ol><li>Presentación de la demanda (hechos, pruebas y documentos; lo que quiero que se haga).</li><li>Admisión del trámite: asignan nro. de expediente y fijan fecha el juez.</li><li>Pruebas y delegación de las partes, incorporadas para que el juez las tenga en cuenta.</li><li>Sentencia y resolución del caso. Termina si ninguna parte apela.</li></ol></dd></div>
+</dl>
 
-<section id="l441"><h2>27. Ley 24.441 artículo por artículo (Títulos IV y V)</h2>
-<h3>Título IV – Créditos hipotecarios para la vivienda</h3>
-<ul><li><b>Art. 50:</b> gastos de escrituración (traslación de dominio e hipoteca) a cargo del cliente: <b>máx. 2 %</b> del precio de venta o valuación; excluye impuestos, incluye honorarios profesionales; el honorario por constituir la hipoteca puede convenirse libremente. Aportes previsionales y contribuciones proporcionales a los honorarios efectivamente percibidos.</li><li><b>Art. 51:</b> el plazo se presume a favor del deudor; derecho <b>inderogable</b> a cancelar anticipadamente pagando todo el capital; solo puede preverse compensación para el acreedor si se cancela antes de cumplirse la <b>cuarta parte del plazo</b>.</li></ul>
-<h3>Título V – Régimen especial de ejecución (arts. 52 a 67)</h3>
-<p><b>Art. 52:</b> aplica a hipotecas con letras hipotecarias (art. 45) y a las que se pactó expresamente someterse a este título; <b>no a cualquier hipoteca</b>.</p>
-<div class="tw"><table><tr><th>Art.</th><th>Contenido</th></tr>
-<tr><td>53 Mora e intimación</td><td>Mora de <b>60 días</b> en capital o intereses → intimación fehaciente con plazo no menor a <b>15 días</b>, bajo advertencia de remate extrajudicial. El deudor denuncia otros acreedores, embargantes y ocupantes.</td></tr>
-<tr><td>54 Juez y constatación</td><td>Vencida la intimación, el acreedor se presenta ante el juez con documentación y certificado de dominio. Traslado al deudor <b>5 días</b> (defensas del art. 64). Escribano propuesto por el acreedor verifica estado físico y ocupación. Si hay ocupantes: desocupar en <b>10 días</b>, luego lanzamiento con fuerza pública. El escribano puede allanar, violentar cerraduras y poner bienes en depósito oneroso a costa del deudor; trámite <b>in audita parte</b>. El acreedor puede obtener la tenencia.</td></tr>
-<tr><td>55-56 Informes</td><td>El acreedor pide directo al Registro informes de dominio, gravámenes y segundo testimonio; puede requerir liquidación de expensas, impuestos, tasas y contribuciones; si no se entregan en <b>10 días hábiles</b>, el bien puede subastarse como libre de deudas.</td></tr>
-<tr><td>57 Martillero y venta</td><td>El acreedor ordena el remate público por el martillero que designe, <b>sin intervención judicial en el acto</b>, con condiciones usuales de plaza. <b>Escribano presente</b> que labra el acta.</td></tr>
-<tr><td>58 Publicidad y base</td><td>Avisos <b>3 días</b> en diario oficial y 2 diarios de gran circulación (uno al menos del lugar del inmueble); último aviso con anticipación <b>no mayor a 2 días</b>. Base = deuda a la fecha de venta. Avisos con superficie cubierta, ubicación, horario de visitas, deudas por tasas, impuestos, contribuciones y expensas, día, hora y lugar exacto.</td></tr>
-<tr><td>59 Notificación</td><td>Deudor, propietario y titulares de derechos reales: fehaciente, <b>7 días hábiles</b> antes, excluido el día del remate.</td></tr>
-<tr><td>60 Liquidación</td><td>Liquidación de deuda y gastos; gastos totales <b>máx. 3 %</b> del crédito; en <b>5 días</b> deposita el remanente a la orden del juez y rinde cuentas; traslado al deudor <b>5 días</b> para aceptar o impugnar.</td></tr>
-<tr><td>61 Sin postores</td><td>Otro remate con base reducida <b>25 %</b>; si tampoco, venta <b>sin limitación de precio</b> al mejor postor. <b>No se cobran honorarios</b> por remates fracasados. El acreedor que compra puede <b>compensar</b> su crédito.</td></tr>
-<tr><td>62 Comprador que no paga</td><td>Nuevo remate; responde por la disminución real del precio, intereses acumulados y gastos.</td></tr>
-<tr><td>63 Perfeccionamiento</td><td>Pago del precio en plazo + <b>tradición</b>; oponible a terceros con inscripción registral. Un solo acreedor titular de todo el crédito: pago directo. Varios: pago al martillero, que descuenta comisión y deposita el saldo judicialmente.</td></tr>
-<tr><td>64-65 Defensas y control</td><td>No hay recursos para frenar el lanzamiento o la subasta, salvo prueba verosímil de: no mora, no intimación, no pacto de la vía, vicios graves de publicidad. Luego de la subasta y cancelado el crédito, el deudor puede impugnar ciertos incumplimientos por vía judicial.</td></tr>
-<tr><td>66-67 Recuperación y saldo</td><td><b>30 días corridos</b> para recuperar pagando al adquirente el precio más el <b>3 %</b> del art. 60. Si el precio no cubre la deuda, el acreedor reclama el saldo ante el juez; el deudor puede pedir reducción equitativa si el precio fue sustancialmente inferior al valor de plaza, considerando ocupación y mantenimiento.</td></tr></table></div>
-<h3>Martillero en la 24.441</h3>
-<p>Designado por el acreedor; organiza la venta, colabora con la publicidad, conduce el remate y documenta el resultado. El <b>escribano</b> participa en la constatación (art. 54) y está en el remate (arts. 54 y 57).</p>
-<h3>Cuadro: electrónica vs. 24.441 (guía actualizada)</h3>
-<div class="tw"><table><tr><th>Aspecto</th><th>Judicial electrónica</th><th>Ley 24.441</th></tr>
-<tr><td>Naturaleza</td><td>Modalidad de subasta judicial en expediente</td><td>Régimen especial de ejecución hipotecaria</td></tr>
-<tr><td>Quién impulsa</td><td>Juzgado</td><td>Acreedor, cumplidos los presupuestos</td></tr>
-<tr><td>Martillero</td><td>Designado en el proceso, bajo dirección judicial</td><td>Designado por el acreedor (art. 57)</td></tr>
-<tr><td>Base</td><td>La fija el juez</td><td>Deuda a la fecha de venta (art. 58)</td></tr>
-<tr><td>Modalidad</td><td>Puja digital, tramos y código de postor</td><td>Remate público según régimen especial</td></tr>
-<tr><td>Publicidad</td><td>Edicto y portal</td><td>3 días en diario oficial y 2 diarios (art. 58)</td></tr>
-<tr><td>Escribano</td><td>No característico</td><td>Presente, labra acta (art. 57)</td></tr>
-<tr><td>Falta de postores</td><td>Régimen procesal y orden judicial</td><td>Base −25 %, luego sin límite (art. 61)</td></tr>
-<tr><td>Comprador incumplidor</td><td>CPCC y condiciones del remate</td><td>Nuevo remate; responde por diferencia, intereses y gastos (art. 62)</td></tr>
-<tr><td>Dinero</td><td>Según expediente</td><td>Directo al acreedor único; si hay varios, depósito judicial (art. 63)</td></tr></table></div>
-<div class="tia"><b>👵 Para la tía</b>La ley le da al banco un «camino rápido»: avisa que debe 60 días, le da 15 días para pagar, ve cómo está la casa con un escribano, vende con un martillero y rinde cuentas. El deudor casi no puede frenarlo, pero después puede reclamar si algo estuvo mal y tiene 30 días para recuperar la casa pagando.</div></section>
+<h2 id="u2">Unidad 2: Requisitos, funciones y sanciones</h2>
+<dl>
+<div class="t"><dt><mark>Requisitos y nombramientos de oficio</mark></dt><dd>Matriculación y colegiación. Curso de 4 meses dictado por juez, representante del Colegio y de la Cámara de Tasaciones; examen. Inscripción en listas: septiembre-octubre. Requisitos: 1 año de domicilio en la jurisdicción, título, certificado de antecedentes, 2 firmas de martilleros con más de 10 años, cumplir Ley 14.085 y aportes Ley 7014. Trámite: CABA ante IPJ; Pcia. por el Colegio.</dd></div>
+<div class="t"><dt><mark>Funciones, competencias y atribuciones</mark></dt><dd><ul><li>Actuar como perito tasador, interventor recaudador o martillero en subastas.</li><li>Realizar constataciones, fijar valores, convocar y presidir remates.</li><li>Requerir auxilio de la fuerza pública cuando esté autorizado.</li><li>Redactar mandamientos, edictos e informes.</li><li>Percibir y rendir cuentas de los fondos recibidos.</li></ul></dd></div>
+<div class="t"><dt><mark>Deberes y obligaciones</mark></dt><dd><mark>Llevar 3 libros</mark> con firma de contador:
+<ul><li><mark>Libro de Entrada</mark>: operaciones que se asumen; datos del bien, quién encomienda y en qué condiciones se recibe.</li><li><mark>Libro de Salida</mark>: operaciones concretadas; a qué asiento de entrada corresponde, monto de la venta, honorarios percibidos y datos del comprador.</li><li><mark>Libro de Gestión</mark>: control detallado de los gastos de cada actuación.</li></ul>
+Además: <mark>portar bandera con nombre visible</mark>, verificar documentación del bien, <mark>respetar horarios, fechas y lugares fijados</mark>, <mark>mantener reserva y lealtad</mark>.</dd></div>
+<div class="t"><dt><mark>Prohibiciones</mark></dt><dd>Delegar funciones sin causa justificada, entregar la bandera a terceros, exceder las facultades otorgadas.</dd></div>
+<div class="t"><dt><mark>Aranceles</mark></dt><dd>Se regulan según la etapa del proceso y la labor realizada. Si el remate fracasa por culpa del profesional: <b>2% en CABA</b>; en Pcia., conforme a la etapa procesal. Publicidad adicional autorizada: <b>máximo 2% de la base</b>.</dd></div>
+<div class="t"><dt><mark>Infracciones y sanciones</mark></dt><dd>Amonestación, suspensión, retiro temporal o definitivo de las listas de oficio, pérdida de honorarios. Si no acepta el cargo sin justificación: sanción. Si incumple, puede ser removido y excluido del año siguiente.</dd></div>
+<div class="t"><dt><mark>Nombramientos de oficio</mark></dt><dd>Por sorteo entre los profesionales inscriptos en la lista vigente. Recibimos cédula con el decreto y los puntos de pericia. <b>3 días hábiles para aceptar</b>; si no lo hacemos sin justificación válida, sanción: retiro de la lista en el año en curso y el siguiente, más pérdida de honorarios de esa actuación.</dd></div>
+<div class="t"><dt><mark>Ejecución hipotecaria</mark></dt><dd>Juicio donde se persigue el cobro de una deuda garantizada con <mark>hipoteca</mark>. El martillero puede ser designado por propuesta de parte. Debe aceptar dentro de los 3 días hábiles desde la notificación y solo puede excusarse por impedimento médico comprobado, interés directo en el bien o vínculo con alguna de las partes. Sigue las reglas generales salvo disposición especial de la Ley 24.441.</dd></div>
+</dl>
 
-<section id="prac"><h2>28. Práctica procesal: conceptos, complementos y honorarios</h2>
-<div class="tw"><table><tr><th>Concepto</th><th>Qué es</th></tr>
-<tr><td>Práctica procesal</td><td>Actos, trámites y reglas que abogados y auxiliares cumplen ante un tribunal para que el proceso avance; es el ejercicio diario del proceso.</td></tr>
-<tr><td>Aceptación del cargo</td><td>El designado (martillero, perito) acepta formalmente, <b>jura</b> cumplir bien y se somete a la jurisdicción del juzgado.</td></tr>
-<tr><td>Constatación del inmueble</td><td>Diligencia del oficial de justicia (a veces con el martillero) para verificar quién ocupa, en qué condiciones está y si coincide con el expediente.</td></tr>
-<tr><td>Mandamiento de constatación</td><td>Orden escrita del juez que habilita la constatación.</td></tr>
-<tr><td>Auxilio de la fuerza pública</td><td>Si los ocupantes impiden la diligencia, el juez autoriza policía (y cerrajero).</td></tr>
-<tr><td>Habilitación de días y horas</td><td>Los actos son en días y horas hábiles; fuera de eso el juez debe habilitar expresamente (ej. sábado o 20 hs).</td></tr>
-<tr><td>Informe de constatación</td><td>Relato detallado de lo encontrado; vital para que los compradores sepan qué compran.</td></tr>
-<tr><td>Valuación</td><td>Valor de mercado actual asignado por un perito tasador designado por el juez.</td></tr>
-<tr><td>Determinación de base</td><td>Valor mínimo para pujar (generalmente un porcentaje de la valuación fiscal o de la tasación). Sin postores, puede quedar sin vender o bajar la base en un segundo remate.</td></tr>
-<tr><td>Adelanto de gastos</td><td>Fondos que las partes (generalmente el acreedor) depositan para costos: edictos, traslados, viáticos del martillero.</td></tr>
-<tr><td>Fecha de remate</td><td>Día y hora exactos de la subasta pública.</td></tr>
-<tr><td>Compra en comisión</td><td>Se compra y se reserva indicar en breve plazo quién es el <b>comitente</b>.</td></tr>
-<tr><td>Edicto</td><td>Aviso oficial en diarios o boletines con datos del bien, base, lugar y condiciones.</td></tr>
-<tr><td>Postor remiso</td><td>Ganó pero no integró el saldo; el juez suele ejecutar la seña y puede sancionarlo.</td></tr>
-<tr><td>Liquidación de bienes del litigio</td><td>Cuenta que resta del precio gastos, impuestos, tasas y honorarios para saber el neto disponible para el acreedor.</td></tr>
-<tr><td>Rendición de cuentas</td><td>Obligatoria; detalle de lo recibido y pagado, para demostrar que el remate fue correcto.</td></tr>
-<tr><td>Práctica judicial / privada</td><td>Judicial: desempeño en tribunales (tiempos, expedientes, códigos). Privada: asesoramiento, contratos, negociación extrajudicial, relación de confianza y honorarios con el cliente.</td></tr>
-<tr><td>Honorarios</td><td>Retribución del abogado; carácter <b>alimentario</b>; Ley <b>27.423</b> fija escalas por complejidad, monto, responsabilidad y calidad.</td></tr></table></div>
-<h3>Complementos de los apuntes</h3>
-<ul><li><b>Adelanto de gastos (martillero/perito):</b> traslado, combustible, hospedaje, comida, cerrajero, agrimensor, depósito, publicaciones. Se presupuestan, se pide autorización y se rinden con comprobantes. Si no se deposita, se puede pedir suspender el plazo o la diligencia, según resuelva el juzgado.</li>
-<li><b>Edictos:</b> en Provincia el costo del Boletín Oficial se calcula por caracteres y días; en Justicia Nacional el juzgado lo remite y el Boletín fija el importe. Dato operativo que puede cambiar.</li>
-<li><b>Compra en comisión:</b> debe estar permitida por la resolución y las condiciones; se identifica al comitente y ambos pueden tener que estar empadronados.</li>
-<li><b>Bienes muebles:</b> se individualizan según el mandamiento y las constancias del embargo; pueden ir a depósito (costo en el adelanto).</li>
-<li><b>Quiebras:</b> el martillero actúa como enajenador con instrucciones del juez e intervención del síndico: inventario, lotes, y puede adelantar gastos de personal, seguridad y logística que se pagan con el producido.</li>
-<li><b>Oferta bajo sobre:</b> propuesta reservada ante el juzgado en el plazo fijado; se abre según el procedimiento y puede servir de referencia o base para la puja. <b>Mejora de oferta:</b> el juzgado invita a mejorar una propuesta; plazos y efectos según la resolución.</li></ul>
-<div class="tia"><b>👵 Para la tía</b>Esta parte es el «vocabulario del trabajo»: papeles y pasos que hace el martillero o perito en el juzgado. Aceptar el trabajo, ver la casa con orden del juez, avisar, cobrar gastos por adelantado y al final rendir cuentas.</div></section>
-<section id="textual"><h2>29. TEXTO TEXTUAL – Documento y apuntes completos</h2>
-<p class="warn">A) Resumen Word «RESUMEN DE SUBASTAS – Unidades 4 y 5», copiado exacto del archivo. B) Apuntes impresos (fotos), transcriptos tal cual se leen. [ilegible] marca lo que no se ve.</p>
-<h3>A) Documento Word (textual)</h3>
-<div class="doc"><p><strong>RESUMEN DE SUBASTAS<br />
-UNIDADES 4 Y 5</strong></p>
-<h4 id="subastas-en-general">1. Subastas en general</h3>
-<p>La subasta es el acto de venta de bienes en el que el martillero recibe ofertas a viva voz y cierra la operación con un golpe de martillo.</p>
-<p>Según el material, existen tres tipos de subasta: judicial, Ley 24.441 y particular.</p>
-<h4 id="subasta-judicial">2. Subasta judicial</h3>
-<p>Es un procedimiento de venta forzada que se realiza para pagar una deuda que no fue cancelada voluntariamente. El juez ordena vender un bien material o inmaterial, luego de que se haya dispuesto su embargo. En el procedimiento se establece un precio de salida o base y el bien se adjudica a quien realiza la mejor oferta económica.</p>
-<p>Designación del martillero: puede ser nombrado por propuesta de una de las partes o mediante sorteo.</p>
-<h4 id="subasta-judicial-electrónica-y-presencial">3. Subasta judicial electrónica y presencial</h3>
-<h4 id="provincia-de-buenos-aires-modalidad-electrónica">3.1. Provincia de Buenos Aires: modalidad electrónica</h4>
-<p>El material indica que en la Provincia de Buenos Aires ya no se realizan subastas judiciales presenciales y que el procedimiento se lleva adelante de manera electrónica. Para intervenir, se debe realizar el registro correspondiente en la página de la Suprema Corte de Justicia.</p>
-<p>Requisitos del martillero para actuar en subastas judiciales en la Provincia de Buenos Aires:</p>
-<ul>
-<li><p>Estar inscripto como perito judicial.</p></li>
-<li><p>Aprobar el curso previsto por la Acordada 2728/91.</p></li>
-<li><p>Inscribirse cada un año en el Organismo Contralor, para las subastas ordinarias.</p></li>
-<li><p>Estar al día con los aportes de la Ley 7014.</p></li>
-<li><p>Tener una antigüedad mínima de un año en la matrícula.</p></li>
-</ul>
-<h4 id="ciudad-de-buenos-aires-modalidad-presencial">3.2. Ciudad de Buenos Aires: modalidad presencial</h4>
-<p>En la Ciudad de Buenos Aires, según el material, las subastas se realizan de manera presencial en la Oficina de Subastas de la SCJN.</p>
-<p>Requisitos indicados:</p>
-<ul>
-<li><p>Estar inscripto como perito.</p></li>
-<li><p>Realizar la inscripción durante los meses de septiembre y octubre.</p></li>
-<li><p>Tener la matrícula vigente.</p></li>
-<li><p>Contar con una antigüedad de un año en la matrícula.</p></li>
-<li><p>Para concursos y quiebras, se indica una antigüedad de cinco años.</p></li>
-</ul>
-<h4 id="cuadro-comparativo-subasta-electrónica-y-presencial">3.3. Cuadro comparativo: subasta electrónica y presencial</h4>
+<h2 id="u3">Unidad 3: Paso a paso de la subasta</h2>
+<p class="lead">Orden cronológico del trabajo, desde que aceptás el cargo hasta la rendición de cuentas.</p>
+<dl>
+<div class="t"><dt>1. <mark>Aceptación del cargo</mark></dt><dd>Se recibe cédula con el decreto de designación y las tareas. <b>3 días hábiles</b> para aceptar; sin justificación, sanción. Aceptado, se analiza el <b>Auto o Decreto de Subasta</b>: orden judicial con datos del bien, cálculo de la base, condiciones de venta, seña, tipo de subasta, honorarios y pautas del edicto.</dd></div>
+<div class="t"><dt>2. <mark>Constatación del inmueble</mark></dt><dd>Diligencia donde el martillero verifica las condiciones reales: ubicación, estado constructivo, conservación, instalaciones, servicios, superficies, linderos y estado de ocupación (desocupado, habitado por titular, inquilino u ocupante sin título). Se toman fotografías. <b>Sin constatación no se puede subastar.</b></dd></div>
+<div class="t"><dt>3. <mark>Mandamiento de constatación</mark></dt><dd>Orden judicial que autoriza la diligencia. En CABA lo confecciona el martillero; en Pcia. se completa en plataforma. Debe transcribirse textualmente la orden del juzgado. Facultades expresas posibles:
+<ul><li>Allanamiento (también sin ocupantes)</li><li>Violación de cerraduras (solo si está autorizado)</li><li><b>Auxilio de la fuerza pública</b>: ante resistencia o negativa, siempre que figure en el mandamiento</li><li>Denuncia de domicilios alternativos</li><li>Habilitación de días y horas</li></ul>
+<b>Nada se presume: si no está escrito, no se puede ejercer.</b> Si hay personas, se hace inventario y se designa depositario. Puede ordenarse llevar llaves al expediente.</dd></div>
+<div class="t"><dt><mark>Habilitación de días y horas inhábiles</mark></dt><dd>Autorización expresa del juzgado para actuar fuera del horario hábil (7:00 a 17:00) y en feriados, sábados o domingos. Se concede cuando el horario habitual impide encontrar a los ocupantes. Permite diligencias incluso de noche o madrugada, con autorización escrita.</dd></div>
+<div class="t"><dt>4. <mark>Informe de constatación</mark></dt><dd>Documento que describe todo lo observado: características físicas, estado, ocupación, deudas por servicios, mejoras, deterioros. <b>Se incorpora textualmente al edicto.</b></dd></div>
+<div class="t"><dt>5. Valuación</dt><dd>Se determina el valor comercial con métodos técnicos (comparables, reposición, etc.). Debe fundamentarse: método, en qué consiste, cómo se aplica y por qué se elige. El valor sirve de base para la subasta.</dd></div>
+<div class="t"><dt>6. <mark>Determinación de la base</mark></dt><dd>Precio mínimo de salida. Se fija según: <b>las 2/3 partes de la tasación</b>, el monto de la deuda actualizada, o lo que establezca la ley aplicable. Se da traslado a las partes por <b>5 días</b> para observaciones. Si nadie objeta, queda firme. <b>Subasta progresiva</b>: si no hay postores se baja 25% y puede quedar sin base.</dd></div>
+<div class="t"><dt><mark>Adelanto de gastos</mark></dt><dd>El martillero puede adelantar gastos necesarios (cerrajero, publicidad, fotografías, traslados). Debe conservar todos los comprobantes para la rendición de cuentas.</dd></div>
+<div class="t"><dt>7. <mark>Fecha de remate</mark></dt><dd>La Oficina de Subastas envía un formulario con fechas propuestas: inicio, cierre, exhibición, registro de postores. Se devuelve firmado. Se informa al juzgado el horario de exhibición y se solicita fecha para el acta de adjudicación.</dd></div>
+<div class="t"><dt>8. <mark>Edicto</mark></dt><dd>Documento público de convocatoria. Contiene datos del juzgado, martillero, bien, base, deudas, seña, comisión, condiciones de venta, fechas de exhibición y remate. El informe de constatación va textual. <b>Lo firma el secretario del juzgado.</b> Se publica en Boletín Oficial y diarios.</dd></div>
+<div class="t"><dt><mark>Compra en comisión</mark></dt><dd>Quien puja y adquiere en nombre de otra persona debe declarar esa representación <b>antes de la adjudicación</b>. Queda <b>obligado solidariamente</b> con el representado; si el principal no paga, el comisionado responde por el total. Debe constar en el acta y toda la documentación.</dd></div>
+<div class="t"><dt><mark>Postor remiso</mark></dt><dd>Si el adjudicatario no paga o no aparece, <b>pierde la seña</b> y puede ser demandado por daños. Se puede adjudicar al siguiente mejor postor.</dd></div>
+<div class="t"><dt><mark>Liquidación de bienes del litigio</mark></dt><dd>Cobrado el precio, se distribuyen los fondos: costas, gastos, honorarios, deudas privilegiadas, y el saldo se entrega al ejecutado. Si hay remanente, se devuelve al deudor.</dd></div>
+<div class="t"><dt>9. <mark>Rendición de cuentas</mark></dt><dd>Dentro de los <b>3 días hábiles</b> posteriores al remate, por escrito: nombre del comprador, monto de venta, detalle y comprobantes de gastos, saldo a depositar. El juzgado da traslado; aprobada, <b>finaliza la intervención</b>. Duración aproximada del proceso: <b>5 meses</b>.</dd></div>
+</dl>
+
+<h2 id="ref">Referencia rápida</h2>
+<p class="lead">Plazos, números y porcentajes para repasar de un vistazo.</p>
 <div class="tw"><table>
-
-<thead>
-<tr class="header">
-<th><strong>Aspecto</strong></th>
-<th><strong>Electrónica</strong></th>
-<th><strong>Presencial</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Modalidad y lugar</td>
-<td>Se realiza por medios electrónicos.</td>
-<td>Se realiza presencialmente, en el ámbito de la Oficina de Subastas.</td>
-</tr>
-<tr class="even">
-<td>Exhibición del bien</td>
-<td>Se realiza 10 días antes del inicio de la subasta.</td>
-<td>Puede realizarse hasta 24 horas antes de la subasta.</td>
-</tr>
-<tr class="odd">
-<td>Inscripción de postores</td>
-<td>Los postores deben estar inscriptos previamente en el Registro General y anotarse en la subasta específica hasta 72 horas antes de su inicio.</td>
-<td>Puede asistir cualquier persona que tenga DNI.</td>
-</tr>
-<tr class="even">
-<td>Ofertas y adjudicación</td>
-<td>Las ofertas se realizan mediante el sistema electrónico. Al finalizar, el sistema emite un informe.</td>
-<td>El martillero recibe las distintas ofertas y adjudica al mejor postor, es decir, a quien hizo la última oferta.</td>
-</tr>
-<tr class="odd">
-<td>Edictos</td>
-<td>Se envían a la Oficina de Subastas 15 días antes de la exhibición, publicados y con fotografías y descripción del bien.</td>
-<td>Se publican en los diarios asignados.</td>
-</tr>
-<tr class="even">
-<td>Fecha</td>
-<td>La fecha se acuerda con la Oficina de Subastas.</td>
-<td>La fecha la asigna la Oficina de Subastas.</td>
-</tr>
-<tr class="odd">
-<td>Cierre y documentación</td>
-<td>Dentro de las 72 horas posteriores a la finalización, comprador, martillero y acreedor concurren al Juzgado para firmar el acta de adjudicación.</td>
-<td>Al terminar la subasta, el martillero suscribe el boleto de compraventa.</td>
-</tr>
-</tbody>
+<tr><th>Tema</th><th>Dato</th></tr>
+<tr><td>Curso para perito</td><td>4 meses (colegio departamental)</td></tr>
+<tr><td>Inscripción en listas</td><td>Septiembre-octubre; se participa desde el año siguiente</td></tr>
+<tr><td>Requisitos de matrícula</td><td>1 año de domicilio, título, antecedentes, 2 firmas de martilleros +10 años, Ley 14.085, aportes Ley 7014</td></tr>
+<tr><td>Aceptar el cargo</td><td>3 días hábiles desde la notificación</td></tr>
+<tr><td>Sanción por no aceptar</td><td>Retiro de la lista año en curso + siguiente, y pérdida de honorarios</td></tr>
+<tr><td>Traslado de la base</td><td>5 días</td></tr>
+<tr><td>Base</td><td>2/3 de la tasación, o deuda actualizada, o lo que diga la ley</td></tr>
+<tr><td>Subasta progresiva</td><td>Baja 25% cada vez; puede quedar sin base</td></tr>
+<tr><td>Horario hábil</td><td>7:00 a 17:00</td></tr>
+<tr><td>Rendición de cuentas</td><td>3 días hábiles después del remate</td></tr>
+<tr><td>Arancel si fracasa por culpa del profesional</td><td>2% en CABA</td></tr>
+<tr><td>Publicidad adicional</td><td>Máximo 2% de la base</td></tr>
+<tr><td>Electrónica: exhibición / inscripción / edicto</td><td>10 días antes / 72 hs antes / 15 días antes de la exhibición</td></tr>
+<tr><td>Electrónica: acta de adjudicación</td><td>72 hs después del remate</td></tr>
+<tr><td>Presencial: exhibición</td><td>Hasta 24 hs antes</td></tr>
+<tr><td>Duración del proceso</td><td>Aprox. 5 meses</td></tr>
+<tr><td>Leyes</td><td>24.441 (ejecución hipotecaria / subasta progresiva), 14.238 (muebles, inmuebles y animales), 14.085, 7014</td></tr>
+<tr><td>Libros</td><td>Entrada, Salida, Gestión (firma de contador)</td></tr>
 </table></div>
-<h4 id="subasta-según-la-ley-24.441">4. Subasta según la Ley 24.441</h3>
-<p>La subasta prevista en la Ley 24.441 se realiza de manera presencial y en un salón de remates. El martillero debe estar inscripto como perito. A diferencia de la subasta judicial común, la contratación y elección del martillero queda a cargo del acreedor.</p>
-<p>Características principales:</p>
-<ul>
-<li><p>El acreedor contrata al martillero.</p></li>
-<li><p>La base de la subasta es el monto de la deuda.</p></li>
-<li><p>La publicación se realiza en el Boletín Oficial y en dos diarios.</p></li>
-<li><p>El inmueble debe encontrarse desocupado.</p></li>
-<li><p>El edicto es firmado por el martillero.</p></li>
-<li><p>Al acto de subasta asiste un escribano.</p></li>
-<li><p>La fecha de la subasta se notifica al deudor mediante cédula o carta documento (CD).</p></li>
-<li><p>La subasta es progresiva: las ofertas van aumentando.</p></li>
-<li><p>El martillero entrega el dinero al acreedor. Si hay varios acreedores, el dinero se deposita judicialmente.</p></li>
-</ul>
-<h4 id="cuadro-comparativo-subasta-judicial-electrónica-y-subasta-ley-24.441">5. Cuadro comparativo: subasta judicial electrónica y subasta Ley 24.441</h3>
-<p>Este cuadro compara las dos modalidades principales desarrolladas en el material: la subasta judicial electrónica de la Provincia de Buenos Aires y la subasta regulada por la Ley 24.441.</p>
-<div class="tw"><table>
-
-<thead>
-<tr class="header">
-<th><strong>Aspecto</strong></th>
-<th><strong>Subasta judicial electrónica</strong></th>
-<th><strong>Subasta Ley 24.441</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Origen y finalidad</td>
-<td>Es ordenada por un juez para vender un bien embargado y obtener fondos para pagar una deuda impaga.</td>
-<td>Se realiza en el marco de la Ley 24.441; el acreedor contrata al martillero para llevar adelante la venta.</td>
-</tr>
-<tr class="even">
-<td>Modalidad</td>
-<td>Electrónica en la Provincia de Buenos Aires, según el material.</td>
-<td>Presencial, en un salón de remates.</td>
-</tr>
-<tr class="odd">
-<td>Elección del martillero</td>
-<td>Puede ser designado por propuesta de parte o por sorteo.</td>
-<td>Lo contrata y elige el acreedor.</td>
-</tr>
-<tr class="even">
-<td>Intervención del martillero</td>
-<td>Debe cumplir los requisitos de inscripción y capacitación indicados para actuar como perito judicial.</td>
-<td>Debe estar inscripto como perito.</td>
-</tr>
-<tr class="odd">
-<td>Base</td>
-<td>Se fija un precio de salida o base en el procedimiento judicial.</td>
-<td>La base es el monto de la deuda.</td>
-</tr>
-<tr class="even">
-<td>Publicidad</td>
-<td>El edicto se remite a la Oficina de Subastas, publicado y acompañado de fotos y descripción del bien, 15 días antes de la exhibición.</td>
-<td>Se publica en el Boletín Oficial y en dos diarios. El edicto lo firma el martillero.</td>
-</tr>
-<tr class="odd">
-<td>Exhibición / estado del bien</td>
-<td>La exhibición se realiza 10 días antes del inicio de la subasta electrónica.</td>
-<td>El inmueble debe estar desocupado.</td>
-</tr>
-<tr class="even">
-<td>Acto y control</td>
-<td>Se desarrolla mediante el sistema electrónico; al finalizar, el sistema emite un informe.</td>
-<td>Se realiza presencialmente y al acto asiste un escribano.</td>
-</tr>
-<tr class="odd">
-<td>Notificación</td>
-<td>El material describe la intervención del Juzgado y la firma del acta de adjudicación dentro de las 72 horas posteriores al cierre.</td>
-<td>Se notifica al deudor la fecha mediante cédula o carta documento.</td>
-</tr>
-<tr class="even">
-<td>Destino del dinero</td>
-<td>Se aplica al procedimiento judicial para atender el crédito reclamado.</td>
-<td>El martillero entrega el dinero al acreedor; si hay varios, lo deposita judicialmente.</td>
-</tr>
-</tbody>
-</table></div>
-<h4 id="constatación-del-bien">6. Constatación del bien</h3>
-<p>Antes de subastar un bien en el procedimiento judicial, el martillero debe realizar un informe sobre sus condiciones físicas y su estado de ocupación. Para ello, el Juzgado libra un mandamiento de constatación con instrucciones para el martillero y el oficial de justicia.</p>
-<p>El mandamiento puede autorizar al oficial de justicia a allanar el domicilio, forzar cerraduras, puertas, portones o candados con ayuda de un cerrajero, solicitar el auxilio de la fuerza pública y actuar en días y horas inhábiles. El juez también puede otorgar otras facultades que considere necesarias para cumplir la diligencia.</p>
-<p>Dato fundamental: según el material, sin la constatación no se puede realizar la subasta.</p>
-<h4 id="pasos-de-una-subasta-judicial">7. Pasos de una subasta judicial</h3>
-<ol type="1">
-<li><p>Aceptación del cargo por parte del martillero.</p></li>
-<li><p>Constatación del bien.</p></li>
-<li><p>Fijación de la fecha y hora de exhibición y de subasta.</p></li>
-<li><p>Presentación de los edictos a confronte.</p></li>
-<li><p>Publicación de los edictos.</p></li>
-<li><p>Realización de la exhibición.</p></li>
-<li><p>Remate.</p></li>
-<li><p>Rendición de cuentas e informe del resultado de la subasta.</p></li>
-</ol>
-<h4 id="edicto-de-subasta">8. Edicto de subasta</h3>
-<p>El edicto es el documento que reúne la información más importante del bien que se ofrece en subasta. Debe incluir:</p>
-<ul>
-<li><p>Datos del Juzgado interviniente y del martillero.</p></li>
-<li><p>Día, hora y lugar del remate.</p></li>
-<li><p>Datos y características del bien.</p></li>
-<li><p>Condiciones de venta y base.</p></li>
-<li><p>Deudas del bien.</p></li>
-<li><p>Estado de ocupación.</p></li>
-<li><p>Horario de exhibición.</p></li>
-</ul>
-<p>En el procedimiento descripto, el edicto lo suscribe el secretario del Juzgado y debe leerse antes de comenzar la subasta.</p>
-<h4 id="el-martillero-como-enajenador-artículo-261">9. El martillero como enajenador – Artículo 261</h3>
-<p>El juez puede designar como enajenadores a martilleros, bancos, intermediarios o entidades especializadas para vender los activos.</p>
-<p>En el caso de los martilleros, el material señala dos requisitos: seis años de antigüedad en la matrícula y contar con una casa abierta al público. Los gastos autorizados se deducen conforme a la ley y la comisión queda a cargo del comprador.</p>
-<h4 id="venta-singular-artículo-208">10. Venta singular – Artículo 208</h3>
-<p>La subasta pública es el método obligatorio para vender los bienes de manera singular. El juez ordena publicar edictos en el diario de publicaciones legales y en otro diario de gran circulación.</p>
-<p>Plazos de publicación indicados:</p>
-<ul>
-<li><p>Bienes muebles: entre 2 y 5 días.</p></li>
-<li><p>Bienes inmuebles: entre 5 y 10 días.</p></li>
-</ul>
-<p>El juez puede disponer medidas adicionales de publicidad o aplicar, cuando corresponda, las pautas generales del artículo 205 de la misma ley.</p>
-<h4 id="ejecución-por-remate-no-judicial-artículo-210">11. Ejecución por remate no judicial – Artículo 210</h3>
-<p>El artículo 210 establece que, en los juicios de quiebra, la ejecución por remate no judicial se remite al artículo 24. Según la explicación del material, esto implica que las reglas sobre radicación, suspensión y fuero de atracción de las ejecuciones o remates no judiciales se rigen por el mecanismo general previsto para la quiebra y para la conservación o realización de los bienes del activo desapoderado.</p>
-<h4 id="prohibición-de-compensación-del-precio-artículo-211">12. Prohibición de compensación del precio – Artículo 211</h3>
-<p>El artículo 211 de la Ley de Concursos y Quiebras 24.522 regula la prohibición de compensar el precio en las subastas o liquidaciones.</p>
-<ul>
-<li><p>Regla general: si un acreedor compra un bien en la quiebra, no puede compensar el precio que debe pagar con la deuda que la persona o empresa fallida tiene con él.</p></li>
-<li><p>Excepción: se admite la compensación cuando el crédito del comprador tiene una garantía real sobre ese mismo bien, por ejemplo, hipoteca o prenda.</p></li>
-<li><p>Requisito: en ese caso, el adquirente debe entregar previamente una fianza de acreedor de mejor derecho, antes de que se concrete la transferencia de la propiedad.</p></li>
-</ul>
-<h4 id="ofertas-bajo-sobre">13. Ofertas bajo sobre</h3>
-<p>Las ofertas bajo sobre tienen reglas y plazos específicos:</p>
-<ul>
-<li><p>Deben presentarse en el Juzgado al menos dos días antes de la fecha fijada para la subasta.</p></li>
-<li><p>Los sobres se abren al comenzar el acto del remate.</p></li>
-<li><p>El secretario del Juzgado entrega las ofertas al martillero el día anterior al remate, bajo recibo.</p></li>
-</ul>
-<h4 id="venta-directa-de-bienes">14. Venta directa de bienes</h3>
-<p>El juez puede disponer la venta directa, previa vista al síndico, cuando resulte útil para el concurso. El material contempla especialmente dos supuestos: que la venta se realice a favor de una cooperativa de trabajo que continúe la explotación de la empresa, o que la naturaleza de los bienes, su escaso valor o el fracaso de otras formas de venta hagan conveniente este mecanismo.</p>
-<p>Puntos principales:</p>
-<ul>
-<li><p>Procede cuando existe una utilidad evidente para el concurso por la naturaleza de los bienes, su escaso valor o el fracaso de otros métodos, como remates o licitaciones.</p></li>
-<li><p>Se contempla prioritariamente la venta a una cooperativa de trabajo que continúe la explotación de la empresa quebrada.</p></li>
-<li><p>El juez determina cómo se realiza la operación y puede delegarla en el síndico, un intermediario o un mercado especializado.</p></li>
-<li><p>La venta directa requiere aprobación judicial posterior para quedar firme.</p></li>
-</ul>
-<h4 id="bienes-invendibles">15. Bienes invendibles</h3>
-<p>Cuando los bienes no pudieron venderse o su realización comercial fracasó, el juez puede ordenar que sean entregados a asociaciones de bien público.</p>
-<p>Antes de decidirlo, debe dar vista al síndico y al deudor, es decir, comunicarles la medida y escuchar sus opiniones. La resolución puede ser apelada por el síndico o por el deudor, siempre que previamente hayan presentado una oposición expresa y fundada.</p>
-<h4 id="realización-de-créditos-a-favor-de-la-quiebra">16. Realización de créditos a favor de la quiebra</h3>
-<p>Los créditos a favor de la quiebra deben realizarse de acuerdo con el artículo 182. El síndico puede encargar su cobro a bancos oficiales o privados de primera línea, o utilizar métodos habituales de plaza, siempre con garantía suficiente y autorización judicial previa.</p>
-<p>En circunstancias especiales, el juez puede autorizar la subasta o la venta privada de esos créditos, tanto de manera individual como por cartera. Para ello, se requiere dar vista al deudor y contar con la conformidad del síndico.</p>
-<h4 id="repaso-rápido-conceptos-que-no-hay-que-confundir">17. Repaso rápido: conceptos que no hay que confundir</h3>
-<ul>
-<li><p>Subasta judicial: venta ordenada por un juez para pagar una deuda impaga; el bien se encuentra sujeto a embargo.</p></li>
-<li><p>Subasta electrónica: modalidad utilizada en la Provincia de Buenos Aires, de acuerdo con el material.</p></li>
-<li><p>Subasta presencial: modalidad indicada para la Ciudad de Buenos Aires y para la subasta de la Ley 24.441.</p></li>
-<li><p>Subasta Ley 24.441: el acreedor elige y contrata al martillero; la base es la deuda y participa un escribano.</p></li>
-<li><p>Constatación: informe sobre el estado físico y de ocupación del bien; es necesaria antes de subastar judicialmente.</p></li>
-<li><p>Edicto: informa los datos esenciales del remate y del bien.</p></li>
-<li><p>Venta singular: el artículo 208 establece la subasta pública como método obligatorio.</p></li>
-<li><p>Venta directa: alternativa que requiere utilidad para el concurso y aprobación judicial posterior.</p></li>
-<li><p>Bienes invendibles: pueden entregarse a asociaciones de bien público con intervención previa del síndico y del deudor.</p></li>
-</ul>
-</div>
-<h3>B) Apuntes impresos – Ley 24441 (textual)</h3>
-<div class="doc">
-<h4>Ejecuciones Ley 24.441 – Subasta Extrajudicial</h4>
-<p>La Ley 24.441 de Financiamiento de la Vivienda y la Construcción creó un régimen especial de ejecución hipotecaria extrajudicial, que permite al acreedor ejecutar la garantía hipotecaria sin necesidad de tramitar todo el proceso de remate judicial tradicional, siempre que esa facultad haya sido pactada expresamente en la escritura hipotecaria.</p>
-<h4>Concepto</h4>
-<p>La ejecución extrajudicial es un procedimiento especial mediante el cual el acreedor hipotecario puede vender el inmueble gravado mediante subasta para cobrar su crédito, con una intervención judicial limitada. Se trata de una excepción al sistema ordinario de ejecución judicial.</p>
-<h4>Requisitos para su Procedencia</h4>
-<ol><li>Existencia de una hipoteca válida.</li><li>Mora del deudor.</li><li>Pacto expreso de ejecución extrajudicial incorporado en la escritura hipotecaria.</li><li>Intimación de pago al deudor.</li><li>Cumplimiento de las formalidades previstas en la Ley 24.441.</li></ol>
-<h4>Procedimiento</h4>
-<p><b>1. Mora del Deudor</b><br>La mora se produce por el incumplimiento de las obligaciones garantizadas con la hipoteca. La ley prevé que, cumplidos ciertos requisitos, la mora opera automáticamente al vencimiento.</p>
-<p><b>2. Intimación de Pago</b><br>El acreedor debe intimar al deudor para que regularice la deuda antes de avanzar con la ejecución.</p>
-<p><b>3. Preparación de la Subasta</b><br>Se designa martillero y se realizan las diligencias necesarias:</p>
-<ul><li>Constatación del inmueble.</li><li>Obtención de certificados registrales.</li><li>Publicación de edictos.</li><li>Determinación de condiciones de venta.</li></ul>
-<p><b>4. Notificación de la Subasta</b><br>El deudor, propietario y demás titulares de derechos reales deben ser notificados fehacientemente de la fecha de la subasta con una anticipación mínima de siete días hábiles.</p>
-<p><b>5. Realización del Remate</b><br>El martillero lleva adelante la venta pública del inmueble conforme las condiciones establecidas.</p>
-<h4>Defensas del Deudor</h4>
-<p>La Ley 24.441 limita las defensas que pueden suspender la subasta.</p>
-<p>El ejecutado puede solicitar judicialmente la suspensión cuando demuestre verosímilmente:</p>
-<p>a) Que no está en mora.<br>b) Que no fue intimado de pago.<br>c) Que no se pactó la vía extrajudicial.<br>d) Que existen vicios graves en la publicidad de la subasta.</p>
-<h4>Liquidación del Crédito</h4>
-<p>Realizada la subasta, el acreedor debe:</p>
-<ul><li>Practicar liquidación de la deuda.</li><li>Descontar gastos de ejecución.</li><li>Depositar el remanente si lo hubiera.</li><li>Presentar rendición de cuentas documentada.</li></ul>
-<h4>Rendición de Cuentas</h4>
-<p>Dentro de los cinco días posteriores a la subasta, el acreedor debe acompañar:</p>
-<ul><li>Precio obtenido.</li><li>Liquidación del crédito.</li><li>Gastos efectuados.</li><li>Remanente existente.</li></ul>
-<p>El juez corre traslado al deudor para que pueda impugnar o aceptar la liquidación.</p>
-<h4>Derecho de Impugnación</h4>
-<p>Luego de realizada la subasta, el deudor puede cuestionar judicialmente:</p>
-<ul><li>La inexistencia de los presupuestos que habilitaban la ejecución.</li><li>La liquidación practicada.</li><li>El incumplimiento de los requisitos legales por parte del acreedor.</li></ul>
-<h4>Recuperación del Inmueble</h4>
-<p>La ley reconoce al deudor la posibilidad de recuperar la propiedad dentro de los treinta días posteriores a la ejecución, abonando al adquirente el precio de la subasta más el porcentaje legal correspondiente.</p>
-<h4>Diferencias entre Subasta Judicial y Extrajudicial</h4>
-<div class="tw"><table><tr><th>Aspecto</th><th>Subasta Judicial</th><th>Subasta Extrajudicial Ley 24.441</th></tr><tr><td>Control judicial</td><td>Permanente</td><td>Limitado</td></tr><tr><td>Trámite</td><td>Más extenso</td><td>Más rápido</td></tr><tr><td>Base legal</td><td>CPCC</td><td>Ley 24.441</td></tr><tr><td>Remate</td><td>Ordenado por el juez</td><td>Ejecutado por el acreedor y martillero</td></tr><tr><td>Defensas del deudor</td><td>Amplias</td><td>Limitadas</td></tr><tr><td>Costos</td><td>Generalmente mayores</td><td>Generalmente menores</td></tr></table></div>
-<h4>Conclusión</h4>
-<p>La ejecución hipotecaria extrajudicial prevista en la Ley 24.441 constituye un procedimiento especial destinado a agilizar el cobro de créditos garantizados con hipoteca. Permite la realización de la subasta sin el desarrollo completo de un juicio ejecutivo tradicional, aunque mantiene controles judiciales mínimos para proteger el derecho de defensa y la legalidad del procedimiento.</p>
-<h4>De los créditos hipotecarios para la vivienda</h4>
-<p>ARTICULO 50. — En los créditos hipotecarios para la vivienda otorgados de conformidad con las disposiciones de esta ley, los gastos de escrituración por la [el texto se corta en la foto; ilegible]</p>
-</div>
-<h3>C) Apuntes de clase (textual, según las fotos)</h3>
-<div class="doc">
-<p>En el Boleto de Compraventa y en el edicto también va a figurar cuando se va firmar la escritura, por ante que Escribano, todos sus datos y ahí se va a abonar el saldo del precio. En el Edicto va a figurar todos los datos del escribano. No se va a poder cambiar el Martillero tendrá que asistir a la firma de la escritura porque es cuando se le va entregar la tenencia de la propiedad. Dentro de los tres días de realizada la subasta, el Martillero le va informar al acreedor le va a rendir cuentas de los gastos que hizo, le va a adjuntar los comprobantes de todos los gastos que hizo y lo va a notificar sobre quien resultó comprador. El acreedor está obligado a presentar ese informe en el expediente. El trabajo del Martillero termina cuando firma la escritura. El proceso de subasta va a terminar cuando se le rinden cuentas al acreedor. Otra diferencia con la subasta tradicional es el sobreseimiento. El deudor puede recuperar la propiedad en un plazo de 30 días abonando los gastos que generó, mas la deuda, mas los honorarios y recupera la propiedad. En la subasta tradicional son 5 días para recuperar la propiedad desde el momento en que se realizó la subasta.</p>
-<p>Aunque no haya gente, el Martillero debe subirse a la tarima, leer el edicto, abrir el remate y darlo por fracasado por falta de postores. Si llega alguien no hay que volver a leer el Edicto. Se respetan los horarios. Es una subasta judicial.</p>
-<p>La <b>subasta extrajudicial</b> regulada por el Título V de la <b>Ley 24.441</b> permite a los acreedores ejecutar hipotecas sin intervención judicial directa. Este procedimiento es rápido pero muy estricto, y requiere que ambas partes hayan acordado previamente esta vía de ejecución en el contrato de mutuo.</p>
-<h4>Pasos Clave del Procedimiento</h4>
-<ul><li><b>Base de la subasta:</b> El monto base para el remate es el total de la deuda actualizada a la fecha de la venta.</li><li><b>Notificaciones:</b> El deudor y demás titulares de derechos reales deben ser notificados de forma fehaciente con un mínimo de 7 días hábiles de anticipación al remate.</li><li><b>Publicación de edictos:</b> Deben publicarse anuncios detallando la ubicación del inmueble, superficie, estado de deudas, y el día y hora del acto.</li><li><b>Acto de remate:</b> Se realiza mediante un martillero designado por el acreedor, sin la presencia de un juez.</li><li><b>Perfeccionamiento y posesión:</b> La venta se concreta con el pago del precio estipulado y la entrega del inmueble (tradición).</li><li><b>Rendición de cuentas:</b> Tras la venta, el acreedor debe liquidar la deuda, cubrir los gastos de ejecución (que no pueden superar el 3% del crédito) y depositar el remanente a disposición del deudor. [1]</li></ul>
-<h4>Consideraciones Legales Importantes</h4>
-<p>[...] oficio. El acreedor puede elegir si quiere que la subasta se realice conforme a esta ley o por el método tradicional al momento de iniciar la acción. Una vez que inició la acción, no puede cambiarlo. Si es una ejecución hipotecaria tradicional, no puede elegir hacerla por la ejecución de la Ley 24441.</p>
-<p>Cuando el Martillero firma la carta de trabajo, el acreedor va a contratar un escribano que es el que va a hacer la constatación e intimación al desalojo. Es fundamental en esta ley que el inmueble esté desocupado. Si el inmueble no está desocupado, no se puede subastar. El escribano va a intimar al desalojo una vez que hace la constatación y va a emitir el informe, le va a dar una copia al martillero y la otra va ir al expediente.</p>
-<p>La base ya va a estar determinada por el monto de la deuda. El Martillero va a fijar fecha de remate. Este remate es presencial. Es la única subasta que se sigue haciendo presencial. Vamos a ir a un salón de remate. No vamos a necesitar que la oficina de subastas nos de fecha. Ese salón tiene que estar en el ámbito del radio del juzgado donde se lleva a cabo la ejecución.</p>
-<p>Al remate va a asistir un escribano. El escribano va a labrar el acta donde va a detallar todo lo que acontece en el momento de la subasta y va a transcribir en esa acta el Boleto de Compraventa. Por lo general ese escribano es el mismo escribano que realiza la escritura traslativa de dominio.</p>
-<p>La subasta va a ser progresiva. Salimos con una base y a la hora va a salir con usa base reducida en un 25% y de persistir la falta de postores va a salir automáticamente sin base. El Edicto de subasta es totalmente distinto al otro, no va a ir a confronte. No va a pasar por el juzgado. Lo vamos a confeccionar nosotros y lo vamos a firmar nosotros. Acá se va a publicar en el Boletín Oficial y en dos diarios particulares. Esos diarios los va a elegir el Martillero. Este, hasta el edicto, no hace presentaciones en el expediente.</p>
-<p>La fecha de subasta hay que notificarla al acreedor con 10 días de anticipación</p>
-<p>Una vez que el Martillero notifica al deudor, va a dejar el Edicto, va a armar el Edicto, lo va a firmar y lo va a publicar. Va a hacer horario de exhibición. Va a ir al Acto de Remate. En el Acto de remate va a estar el escribano y el Martillero va a manejar el remate. Se vende. Una vez que se vende el Martillero va a percibir el 30% de seña igual que cualquier remate y los honorarios. Va a firmar el Boleto de Compraventa por subasta Judicial y se va a firmar el acta que hace el escribano. El Escribano va a estar presente en el momento en que el Martillero firma el Boleto y el dinero que le entregan, si hay un solo acreedor, le va a entregar directamente el dinero al acreedor (el 30% descontados los gastos). Si hay mas de un acreedor, va a depositar el dinero en la cuenta del expediente para que el juzgado haga la distribución del dinero porque el Martillero desconoce las proporciones de cada uno. En el Boleto de Compraventa, van a figurar los plazos, va a firmarse la Escritura para perfeccionar la venta.</p>
-<p>Vivienda única: La constitucionalidad de este mecanismo abreviado suele ser cuestionada cuando afecta bienes de familia o viviendas únicas y de uso permanente, debiendo analizarse la jurisprudencia aplicable.</p>
-<p>Deudas previas: Según la jurisprudencia, el comprador en subasta extrajudicial no debe afrontar las deudas por impuestos, tasas y contribuciones anteriores a la toma de posesión si el dinero del remate no alcanzó para cubrirlas.</p>
-<p>Pacto de partes: Si el deudor se sometió voluntariamente a esta cláusula en el contrato, suele ser improcedente intentar frenar el remate alegando inconstitucionalidad salvo vicios graves</p>
-<p class="warn">Nota: el orden de las últimas hojas puede no ser el original de tu impresión. Una foto borrosa no se pudo transcribir.</p>
-</div></section>
-<section id="textual2"><h2>30. TEXTO TEXTUAL – PDFs nuevos</h2>
-<p class="warn">Extraído automáticamente de los PDFs. Las tablas pueden aparecer desordenadas (columna por columna); los números de página van intercalados.</p>
-<h3>D) Guía Oral Subastas Unidades 4 y 5 (PDF)</h3><pre class="raw">Antes de empezar: una actualización importante sobre Provincia y Capital
-Provincia de Buenos Aires: las subastas judiciales electrónicas se rigen por el Acuerdo 3604 de la Suprema Corte de Justicia de
-la Provincia de Buenos Aires (SCBA), con su Anexo I y modificaciones. El portal oficial es https://subastas.scba.gov.ar/.
-Ciudad Autónoma de Buenos Aires: para los tribunales nacionales y federales con asiento en CABA rige la Acordada 15/2025
-de la Corte Suprema de Justicia de la Nación (CSJN). Su uso es obligatorio desde el 1 de octubre de 2025. El portal oficial es
-https://subastaselectronicasjudiciales.csjn.gov.ar/.
-ambos ámbitos utilizan subastas electrónicas, pero bajo reglamentos y autoridades diferentes. La Acordada 15/2025 no extiende
-automáticamente el sistema a todos los tribunales federales del interior del país.
-La Ley 24.441 es otra cosa: es una ley nacional que establece un régimen especial de ejecución de hipotecas. No es un portal ni
-una variante del sistema electrónico. El régimen especial puede realizarse por remate público presencial según la operatoria que
-describen la ley y los apuntes.
-
-UNIDAD 4 — Subastas electrónicas
-Concepto: es una modalidad de subasta judicial en la que las ofertas o pujas se realizan a través de una plataforma digital,
-durante un período previamente establecido. El público puede consultar la información y seguir el desarrollo de la subasta; los
-postores habilitados participan mediante un código de postor.
-No deja de ser una subasta judicial: sigue existiendo un expediente, una orden del juez, un martillero designado y reglas
-procesales. Lo que cambia es el medio por el cual se publicita y se reciben las ofertas.
-Finalidades: ampliar la participación, facilitar el acceso desde distintos lugares, dar publicidad en tiempo real, preservar el
-anonimato de los oferentes frente al público y reducir los problemas de la puja presencial.
-●​
-Normativa de Provincia: Acuerdo 3604 SCBA, Anexo I, y normas procesales provinciales.
-●​
-Normativa de tribunales nacionales y federales con asiento en CABA: Acordada 15/2025 CSJN y Código Procesal Civil y
-Comercial de la Nación.
-●​
-Portales: subastas.scba.gov.ar (Provincia) y subastaselectronicasjudiciales.csjn.gov.ar (CABA, justicia nacional y federal
-con asiento en la Ciudad).
-
-Historia y organización del sistema
-Según los apuntes, la Corte provincial comenzó a trabajar en la idea de implementar subastas electrónicas alrededor de 2011,
-ante problemas que se repetían en los remates tradicionales. El Acuerdo 3604 fue dictado el 8 de agosto de 2012. La puesta en
-funcionamiento fue gradual: comenzó en La Plata y luego se extendió a otros departamentos judiciales.
-En Provincia existe un Registro General de Subastas Judiciales y seccionales departamentales. La Oficina/Seccional de Subastas
-coordina la parte operativa y verifica que se cumplan los recaudos para publicar y realizar la subasta. No reemplaza al juzgado: la
-orden y las decisiones procesales siguen siendo judiciales.
-En CABA, la Oficina de Subastas Judiciales depende del Centro de Asistencia Judicial Federal de la CSJN y administra el portal
-nacional/federal para los tribunales comprendidos en la Acordada 15/2025.
-
-El rol del martillero en la subasta electrónica
-El martillero actúa como auxiliar de la justicia y, en la subasta judicial, como delegado del juez en la dirección del remate. No
-puede apartarse de la resolución judicial ni inventar condiciones de venta.
-Debe estudiar el expediente, cumplir las instrucciones, coordinar con la Oficina de Subastas, informar correctamente los datos del
-bien, preparar la publicidad, organizar la exhibición, atender consultas, controlar el desarrollo de la puja dentro de sus funciones y
-confeccionar el acta de resultado.
-
-También debe actuar con diligencia y veracidad: una constatación equivocada, información falsa, edicto incorrecto o
-incumplimiento de plazos puede generar suspensión, nulidad, pérdida de honorarios o responsabilidad por daños, según el caso.
-●​
-●​
-●​
-●​
-●​
-
-No fija por sí solo las condiciones esenciales: debe respetar lo dispuesto por el juez.
-Debe comunicar datos completos y comprobables del bien.
-Debe coordinar fechas, exhibición y documentación con la oficina correspondiente.
-Debe confeccionar y presentar el acta de resultado dentro del plazo reglamentario.
-Debe rendir gastos cuando corresponda y conservar comprobantes.
-
-Procedimiento de una subasta electrónica: paso a paso
-1. Orden judicial y revisión del expediente
-El juez dicta la resolución que ordena la subasta y establece las condiciones esenciales: bien, base, modalidad, plazos, depósito
-de garantía si corresponde y demás condiciones. El martillero revisa el expediente para verificar que tenga la documentación
-necesaria y que no existan obstáculos.
-
-2. Constatación del bien
-Se realiza una constatación para conocer el estado físico y de ocupación del inmueble. Ya no alcanza con informar solamente
-quién lo ocupa: según los apuntes, se describen ambientes, estado de conservación, instalaciones, mejoras, deterioros y demás
-características. Se toman fotografías y, cuando se solicita, video del frente, fondo e interior, respetando las autorizaciones
-judiciales.
-
-3. Valuación y base
-El martillero informa el valor del bien y el juzgado determina la base conforme al régimen procesal aplicable y a las constancias del
-expediente. En los apuntes de práctica aparecen como alternativas de base las dos terceras partes de la tasación, el monto de la
-deuda actualizada o las dos terceras partes de la valuación fiscal. No memorices esas alternativas como una regla universal:
-depende del código aplicable y de lo que ordene el juez.
-
-4. Comunicación con la Oficina de Subastas
-Una vez reunida la documentación, el juzgado y el martillero coordinan con la oficina las fechas de inicio y cierre, el cierre de
-acreditación de postores, la exhibición y la publicación. La oficina puede observar faltantes o pedir que se complete o actualice
-documentación antes de habilitar la publicación.
-
-5. Edicto y publicación en el portal
-El edicto se presenta a confronte para su control. Una vez aprobado y publicado conforme al procedimiento, se remite la
-información al portal. La publicación digital incluye los datos del edicto y otros datos de interés, como imágenes, fechas, tramos de
-puja, datos del martillero y visitas cuando corresponda. Tanto el Acuerdo 3604 como la Acordada 15/2025 exigen publicación en el
-portal con una antelación mínima de diez días hábiles al comienzo de la subasta.
-
-6. Exhibición
-La exhibición permite que los interesados conozcan el bien antes de ofertar. En los apuntes se menciona habitualmente una
-semana antes del inicio; el día y horario concretos deben surgir del edicto y de la orden judicial. En la plataforma se informan los
-horarios de visita cuando corresponda.
-
-7. Registro general e inscripción a la subasta particular
-Son dos pasos distintos. Primero, la persona se empadrona en el Registro General, acredita su identidad y obtiene usuario. Ese
-registro tiene vigencia de un año, tanto en el sistema provincial como en el nacional/federal de CABA. Después debe inscribirse en
-cada subasta concreta en la que quiera participar y obtener un código de postor específico para ese remate.
-
-8. Depósito de garantía
-El depósito de garantía no es el precio de compra ni la seña del contrato. Sirve como garantía de seriedad de la participación y de
-las obligaciones del postor. La reglamentación lo contempla cuando el juez lo exige; por eso no debe afirmarse que siempre y en
-
-todos los casos es obligatoriamente del 5%. En la práctica de clase se menciona habitualmente un 5% de la base. El monto, la
-cuenta y el plazo deben leerse en el edicto y en la orden judicial. Cuando se exige, debe estar acreditado con al menos tres días
-hábiles de anticipación al inicio.
-
-9. Apertura y desarrollo de las ofertas
-La subasta comienza automáticamente en el día y hora indicados. La puja es continua y permanente durante el plazo establecido,
-y el portal informa el código de postor, monto, fecha y hora de cada oferta. El público puede seguir el procedimiento en tiempo
-real.
-
-10. Cierre, acta y adjudicación
-Al finalizar el plazo, el sistema cierra automáticamente, salvo que opere una extensión o suspensión. El sistema identifica al
-ganador y comunica el monto. El martillero confecciona el acta de resultado, indicando al vencedor y las demás ofertas más altas.
-En Provincia y en el sistema nacional/federal de CABA, el acta debe presentarse en el expediente dentro de los tres días hábiles
-posteriores al cierre.
-Cierre de ofertas y adjudicación/aprobación no son lo mismo. El cierre es el final de la puja; luego se cumplen los pasos de
-documentación, audiencia o aprobación judicial que correspondan. En inmuebles y bienes registrables la intervención del juzgado
-continúa después del cierre.
-
-Registro de postores: qué tenés que explicar
-El registro general habilita a una persona para operar en el portal. No significa que ya esté anotada en todas las subastas. Para
-cada remate debe realizar una inscripción específica y obtener un código de postor, que es personal y secreto.
-En Provincia, el Acuerdo 3604 prevé la inscripción en el Registro General y la posterior registración individual en cada subasta. La
-inscripción a una subasta debe estar realizada con una antelación mínima de tres días hábiles al comienzo.
-En CABA, la Acordada 15/2025 también exige empadronamiento general e inscripción en cada subasta. El empadronamiento se
-valida ante la Oficina de Subastas Judiciales. Para intervenir, el postor debe estar habilitado hasta el día hábil anterior al inicio; si
-se exige depósito, éste debe acreditarse con al menos tres días hábiles de anticipación.
-Los apuntes de clase dicen que cualquier mayor de edad puede anotarse. La reglamentación provincial contempla personas
-físicas y jurídicas, y la nacional también permite la inscripción de personas humanas o jurídicas con la documentación
-correspondiente. En cada caso hay que cumplir los requisitos del portal.
-●​
-Registro general: tiene vigencia de un año.
-●​
-Inscripción particular: se realiza para una subasta determinada.
-●​
-Código de postor: identifica al oferente sin mostrar públicamente su identidad.
-●​
-Depósito de garantía: solo cuando lo exige la resolución o el edicto; en clase se trabaja habitualmente con el 5% de la
-base.
-●​
-Reserva de postura: permite que determinados postores no ganadores puedan ser considerados si el primero no cumple,
-conforme al régimen procesal aplicable.
-
-Pujas, tramos y postura máxima secreta
-Los tramos son escalones predeterminados de oferta. El postor no escribe cualquier suma: elige el tramo que corresponde en el
-sistema. En el régimen provincial y en el nacional/federal de CABA, los tramos posteriores al inicial se incrementan en un 5%
-calculado sobre el monto del tramo inicial, de acuerdo con la reglamentación.
-La postura máxima secreta es una herramienta por la cual el postor indica, antes o durante el procedimiento según la
-configuración reglamentaria, cuál es el máximo que está dispuesto a ofrecer. El sistema puja automáticamente por él hasta ese
-límite. Si el usuario realiza una oferta manual, se desactiva la postura automática y debe continuar pujando manualmente.
-Si dos posturas máximas secretas coinciden, la prioridad se determina por la fecha y hora en que fueron ingresadas.
-
-Extensión del plazo: los últimos tres minutos
-En Provincia y en CABA, si durante los últimos tres minutos antes del cierre se presenta una oferta superior, el sistema extiende
-automáticamente la subasta diez minutos. Si vuelve a ingresar una oferta superior dentro de esa extensión, se renueva por otros
-diez minutos. El mecanismo continúa hasta que transcurran diez minutos sin una nueva oferta superior.
-Esto evita que alguien gane simplemente ofertando en el último segundo sin dar oportunidad de respuesta a los demás postores.
-
-Acta, adjudicación y postor remiso
-El acta de resultado deja constancia del monto alcanzado, código/datos del ganador y las ofertas más altas de los demás
-participantes. En el régimen provincial el martillero la confecciona por el formulario del portal y la presenta en el expediente dentro
-de tres días hábiles. En CABA la Acordada 15/2025 fija el mismo plazo.
-La adjudicación o aprobación es el paso posterior por el cual se formaliza judicialmente el resultado y se verifican los requisitos del
-comprador. Para inmuebles y bienes registrables, la autoridad judicial debe intervenir en la aprobación. En Provincia el Acuerdo
-3604 contempla audiencia para el acta pertinente, en la fecha que fija el órgano jurisdiccional y que debe estar prevista con
-antelación en la publicidad.
-Postor remiso es quien resulta ganador y luego no cumple con el pago o las obligaciones en el plazo establecido. En la subasta
-judicial ordinaria puede perder el depósito o la seña y quedar sujeto a las consecuencias procesales y daños que correspondan.
-En Provincia, la reserva de postura puede permitir consultar al siguiente oferente conforme al CPCC. No confundas esto con la
-Ley 24.441: allí el incumplimiento del comprador está regulado específicamente por el artículo 62.
-
-La Oficina de Subastas: función
-La Oficina de Subastas es un órgano de apoyo y coordinación del sistema. Recibe la documentación, controla que se hayan
-cumplido los pasos reglamentarios, coordina el calendario y gestiona la publicación en el portal. Puede advertir faltantes y
-comunicar incidencias. La decisión de ordenar, suspender, aplazar o cancelar la subasta corresponde al órgano judicial
-competente, que debe comunicarlo a la oficina para que se actualice la información del portal.
-En Provincia, el Registro General y sus seccionales forman parte de la estructura prevista por el Acuerdo 3604. En CABA, la
-Oficina de Subastas Judiciales depende del Centro de Asistencia Judicial Federal de la CSJN.
-
-Contenido del edicto y de la publicación digital
-El edicto es el aviso formal que da publicidad a la subasta. Debe permitir que cualquier interesado conozca qué se vende, dónde
-está, en qué condiciones, cuándo se realiza y qué debe hacer para participar. En la subasta electrónica, la publicación del portal
-agrega información práctica y visual.
-●​
-●​
-●​
-●​
-●​
-●​
-●​
-●​
-●​
-●​
-●​
-
-Identificación del juzgado, secretaría y expediente.
-Datos del martillero designado y medios de contacto.
-Identificación y descripción del bien: ubicación, matrícula o datos registrales, superficie y características relevantes.
-Estado de ocupación y estado físico, según constatación e informe.
-Base, condiciones de venta, deudas informadas y forma de pago.
-Fecha y hora de inicio y cierre de la subasta; fecha límite de acreditación/inscripción de postores.
-Monto y cuenta del depósito de garantía, si corresponde.
-Tramos de puja y sus importes.
-Fecha y horario de exhibición o visitas.
-Fecha de firma del acta o audiencia de adjudicación, si está fijada.
-Imágenes del bien y demás información que el juez considere relevante.
-
-Provincia de Buenos Aires y CABA: comparación actual
-La idea central es que ambos sistemas son electrónicos, pero cada uno tiene su propio reglamento, portal y órgano de
-administración. Los datos exactos de cada subasta siempre deben verificarse en el edicto y en la resolución judicial.
-
-Aspecto
-Norma
-Portal
-
-Registro general
-
-Provincia de Buenos Aires
-Acuerdo 3604 SCBA y modificatorias.
-subastas.scba.gov.ar
-Registro General y seccionales
-departamentales de la SCBA.
-Vigencia de un año.
-
-Inscripción a cada remate
-
-Mínimo tres días hábiles antes del inicio.
-
-Administración
-
-Garantía
-Publicación
-Duración
-Extensión
-Tramos
-Acta
-Ámbito
-
-CABA: tribunales nacionales/federales
-Acordada 15/2025 CSJN.
-subastaselectronicasjudiciales.csjn.gov.ar
-Oficina de Subastas Judiciales, dependiente del Cent
-de Asistencia Judicial Federal.
-Vigencia de un año.
-Habilitado hasta el día hábil anterior; depósito, si se
-exige, acreditado tres días hábiles antes.
-Cuando la exige el juez; monto informado en
-portal/edictos.
-Mínimo 10 días hábiles antes.
-10 días hábiles.
-
-Cuando la exige el juez; apuntes suelen
-mencionar 5%.
-Mínimo 10 días hábiles antes.
-10 días hábiles.
-Oferta superior últimos 3 minutos: +10 min,
-Misma regla.
-renovable.
-Incrementos del 5% sobre el tramo inicial. Incrementos del 5% sobre el tramo inicial.
-Presentación en 3 días hábiles.
-Presentación en 3 días hábiles.
-Tribunales nacionales y federales con asiento en
-Justicia provincial bonaerense.
-CABA.
-
-UNIDAD 5 — Pericia judicial
-Concepto: la pericia judicial es una prueba que incorpora al expediente conocimientos técnicos, científicos, artísticos o
-especializados que el juez no tiene por qué dominar. El perito no decide el juicio: aporta una opinión fundada para ayudar al juez a
-comprender un hecho o determinar una cuestión técnica.
-Para el martillero/tasador, la pericia puede consistir en constatar, describir o tasar un inmueble o bien. Una pericia de valor es una
-tasación fundamentada: no alcanza con decir &#x27;vale tanto&#x27;; hay que explicar de dónde sale el valor y cómo se llegó a él.
-●​
-El perito responde preguntas técnicas, no cuestiones jurídicas que debe resolver el juez.
-●​
-Debe trabajar dentro de los puntos de pericia y del objeto de su designación.
-●​
-Debe ser objetivo, claro, imparcial y fundamentar sus conclusiones.
-●​
-Debe informar si no pudo ingresar al inmueble, si faltó documentación o si encontró diferencias entre los papeles y la
-realidad.
-
-Perito oficial y perito de parte
-Perito oficial o perito designado de oficio: es el profesional nombrado por el juzgado para realizar la pericia. Su función es auxiliar
-al juez y responder los puntos de pericia. No representa a ninguna de las partes y debe mantener independencia.
-Perito de parte o consultor técnico: es el profesional que interviene por iniciativa de una de las partes para asesorarla
-técnicamente, controlar la tarea pericial y formular observaciones. En el Código Procesal Civil y Comercial de la Nación se lo
-denomina consultor técnico. La denominación y el modo de intervención pueden variar según el código procesal y el fuero.
-Según los apuntes de clase, cuando interviene un perito oficial debe convocar a los peritos de parte al relevamiento. Si hay
-diferencias técnicas, deben quedar explicitadas; no se debe ocultar la discrepancia. En el régimen nacional, el consultor técnico
-controla y participa en los términos del código, pero no sustituye al perito designado por el juez.
-
-Puntos de pericia
-Los puntos de pericia son las preguntas o cuestiones técnicas concretas que el juez o las partes proponen para que el experto
-responda. Delimitan el trabajo: el perito no debe irse por las ramas ni emitir opiniones sobre temas que no le fueron
-encomendados.
-Ejemplo en una tasación: determinar el valor de mercado del inmueble a una fecha determinada; describir el estado de
-conservación; indicar superficie y mejoras; estimar valor locativo; o establecer el valor histórico a la fecha del hecho.
-
-El expediente judicial y el trabajo del perito
-El expediente es el conjunto ordenado de escritos, resoluciones, actas, informes y pruebas que documentan el proceso. Es la
-historia del juicio y la base sobre la que el juez toma decisiones.
-Antes de inspeccionar el bien, el perito debe leer el expediente: resolución que lo designa, puntos de pericia, datos del inmueble,
-documentación acompañada, planteos de las partes y plazos. Después debe realizar la tarea, presentar el dictamen y contestar
-las observaciones que se formulen.
-●​
-●​
-●​
-●​
-●​
-
-Carátula: identifica el juicio, las partes, el juzgado y el número de expediente.
-Escritos: presentaciones de las partes y del perito.
-Resoluciones: decisiones y órdenes del juez.
-Pruebas: documentos, testimonios, informes y pericias.
-Actas: constancias de diligencias y audiencias.
-
-Constatación del bien para una pericia
-La constatación es la inspección del bien para comprobar directamente sus características y condiciones. En una pericia
-inmobiliaria se observan ubicación, entorno, accesos, superficie, distribución, ambientes, materiales, antigüedad aparente, estado
-de conservación, instalaciones, servicios, mejoras, deterioros y ocupación.
-El perito debe comparar lo que dicen los documentos con lo que encuentra en el lugar. Si hay diferencias, las describe. Si no
-puede ingresar, deja constancia de esa circunstancia y explica qué limitaciones produce para su conclusión.
-Las fotografías, mediciones, planos, publicaciones comparables y demás elementos pueden respaldar el informe, siempre que
-sean pertinentes y se identifique su origen.
-
-El dictamen pericial: cómo se arma
-El dictamen es el informe técnico que se presenta al juzgado. Debe ser claro, ordenado y responder cada punto de pericia. Una
-estructura útil para el oral es:
-●​
-●​
-●​
-●​
-●​
-●​
-●​
-●​
-●​
-
-Identificación: expediente, juzgado, perito y objeto de la pericia.
-Antecedentes: qué documentación se revisó y qué puntos deben contestarse.
-Tarea realizada: fecha de inspección, personas presentes, acceso al inmueble y relevamientos.
-Descripción del bien: características físicas, ubicación, superficies, estado y ocupación.
-Metodología: método utilizado y por qué es adecuado.
-Datos y cálculos: comparables, fuentes, coeficientes, planillas y operaciones.
-Respuesta a cada punto de pericia.
-Conclusión: valor determinado y fecha de referencia.
-Anexos: fotografías, planos, documentación y planillas que respalden el trabajo.
-
-Métodos de tasación dentro de una pericia
-Método comparativo o de mercado: se buscan inmuebles comparables y se analizan sus diferencias respecto del bien tasado. Se
-homogeneizan las muestras con ajustes o coeficientes por ubicación, superficie, frente y fondo, antigüedad, estado, fecha de
-oferta/venta y otras características. No se trata de copiar un precio publicado: hay que justificar la comparación.
-Método de reposición: se estima cuánto costaría reponer o reconstruir el bien en condiciones equivalentes, considerando costos
-actuales y depreciación por antigüedad, estado y obsolescencia. Debe explicarse qué costos se utilizaron y cómo se aplicó la
-depreciación.
-La elección del método depende del tipo de bien, finalidad, información disponible y fecha de valuación. Puede ser necesario usar
-más de un enfoque y explicar cómo se ponderaron.
-
-Valor histórico
-El valor histórico es el valor que tenía un inmueble en una fecha pasada determinada. No se obtiene tomando la tasación actual y
-aplicándole mecánicamente un coeficiente de inflación o desinflación.
-Según los apuntes, para estimar un valor histórico hay que conseguir información confiable de la época: ventas comparables,
-publicaciones, registros, documentación o antecedentes verificables. Se debe explicar la fecha y la fuente de cada dato.
-Si no hay información suficiente, el perito debe decirlo y explicar las limitaciones. No debe inventar comparables ni presentar una
-conclusión con una precisión que la evidencia no permite.
-
-Medios y formas de prueba
-La prueba es el conjunto de elementos y procedimientos que permiten acreditar hechos relevantes y controvertidos del juicio. La
-prueba ayuda al juez a formar convicción sobre lo que ocurrió.
-Medio de prueba es la clase de elemento que se utiliza. Forma de producción es el procedimiento por el cual se ofrece, ordena,
-produce, incorpora y controla ese medio dentro del expediente. Las reglas concretas dependen del código procesal aplicable.
-●​
-●​
-●​
-●​
-●​
-●​
-●​
-
-Documental: contratos, escrituras, recibos, planos, fotografías, informes y otros documentos.
-Testimonial: declaración de personas que conocen hechos relevantes.
-Pericial: opinión fundada de un experto cuando se requieren conocimientos técnicos.
-Informativa: informes solicitados a organismos, registros, empresas o entidades.
-Reconocimiento o inspección judicial: observación directa de un lugar, cosa o persona por el juez o autoridad designada.
-Confesional/declaración de parte: respuestas de una parte sobre hechos controvertidos, según el régimen procesal.
-Presunciones: inferencias que se extraen de hechos acreditados conforme a las reglas legales y de la sana crítica.
-
-Traslado, observaciones e impugnación de la pericia
-Una vez presentado el dictamen, el juzgado da intervención a las partes para que lo conozcan y puedan formular observaciones o
-impugnarlo dentro del plazo procesal. El traslado es esa oportunidad de tomar conocimiento y responder.
-El perito debe contestar las observaciones técnicas con fundamentos, explicar sus cálculos, acompañar fuentes si corresponde y
-aclarar errores u omisiones. No debe modificar arbitrariamente la conclusión para conformar a una parte.
-El juez es quien valora la fuerza probatoria del dictamen junto con el resto de la prueba. El informe pericial no obliga
-automáticamente al juez.
-
-Tribunal de Tasaciones
-En los apuntes aparece como tema de investigación de la cátedra, pero no está desarrollado con detalle en las clases transcriptas.
-Para el oral, conviene conocer la idea general: el Tribunal de Tasaciones de la Nación es un organismo técnico estatal que
-interviene en valuaciones requeridas en materias de competencia nacional, entre ellas tasaciones vinculadas a bienes del Estado
-y expropiaciones, conforme a su normativa específica.
-No confundas el Tribunal de Tasaciones con el perito de una causa: el primero es un organismo especializado; el perito judicial es
-designado en un expediente para responder puntos concretos. Si el profesor exige su procedimiento interno, ese detalle no surge
-de los apuntes disponibles y conviene confirmarlo con la cátedra.
-
-UNIDAD 5 — Ley 24.441: régimen especial de ejecución de hipotecas
-La Ley 24.441 es una ley nacional de financiamiento de la vivienda y la construcción. Dentro de ella, el Título V regula un régimen
-especial de ejecución de hipotecas (artículos 52 a 67). Para la materia interesa cómo se realiza el remate y cuál es la función del
-martillero.
-Hipoteca: derecho real de garantía que afecta un inmueble al cumplimiento de una obligación, generalmente un préstamo o mutuo.
-Si el deudor incumple, el acreedor puede ejecutar la garantía para cobrar.
-
-Atención: el régimen especial de la Ley 24.441 no se aplica automáticamente a cualquier hipoteca. El artículo 52 contempla las
-hipotecas con letras hipotecarias en las condiciones del artículo 45 y aquellas en las que se haya convenido expresamente
-someterse a este título.
-
-Ley 24.441: procedimiento paso a paso
-1. Mora e intimación — artículo 53
-Ante la mora en el pago del capital o intereses por sesenta días, el acreedor debe intimar fehacientemente al deudor para que
-pague en un plazo no menor de quince días. Debe advertir que, si no paga íntegramente, el inmueble podrá rematarse por la vía
-extrajudicial. También se le requiere que informe acreedores privilegiados, embargantes y ocupantes.
-
-2. Presentación ante el juez y constatación — artículo 54
-Vencida la intimación sin pago, el acreedor puede presentarse ante el juez competente con la documentación que exige la ley y el
-certificado de dominio. El juez da traslado al deudor por cinco días para que pueda plantear las defensas limitadas del artículo 64.
-El juez ordena verificar el estado físico y de ocupación mediante un escribano propuesto por el acreedor.
-Si el inmueble está ocupado, se intima a desocuparlo dentro de diez días. Si no se cumple, puede ordenarse el lanzamiento con
-fuerza pública, allanamiento y apertura de cerraduras en los términos de la norma. Por eso, no es correcto decir que la ley exige
-que el inmueble ya esté desocupado antes de iniciar todo el procedimiento: la ley prevé qué hacer si está ocupado.
-
-3. Informes y documentación — artículos 55 y 56
-El acreedor puede pedir directamente al Registro de la Propiedad informes de dominio y gravámenes, y obtener un segundo
-testimonio del título en los supuestos previstos. También puede requerir liquidaciones de expensas, impuestos, tasas y
-contribuciones. La ley prevé consecuencias si esas liquidaciones no se entregan dentro del plazo legal.
-
-4. Designación del martillero y venta — artículo 57
-Verificado el estado del inmueble, el acreedor ordena la venta en remate público por intermedio del martillero que designe, sin
-intervención judicial en el acto de venta, y con las condiciones usuales de plaza. En la explicación de clase: el acreedor elige y
-contrata al martillero. En el remate debe estar presente un escribano, que labra el acta.
-
-5. Publicidad y base — artículo 58
-La ley exige avisos durante tres días en el diario oficial y en dos diarios de gran circulación, uno al menos del lugar donde está el
-inmueble. El último aviso debe publicarse con una anticipación no mayor de dos días a la fecha del remate. La base es el monto
-de la deuda a la fecha de la venta.
-Los avisos deben informar como mínimo superficie cubierta, ubicación, horario de visitas, estado de deuda por tasas, impuestos,
-contribuciones y expensas, y día, hora y lugar exacto de la subasta.
-
-6. Notificación — artículo 59
-El deudor, el propietario y los demás titulares de derechos reales sobre el inmueble deben ser notificados fehacientemente de la
-fecha de subasta con siete días hábiles de anticipación, excluido el día del remate.
-
-7. Remate y liquidación — artículo 60
-Realizada la subasta, el acreedor practica la liquidación de lo adeudado y de los gastos de ejecución. Los gastos totales por todo
-concepto no pueden superar el tres por ciento del crédito. Dentro de los cinco días siguientes debe depositar el remanente a la
-orden del juez y presentar rendición de cuentas documentada. El juez da traslado al deudor por cinco días para que acepte o
-impugne la liquidación.
-
-8. Si no hay postores — artículo 61
-Si el remate fracasa por falta de postores, se realiza otro con una reducción del 25% de la base. Si tampoco hay postores, se
-ordena la venta sin limitación de precio y al mejor postor. No se cobran honorarios por los remates fracasados. Si compra el
-acreedor hipotecario, puede compensar su crédito.
-
-9. Comprador que no paga — artículo 62
-Si el comprador no paga la totalidad del precio en el plazo establecido, se realiza un nuevo remate. El comprador incumplidor
-responde por la disminución real del precio que se obtenga en la nueva subasta, los intereses que se hayan acumulado y los
-gastos ocasionados.
-
-10. Perfeccionamiento y destino del dinero — artículo 63
-La venta queda perfeccionada cuando se paga el precio en el plazo acordado y se realiza la tradición al comprador. Para que sea
-oponible a terceros debe cumplirse la inscripción registral. Si el acreedor es titular de todo el crédito, el pago se hace directamente
-a él. Si hay más de un acreedor, el pago se hace al martillero, quien descuenta su comisión y deposita el saldo a la orden del juez
-para distribuirlo.
-
-11. Defensas y control judicial — artículos 64 y 65
-El deudor no puede usar cualquier incidente o recurso para frenar el lanzamiento o la subasta. La ley admite defensas específicas:
-que no existe mora, que no hubo intimación, que no se pactó la vía especial o que hubo vicios graves en la publicidad. Si se
-acredita alguno de esos supuestos, el juez puede suspender. Después de realizada la subasta y cancelado el crédito, el deudor
-puede impugnar determinados incumplimientos por la vía judicial.
-
-12. Recuperación del inmueble y saldo — artículos 66 y 67
-Dentro de los treinta días corridos de efectuada la ejecución extrajudicial, el deudor puede recuperar la propiedad si paga al
-adquirente el precio obtenido en la subasta más el tres por ciento previsto por el artículo 60. Si el precio no alcanza para cubrir
-toda la deuda, el acreedor puede reclamar el saldo ante el juez; el deudor puede pedir una reducción equitativa si el precio fue
-sustancialmente inferior al valor de plaza, considerando la ocupación y el mantenimiento del inmueble.
-
-Qué hace el martillero en la Ley 24.441
-Según la ley y los apuntes, el martillero es designado por el acreedor para realizar el remate público. Debe ajustarse al régimen
-legal, organizar la venta, colaborar con la publicidad, conducir el acto de remate, documentar el resultado y cumplir las
-instrucciones aplicables.
-La intervención del escribano es una característica importante: participa en la constatación prevista por el artículo 54 y está
-presente en el remate para labrar el acta, según los artículos 54 y 57.
-El dinero no siempre se entrega de la misma manera: si existe un único acreedor titular de todo el crédito, el pago puede hacerse
-directamente a él; si hay varios acreedores, interviene el martillero y deposita el saldo a la orden del juez para su distribución.
-
-Diferencias: subasta judicial electrónica y Ley 24.441
-La diferencia principal no es solo el uso de una computadora. Son dos regímenes distintos. La subasta electrónica es una
-modalidad de realización de una subasta judicial ordenada en un expediente. La Ley 24.441 establece un régimen especial de
-ejecución hipotecaria, con intervención judicial en ciertos controles y una venta ordenada por el acreedor bajo las condiciones de
-la ley.
-Aspecto
-Naturaleza
-Quién impulsa
-Martillero
-Base
-Modalidad
-Publicidad
-Escribano
-Falta de postores
-Comprador incumplidor
-
-Subasta judicial electrónica
-Modalidad electrónica de una subasta judicial ordenada en
-expediente.
-Juzgado dentro del proceso judicial.
-Designado conforme al proceso y bajo dirección judicial.
-La determina el juez según normas procesales.
-Puja digital por portal, tramos y código de postor.
-
-Régimen Ley 24.441
-Régimen especial de ejecución hipotecaria.
-
-Acreedor, cumplidos los presupuestos legales.
-Designado por el acreedor (art. 57).
-Monto de la deuda a la fecha de venta (art. 58).
-Remate público según régimen especial.
-Avisos 3 días en diario oficial y 2 diarios de gran circu
-Edicto y portal judicial, imágenes y datos del bien.
-(art. 57).
-No es requisito característico del sistema electrónico ordinar Presente en el remate y labra acta (art. 57).
-Nueva subasta con base -25%; luego sin límite de pr
-Régimen procesal y orden judicial.
-(art. 61).
-Nuevo remate; responde por diferencia, intereses y g
-Consecuencias del CPCC y condiciones del remate.
-(art. 62).
-Directo al acreedor si es único titular; si hay varios,
-Depósito y distribución según expediente.
-martillero deposita saldo judicialmente (art. 63).
-
-Complementos de los apuntes: temas prácticos que pueden relacionarse
-Estos temas aparecen en las anotaciones de tu compañero y en el material de práctica procesal. Algunos pertenecen
-principalmente a la unidad de práctica procesal, no son el núcleo del programa de las Unidades 4 y 5. Conviene conocerlos
-brevemente por si el profesor los relaciona.
-
-Adelanto de gastos
-El martillero/perito puede solicitar al juzgado un adelanto para cubrir gastos necesarios: traslado, combustible, hospedaje, comida,
-cerrajero, agrimensor, depósito de bienes, publicaciones o publicidad adicional. Debe presupuestarlos, pedir autorización y luego
-rendirlos con comprobantes. Según los apuntes, si el adelanto no se deposita, el profesional puede pedir que se suspenda el plazo
-o la diligencia hasta recibirlo; esto debe ajustarse a lo que resuelva el juzgado.
-
-Edictos: Provincia y Justicia Nacional
-Los apuntes indican que en Provincia el costo de los edictos del Boletín Oficial se calcula según caracteres y días de publicación;
-en Justicia Nacional, el juzgado remite el edicto al Boletín Oficial y éste determina el importe. Es un dato operativo que puede
-cambiar, por lo que no conviene memorizarlo como una regla legal permanente.
-
-Compra en comisión
-Es la compra que realiza una persona por cuenta de otra (comitente). Debe estar permitida por la resolución y las condiciones de
-venta. En los sistemas electrónicos actuales se exige identificar al comitente y cumplir las condiciones del registro; en Provincia y
-CABA ambos pueden tener que estar empadronados. No debe suponerse que siempre está permitida.
-
-Liquidación de bienes muebles
-Cuando se subastan bienes muebles embargados, el martillero debe individualizarlos conforme al mandamiento y a las
-constancias del embargo. Puede ser necesario trasladarlos a un depósito, cuyo costo debe contemplarse en el adelanto de
-gastos. Luego se informa el resultado y se rinden los gastos.
-
-Quiebras y martillero enajenador
-En los procesos de quiebra el martillero puede actuar como enajenador, dentro de las instrucciones del juez y con intervención del
-síndico. Según los apuntes, se realiza inventario, se evalúa cómo conviene vender, se agrupan bienes en lotes cuando resulte
-adecuado y se organiza la venta. El profesional puede tener que adelantar gastos de personal, seguridad y logística, que luego se
-atienden con el producido según lo autorizado.
-
-Oferta bajo sobre y mejora de oferta
-La oferta bajo sobre es una propuesta económica presentada de manera reservada ante el juzgado dentro del plazo que se haya
-establecido. Luego se abre conforme al procedimiento fijado y puede servir como referencia o base para la puja. La mejora de
-oferta es una instancia en la que el juzgado invita a mejorar una propuesta para obtener mejores condiciones. Los plazos y efectos
-dependen de la resolución y del régimen aplicable.
-
-Tribunal de Tasaciones y peritos
-No mezcles la intervención del Tribunal de Tasaciones con la del perito designado en una causa. Si te preguntan por el organismo,
-explicá primero su carácter técnico estatal y luego aclarar que el perito judicial trabaja dentro de un expediente y responde puntos
-concretos.
-
-</pre>
-<h3>E) Técnicas de Subastas – Segundo parcial (PDF)</h3><pre class="raw">TÉCNICAS DE SUBASTAS – SEGUNDO PARCIAL
-UNIDAD 4
-CONCEPTOS DE LA SUBASTA JUDICIAL
-Práctica Procesal
-Se refiere al conjunto de actos, trámites y reglas que abogados y auxiliares de justicia
-deben cumplir ante un tribunal para que el proceso avance conforme a la ley. No es un
-acto único, sino el ejercicio diario del proceso.
-Aceptación del cargo
-Acto por el cual una persona designada por el juez (como el martillero público o el perito)
-manifiesta formalmente que acepta la responsabilidad, jura cumplirla bien y se somete
-a la jurisdicción del juzgado.
-Constatación del inmueble
-Es la diligencia en la cual el oficial de justicia (a veces acompañado por el martillero) se
-traslada al lugar para verificar quién ocupa el inmueble, en qué condiciones está, si hay
-moradores, y si el estado coincide con lo que figura en el expediente.
-Mandamiento de Constatación
-Es la orden escrita librada por el juez para que el oficial de justicia realice la
-constatación mencionada anteriormente. Es el documento legal que habilita la
-diligencia.
-Auxilio de la Fuerza Pública
-Si al ir a constatar el inmueble los ocupantes se niegan a abrir o impiden la diligencia, el
-juez autoriza el uso de la policía para asegurar que el oficial pueda cumplir con su tarea
-(incluyendo el uso de cerrajero si es necesario).
-Habilitación de días y horas
-Los actos judiciales solo pueden realizarse en días hábiles y horario administrativo. Si el
-remate o una diligencia debe ocurrir fuera de ese tiempo (ej. un sábado o a las 8 de la
-noche), el juez debe autorizar (&quot;habilitar&quot;) expresamente ese tiempo.
-Informe de Constatación
-Es el documento escrito donde el oficial de justicia relata detalladamente qué encontró
-en el inmueble durante la diligencia. Este informe es vital para que los futuros
-compradores sepan qué están comprando (si está ocupado, alquilado, etc.).
-Valuación
-Es el valor asignado al inmueble por un perito tasador designado por el juez. Es el valor
-de mercado actual del bien.
-Determinación de Base
-1
-
-El juez fija un valor mínimo sobre el cual se empezará a pujar en el remate (generalmente
-un porcentaje de la valuación fiscal o de la tasación). Si no hay postores por encima de
-la base, el bien puede quedar sin venderse o bajarse la base en un segundo remate.
-
-2
-
-Adelanto de Gastos
-Fondos que las partes (generalmente el ejecutante/acreedor) deben depositar en el
-expediente para cubrir los costos de la subasta: edictos, traslados, viáticos del
-martillero, etc.
-Fecha de Remate
-Día y hora exactos en los que se llevará a cabo la subasta pública.
-Compra en Comisión
-Figura por la cual una persona compra el bien en el remate, pero se reserva el derecho
-de indicar, en un plazo breve y determinado, quién será el comprador definitivo (su
-&quot;comitente&quot;).
-Edicto
-Es el aviso oficial (publicado en diarios o boletines judiciales) que informa al público
-sobre la subasta. Contiene los datos del bien, la base, el lugar del remate y las
-condiciones de venta. Es lo que da publicidad al acto.
-Postor remiso
-Es aquel que ganó la subasta, pero no cumplió con las obligaciones posteriores (como
-integrar el saldo del precio en el plazo estipulado). El juez suele ejecutarle la seña (la
-pierde) y puede sancionarlo.
-Liquidación de Bienes del Litigio
-Es la cuenta detallada donde se resta al precio obtenido en la subasta todos los gastos,
-impuestos, tasas y honorarios, para determinar cuánto dinero neto queda disponible
-para pagar la deuda del acreedor.
-Rendición de Cuentas
-Es el acto obligatorio del martillero y del juzgado de presentar ante las partes el detalle
-de todo el dinero recibido y los pagos realizados, demostrando que el remate se realizó
-correctamente y que el saldo es el correcto.
-UNIDAD 5
-CONCEPTOS CLAVES
-Pericia Judicial
-Es el medio de prueba donde un experto (perito) aplica sus conocimientos técnicos para
-ayudar al juez a entender hechos complejos. El perito actúa como auxiliar de la justicia
-y su función es ofrecer una opinión fundada.
-Constatación del bien
-Es una diligencia probatoria donde un oficial de justicia u otro auxiliar se presenta en un
-lugar para verificar físicamente el estado, ocupación o características de un bien. Sirve
-para que el juez tenga una visión directa de la realidad material.
-3
-
-Expediente
-Es el conjunto de todas las actuaciones (escritos, pruebas, resoluciones judiciales,
-notificaciones) de un proceso legal. Hoy en día, en la mayoría de las jurisdicciones, el
-expediente a migrado del formato papel al expediente digital, que centraliza toda la
-información para dar transparencia y agilidad.
-Prueba
-Es el elemento o actividad que permite al juez conocer la verdad sobre los hechos
-controvertidos. Sin prueba, una pretensión no puede prosperar.
-Medios y Formas de Prueba
-Son los instrumentos previstos por la ley para incorporar esa prueba al proceso.
-Algunos ejemplos son:
-• Documental: Papeles, contratos, mails.
-• Testimonial: Declaraciones de terceros.
-• Informativa: Informes de organismos públicos o privados.
-• Pericial: Cuando se requiere conocimiento técnico especializado (científico,
-artístico o contable) que el juez no posee.
-Práctica Judicial
-Se refiere al desempeño dentro del ámbito de los tribunales. Implica conocer los
-tiempos procesales, la gestión de los expedientes, el trato con los empleados judiciales
-y la aplicación práctica de los códigos.
-Práctica Privada
-Es la gestión del abogado fuera del juzgado: el asesoramiento al cliente, la redacción de
-contratos, la negociación extrajudicial, la estrategia de defensa y la atención
-personalizada. A diferencia de la función pública, se rige por una relación directa de
-confianza y honorarios con el cliente.
-Honorarios Profesionales
-Es la retribución económica que recibe el abogado por su trabajo.
-• Naturaleza: Tienen carácter alimentario, lo que significa que se consideran
-esenciales para el sustento del profesional.
-• Regulación: Existen leyes específicas (como la Ley 27.423 en Argentina) que
-establecen escalas basadas en la complejidad, el monto del juicio, la
-responsabilidad y la calidad de la labor realizada.
-
-4
-
-SUBASTA JUDICIAL ELECTRÓNICA (s/material)
-¿Qué es y quién la pide?
-Es una modalidad de ejecución forzada de bienes incorporada al sistema procesal para
-mejorar el servicio de justicia y garantizar la transparencia, evitando problemáticas del
-ámbito material. Es un procedimiento público y abierto que permite el seguimiento en
-directo y de forma anónima a través de Internet. Es dispuesta por los órganos
-jurisdiccionales (jueces o tribunales) de diversos fueros (civil, comercial, laboral,
-familia, etc.).
-
-¿Dónde y cómo se realiza?
-Se lleva a cabo en un portal web específico dentro de la página de la Suprema Corte de
-Justicia de la Provincia de Buenos Aires. El proceso se basa en una puja continua y
-permanente de los oferentes en una sala virtual, donde las ofertas se publican en
-tiempo real indicando el código del postor, el monto y la hora.
-
-Registro y requisitos esenciales
-Para participar, es necesario cumplir con dos niveles de registración:
-Registro General de Postores: Cualquier persona física o jurídica puede inscribirse
-mediante un formulario con carácter de declaración jurada. La inscripción es anual y
-requiere presentarse en una &quot;Seccional&quot; con documentos de identidad o estatutos
-societarios para obtener un usuario y contraseña.
-Inscripción a una subasta particular: El usuario ya registrado debe solicitar participar
-en una subasta específica a través del portal.
-Depósito en garantía: Si el juez lo exige, el postor debe integrar un depósito y acreditarlo
-al menos tres días hábiles antes del inicio del acto. Cumplido esto, recibe un Código
-de Postor único y secreto.
-
-Dirección de la subasta y fijación de fecha
-El martillero designado actúa como auxiliar de justicia y delegado del juez en la
-dirección del acto.
-Fijación: El martillero debe proveer los datos del bien y la fecha de la subasta a la
-Seccional con al menos 10 días de antelación a la publicidad.
-Publicidad: Se debe publicar en el portal con fotos, datos del martillero, tramos de puja
-y precio de reserva si lo hubiera, con una antelación no menor a diez días hábiles antes
-del inicio.
-
-Celebración y el Cierre
-5
-
-Tramos de puja: Las ofertas se hacen por montos fijos. Si hay base, el primer tramo es
-ese valor; los siguientes aumentan un 5% sobre el inicial.
-Horario: El tiempo se contabiliza en días hábiles las 24 horas.
-Postura Máxima Secreta: Es una modalidad donde el postor ingresa el precio máximo
-que está dispuesto a pagar. El sistema puja automáticamente por él en el tramo
-siguiente al de otros oferentes hasta alcanzar su límite.
-Cierre y Extensión: El cierre es automático el día y hora fijados. Sin embargo, si se recibe
-una oferta en los últimos tres minutos, el cierre se extiende automáticamente diez
-minutos más, y así sucesivamente hasta que no haya nuevas pujas por diez minutos
-seguidos.
-
-Actos posteriores e incumplimiento
-Notificación: Al finalizar, el sistema notifica al ganador por correo electrónico.
-Acta de subasta: El martillero debe labrar un acta y presentarla en el expediente judicial
-en un plazo de tres días hábiles.
-Bienes registrables: Si se trata de inmuebles o muebles registrables, el ganador y el
-martillero deben comparecer a una audiencia ante el secretario del Juzgado para
-firmar el acta definitiva.
-Postores no ganadores: Se les devuelve el depósito de garantía, a menos que hayan
-realizado una &quot;reserva de postura&quot;.
-Incumplimiento: La reserva de postura permite que, si el ganador incumple sus
-obligaciones (como el pago), se apliquen las previsiones legales para que el siguiente
-mejor postor pueda ser considerado. El incumplimiento de normas del portal también
-puede derivar en la revocación del acceso al usuario.
-
-6
-
-SUBASTAS JUDICIALES ELECTRÓNICAS S/ CÓD. PROCESAL
-Acuerdo 3604 (Cuerpo Principal)
-Art. 1: Aprueba formalmente el Reglamento de Subastas Judiciales Electrónicas (Anexo
-I).
-Art. 2: Encomienda a la Subsecretaría de Tecnología Informática la creación y puesta
-en funcionamiento del sistema informático necesario.
-Art. 3: Establece que la implementación del sistema será gradual y progresiva según lo
-dictaminen las resoluciones futuras de la Suprema Corte.
-Art. 4: Ordena la publicación del acuerdo en el Boletín Oficial y en la web institucional.
-
-Anexo I: Reglamento de Subastas Judiciales Electrónicas
-Capítulo I: Generalidades
-Art. 1: El reglamento rige para todas las subastas realizadas por medios electrónicos.
-Art. 2: Las subastas se publican en un portal web de la Suprema Corte. El público
-general puede seguir el proceso de forma anónima, pero solo los usuarios registrados
-pueden pujar.
-Art. 3: La publicación debe contener: datos de los edictos, fotos del bien, fechas de
-inicio y cierre de acreditación, tramos de puja, datos del martillero, precio de reserva y
-horarios de visita.
-Art. 4: La publicidad virtual debe aparecer al menos diez días hábiles antes de que
-comience la subasta.
-Art. 5: Crea el Registro General de Subastas Judiciales con sede en La Plata y
-dependencias regionales (Seccionales).
-Capítulo II: Inscripción al Registro General de Postores
-Art. 6: Cualquier persona física o jurídica puede inscribirse para participar en subastas
-de cualquier fuero (civil, laboral, familia, etc.).
-Art. 7: El trámite se realiza en las Seccionales del Registro.
-Art. 8: La inscripción está abierta todo el año (salvo ferias), dura un año y puede
-renovarse 15 días antes de su vencimiento.
-Art. 9 y 10: Se utiliza un formulario online que luego debe imprimirse y presentarse
-físicamente en la Seccional.
-7
-
-Art. 11: Datos requeridos: Nombre/Razón social, DNI/CUIT, domicilio real, email y
-teléfono (con carácter de declaración jurada).
-Art. 12: Documentación: DNI original y copia, instrumentos de personería si es
-apoderado, y estatutos/designación de autoridades para personas jurídicas.
-Art. 13: El usuario es responsable de que la información sea veraz y esté actualizada.
-Art. 14 y 15: El funcionario decide la admisión en el acto. Si se aprueba, se genera una
-constancia de alta por duplicado.
-Art. 16: Las Seccionales custodian la documentación por dos años y luego la destruyen.
-Art. 17: El sistema envía un usuario y contraseña al email del postulante, la cual debe
-ser personalizada en el primer ingreso.
-Art. 18: Si falta algún requisito, se deniega la inscripción en el acto; el postulante puede
-pedir una reconsideración en un plazo de tres días.
-Art. 19: La cuenta es personal e intransferible. El usuario es responsable de mantener
-la confidencialidad de su clave.
-Art. 20: El incumplimiento de obligaciones permite al Registro revocar el acceso al
-portal.
-Capítulo III: Registración a las Subastas Específicas
-Art. 21: Para cada subasta particular, el usuario ya registrado debe inscribirse
-individualmente, indicando si desea hacer reserva de postura o si compra en comisión.
-Art. 22: Si se exige depósito en garantía, el postor debe pagarlo y acreditarlo ante la
-Seccional al menos tres días hábiles antes del inicio. Tras esto, recibe un Código de
-Postor único y secreto.
-Art. 23: Si no hay depósito, la inscripción se perfecciona online y se envía el código por
-email.
-Art. 24: El plazo límite para inscribirse en una subasta es de tres días hábiles antes de su
-inicio.
-Capítulo IV: Dirección de la Subasta
-Art. 25: El martillero recibe herramientas informáticas para cumplir su función.
-
-8
-
-Art. 26: El martillero debe llevar a la Seccional los datos del bien y acreditar los edictos
-con diez días hábiles de antelación a la publicación virtual (20 días antes del remate).
-Art. 27: El martillero abre formalmente la participación de los postores el día fijado.
-
-Capítulo V: Celebración de la Subasta
-Art. 28: La subasta dura el tiempo fijado y se contabiliza en días hábiles las 24 horas.
-Art. 29: Si el inicio cae en día inhábil, pasa al siguiente hábil. Si hay días inhábiles durante
-el proceso, el plazo se suspende y retoma automáticamente.
-Art. 30: Es una sala virtual de puja continua. Se publican en tiempo real los montos y
-códigos de los postores para transparencia.
-Art. 31, 32 y 33: Las pujas se hacen por tramos. Si hay base, ese es el primer tramo; los
-demás aumentan un 5% sobre el valor inicial. El postor solo debe indicar el número de
-tramo al que desea ofertar.
-Capítulo VI: Postura Máxima Secreta
-Art. 34: Permite que el postor fije un precio máximo. El sistema puja automáticamente
-por él (un tramo por encima del anterior oferente) hasta alcanzar dicho límite. Si el
-usuario puja manualmente, esta función se anula.
-Capítulo VII: Actos Posteriores al Cierre
-Art. 35: El cierre es automático. El ganador es notificado por email y se informa el precio
-final a los demás participantes.
-Art. 36: El martillero debe presentar un acta detallada en el expediente judicial en tres
-días hábiles.
-Art. 37: La Seccional envía al Juzgado el listado de postores acreditados y sus depósitos
-a los tres días del cierre.
-Art. 38: Para bienes registrables (inmuebles/autos), se firma un acta definitiva en
-audiencia ante el Secretario del Juzgado. El ganador debe acreditar su identidad con el
-código de postor y comprobantes de inscripción.
-Art. 39: Los depósitos de los no ganadores se devuelven por orden judicial, salvo que
-hayan hecho reserva de postura.
-
-9
-
-Capítulo VIII al XIII: Cuestiones Técnicas y de Contingencia
-Art. 40 (Reserva de Postura): Permite que el segundo mejor postor mantenga su oferta
-vigente por si el ganador incumple (según art. 585 CPCC).
-Art. 41: El horario oficial es el de la Provincia de Buenos Aires.
-Art. 42 (Tiempo de Extensión): Si alguien oferta en los últimos tres minutos, la subasta
-se extiende diez minutos más. Esto puede repetirse indefinidamente hasta que pasen
-diez minutos sin nuevas pujas.
-Art. 43: Cualquier suspensión o anulación ordenada por el Juez debe ser comunicada y
-publicada de inmediato en el portal.
-Art. 44 y 45: Define que el Registro Central está en La Plata y las Seccionales en las
-cabeceras departamentales.
-Art. 47 y 48: La Corte garantiza disponibilidad 24/7. Si el servicio se interrumpe, los
-plazos de la subasta se suspenden y se reanudan automáticamente al solucionarse el
-problema.
-Art. 49: La Suprema Corte no es responsable por fallas técnicas causadas por fuerza
-mayor o terceros.
-
-10
-
-LEY 24.441
-TÍTULO IV – Créditos Hipotecarios para la Vivienda
-Gastos y Honorarios (Art. 50)
-En los créditos otorgados bajo esta ley, los gastos de escrituración (por traslación de
-dominio e hipoteca) a cargo del cliente no pueden superar el 2% del precio de venta o
-valuación del inmueble. Este porcentaje excluye impuestos pero incluye honorarios
-profesionales. No obstante, el honorario por la constitución de la hipoteca en sí puede
-convenirse libremente. Los aportes previsionales y contribuciones serán proporcionales
-a los honorarios efectivamente percibidos.
-Plazos y Cancelación Anticipada (Art. 51)
-El plazo del crédito se presume a favor del deudor. Es un derecho inderogable del deudor
-cancelar el crédito anticipadamente pagando la totalidad del capital. El contrato solo
-puede prever una compensación para el acreedor si la cancelación ocurre antes de
-haberse cumplido la cuarta parte del plazo total pactado.
-
-TÍTULO V – Régimen Especial de Ejecución de Hipotecas
-Mora e Intimación (Art. 53)
-Ante una mora de 60 días en el pago de capital o intereses, el acreedor debe intimar al
-deudor de forma fehaciente.
-Se otorga un plazo no menor a 15 días para el pago íntegro, bajo advertencia de remate
-extrajudicial.
-El deudor debe denunciar el nombre y domicilio de otros acreedores, embargantes y
-ocupantes.
-Verificación y Tenencia del Inmueble (Art. 54)
-Si no hay pago, el acreedor solicita al juez la verificación del estado de ocupación.
-Si el inmueble está ocupado, se intima la desocupación en 10 días bajo apercibimiento
-de lanzamiento por la fuerza pública.
-El acreedor puede obtener la tenencia del inmueble. El escribano actuante puede
-allanar, violentar cerraduras y poner bienes en depósito oneroso a costa del deudor.
-Este trámite es in audita parte (sin audiencia de la contraparte).
-Facultades del Acreedor (Arts. 55 y 56)
-El acreedor puede solicitar directamente al Registro informes de dominio, gravámenes y
-segundos testimonios del título.
-Puede requerir liquidación de expensas e impuestos. Si no se entregan en 10 días
-hábiles, el bien puede subastarse como si estuviera libre de deudas.
-La Subasta (Arts. 57 a 59)
-Venta: El acreedor ordena el remate público a través de un martillero, sin intervención
-judicial.
-Publicidad: Avisos por 3 días en el diario oficial y dos de gran circulación.
-11
-
-Base: El monto de la deuda a la fecha de la venta.
-Notificación: El deudor y propietarios deben ser notificados de la fecha de subasta con
-7 días hábiles de anticipación.
-Liquidación y Remanente (Art. 60)
-Tras la subasta, el acreedor practica liquidación. Los gastos de ejecución no pueden
-superar el 3% del crédito.
-El remanente debe depositarse ante el juez dentro de los 5 días para que el deudor pueda
-impugnarlo o aceptarlo.
-Fracaso de la Subasta y Pago (Arts. 61 a 63)
-Si no hay postores, se hace un segundo remate reduciendo la base un 25%; si vuelve a
-fallar, se vende al mejor postor sin base.
-El acreedor que compra puede compensar su crédito.
-La venta se perfecciona con el pago del precio y la tradición (entrega) del bien.
-Defensas del Ejecutado (Art. 64)
-El deudor no puede interponer defensas o recursos para interrumpir el lanzamiento o
-la subasta, salvo que acredite verosímilmente:
-1. Que no está en mora.
-2. Que no fue intimado de pago.
-3. Que no se pactó la vía de ejecución especial.
-4. Que existen vicios graves en la publicidad del remate.
-
-12
-
-</pre></section>
+<div class="box"><b>Ojo con esto:</b> en tus apuntes la base de la Ley 24.441 figura como el monto de la deuda, y en Unidad 3 como 2/3 de la tasación o la deuda actualizada. Confirmá con tu profe cuál aplica en cada caso.</div>
 </main>
 <script>
-var n=document.getElementById('nav');
-document.querySelectorAll('section').forEach(function(s){var a=document.createElement('a');a.href='#'+s.id;a.textContent=s.querySelector('h2').textContent.split(' ')[0].replace('.','')+'·'+s.querySelector('h2').textContent.split(' ').slice(1,3).join(' ');n.appendChild(a)});
+(function(){
+var b=document.getElementById('rv'),m=document.querySelector('main');
+b.addEventListener('click',function(){
+var on=b.getAttribute('aria-pressed')!=='true';
+b.setAttribute('aria-pressed',on);
+m.classList.toggle('rev',on);
+if(!on)document.querySelectorAll('dd.open').forEach(function(d){d.classList.remove('open')});
+});
+m.addEventListener('click',function(e){
+var d=e.target.closest('dd');
+if(d&&m.classList.contains('rev'))d.classList.toggle('open');
+});
+})();
 </script>
-</body></html>
+</body>
+</html>
